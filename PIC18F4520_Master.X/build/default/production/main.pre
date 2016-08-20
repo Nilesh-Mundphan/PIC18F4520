@@ -3951,7 +3951,7 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 15 "delay.h"
+# 15 "lib/delay\delay.h"
 void delay_ms(unsigned int d);
 void delay_us(unsigned int d);
 
@@ -4046,7 +4046,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 20 "system.h"
+# 20 "lib/system\system.h"
 #pragma config OSC = HS
 #pragma config WDT = OFF
 #pragma config BOREN = ON
@@ -4055,12 +4055,13 @@ typedef uint16_t uintptr_t;
 #pragma warning disable 520
 #pragma warning disable 752
 
-# 15 "gpio.h"
+# 15 "lib/gpio\gpio.h"
 void gpio_pin_mode(unsigned char pin,unsigned char mode);
 void gpio_pin_write(unsigned char pin,unsigned char bit_val);
 unsigned char gpio_pin_read(unsigned char pin);
 
 # 15 "demo.h"
+void io_test();
 void gsm_test();
 void mpu6050_test();
 void lcd_test();

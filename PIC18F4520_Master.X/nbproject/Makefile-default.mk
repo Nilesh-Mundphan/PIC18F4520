@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../PIC18F4520_Master.X/adc.c ../PIC18F4520_Master.X/delay.c ../PIC18F4520_Master.X/eeprom.c ../PIC18F4520_Master.X/i2c.c ../PIC18F4520_Master.X/serial.c ../PIC18F4520_Master.X/spi.c ../PIC18F4520_Master.X/gpio.c systick.c isr.c Nstring.c dht11.c ../PIC18F4520_Master.X/lcd.c ../PIC18F4520_Master.X/mcp320x.c ../PIC18F4520_Master.X/time.c hcsr04.c mpu6050.c gsm.c demo.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=demo.c main.c lib/delay/delay.c lib/spi/spi.c lib/adc/adc.c lib/eeprom/eeprom.c lib/gpio/gpio.c lib/i2c/i2c.c lib/serial/serial.c lib/nstring/Nstring.c lib/isr/isr.c lib/systick/systick.c modules/dht11/dht11.c modules/gsm/gsm.c modules/hcsr04/hcsr04.c modules/lcd/lcd.c modules/mcp320x/mcp320x.c modules/mpu6050/mpu6050.c modules/rtc/time.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/68640168/adc.p1 ${OBJECTDIR}/_ext/68640168/delay.p1 ${OBJECTDIR}/_ext/68640168/eeprom.p1 ${OBJECTDIR}/_ext/68640168/i2c.p1 ${OBJECTDIR}/_ext/68640168/serial.p1 ${OBJECTDIR}/_ext/68640168/spi.p1 ${OBJECTDIR}/_ext/68640168/gpio.p1 ${OBJECTDIR}/systick.p1 ${OBJECTDIR}/isr.p1 ${OBJECTDIR}/Nstring.p1 ${OBJECTDIR}/dht11.p1 ${OBJECTDIR}/_ext/68640168/lcd.p1 ${OBJECTDIR}/_ext/68640168/mcp320x.p1 ${OBJECTDIR}/_ext/68640168/time.p1 ${OBJECTDIR}/hcsr04.p1 ${OBJECTDIR}/mpu6050.p1 ${OBJECTDIR}/gsm.p1 ${OBJECTDIR}/demo.p1 ${OBJECTDIR}/main.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/68640168/adc.p1.d ${OBJECTDIR}/_ext/68640168/delay.p1.d ${OBJECTDIR}/_ext/68640168/eeprom.p1.d ${OBJECTDIR}/_ext/68640168/i2c.p1.d ${OBJECTDIR}/_ext/68640168/serial.p1.d ${OBJECTDIR}/_ext/68640168/spi.p1.d ${OBJECTDIR}/_ext/68640168/gpio.p1.d ${OBJECTDIR}/systick.p1.d ${OBJECTDIR}/isr.p1.d ${OBJECTDIR}/Nstring.p1.d ${OBJECTDIR}/dht11.p1.d ${OBJECTDIR}/_ext/68640168/lcd.p1.d ${OBJECTDIR}/_ext/68640168/mcp320x.p1.d ${OBJECTDIR}/_ext/68640168/time.p1.d ${OBJECTDIR}/hcsr04.p1.d ${OBJECTDIR}/mpu6050.p1.d ${OBJECTDIR}/gsm.p1.d ${OBJECTDIR}/demo.p1.d ${OBJECTDIR}/main.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/demo.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/lib/delay/delay.p1 ${OBJECTDIR}/lib/spi/spi.p1 ${OBJECTDIR}/lib/adc/adc.p1 ${OBJECTDIR}/lib/eeprom/eeprom.p1 ${OBJECTDIR}/lib/gpio/gpio.p1 ${OBJECTDIR}/lib/i2c/i2c.p1 ${OBJECTDIR}/lib/serial/serial.p1 ${OBJECTDIR}/lib/nstring/Nstring.p1 ${OBJECTDIR}/lib/isr/isr.p1 ${OBJECTDIR}/lib/systick/systick.p1 ${OBJECTDIR}/modules/dht11/dht11.p1 ${OBJECTDIR}/modules/gsm/gsm.p1 ${OBJECTDIR}/modules/hcsr04/hcsr04.p1 ${OBJECTDIR}/modules/lcd/lcd.p1 ${OBJECTDIR}/modules/mcp320x/mcp320x.p1 ${OBJECTDIR}/modules/mpu6050/mpu6050.p1 ${OBJECTDIR}/modules/rtc/time.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/demo.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/lib/delay/delay.p1.d ${OBJECTDIR}/lib/spi/spi.p1.d ${OBJECTDIR}/lib/adc/adc.p1.d ${OBJECTDIR}/lib/eeprom/eeprom.p1.d ${OBJECTDIR}/lib/gpio/gpio.p1.d ${OBJECTDIR}/lib/i2c/i2c.p1.d ${OBJECTDIR}/lib/serial/serial.p1.d ${OBJECTDIR}/lib/nstring/Nstring.p1.d ${OBJECTDIR}/lib/isr/isr.p1.d ${OBJECTDIR}/lib/systick/systick.p1.d ${OBJECTDIR}/modules/dht11/dht11.p1.d ${OBJECTDIR}/modules/gsm/gsm.p1.d ${OBJECTDIR}/modules/hcsr04/hcsr04.p1.d ${OBJECTDIR}/modules/lcd/lcd.p1.d ${OBJECTDIR}/modules/mcp320x/mcp320x.p1.d ${OBJECTDIR}/modules/mpu6050/mpu6050.p1.d ${OBJECTDIR}/modules/rtc/time.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/68640168/adc.p1 ${OBJECTDIR}/_ext/68640168/delay.p1 ${OBJECTDIR}/_ext/68640168/eeprom.p1 ${OBJECTDIR}/_ext/68640168/i2c.p1 ${OBJECTDIR}/_ext/68640168/serial.p1 ${OBJECTDIR}/_ext/68640168/spi.p1 ${OBJECTDIR}/_ext/68640168/gpio.p1 ${OBJECTDIR}/systick.p1 ${OBJECTDIR}/isr.p1 ${OBJECTDIR}/Nstring.p1 ${OBJECTDIR}/dht11.p1 ${OBJECTDIR}/_ext/68640168/lcd.p1 ${OBJECTDIR}/_ext/68640168/mcp320x.p1 ${OBJECTDIR}/_ext/68640168/time.p1 ${OBJECTDIR}/hcsr04.p1 ${OBJECTDIR}/mpu6050.p1 ${OBJECTDIR}/gsm.p1 ${OBJECTDIR}/demo.p1 ${OBJECTDIR}/main.p1
+OBJECTFILES=${OBJECTDIR}/demo.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/lib/delay/delay.p1 ${OBJECTDIR}/lib/spi/spi.p1 ${OBJECTDIR}/lib/adc/adc.p1 ${OBJECTDIR}/lib/eeprom/eeprom.p1 ${OBJECTDIR}/lib/gpio/gpio.p1 ${OBJECTDIR}/lib/i2c/i2c.p1 ${OBJECTDIR}/lib/serial/serial.p1 ${OBJECTDIR}/lib/nstring/Nstring.p1 ${OBJECTDIR}/lib/isr/isr.p1 ${OBJECTDIR}/lib/systick/systick.p1 ${OBJECTDIR}/modules/dht11/dht11.p1 ${OBJECTDIR}/modules/gsm/gsm.p1 ${OBJECTDIR}/modules/hcsr04/hcsr04.p1 ${OBJECTDIR}/modules/lcd/lcd.p1 ${OBJECTDIR}/modules/mcp320x/mcp320x.p1 ${OBJECTDIR}/modules/mpu6050/mpu6050.p1 ${OBJECTDIR}/modules/rtc/time.p1
 
 # Source Files
-SOURCEFILES=../PIC18F4520_Master.X/adc.c ../PIC18F4520_Master.X/delay.c ../PIC18F4520_Master.X/eeprom.c ../PIC18F4520_Master.X/i2c.c ../PIC18F4520_Master.X/serial.c ../PIC18F4520_Master.X/spi.c ../PIC18F4520_Master.X/gpio.c systick.c isr.c Nstring.c dht11.c ../PIC18F4520_Master.X/lcd.c ../PIC18F4520_Master.X/mcp320x.c ../PIC18F4520_Master.X/time.c hcsr04.c mpu6050.c gsm.c demo.c main.c
+SOURCEFILES=demo.c main.c lib/delay/delay.c lib/spi/spi.c lib/adc/adc.c lib/eeprom/eeprom.c lib/gpio/gpio.c lib/i2c/i2c.c lib/serial/serial.c lib/nstring/Nstring.c lib/isr/isr.c lib/systick/systick.c modules/dht11/dht11.c modules/gsm/gsm.c modules/hcsr04/hcsr04.c modules/lcd/lcd.c modules/mcp320x/mcp320x.c modules/mpu6050/mpu6050.c modules/rtc/time.c
 
 
 CFLAGS=
@@ -87,147 +87,11 @@ MP_PROCESSOR_OPTION=18F4520
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/68640168/adc.p1: ../PIC18F4520_Master.X/adc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/adc.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/adc.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/adc.p1  ../PIC18F4520_Master.X/adc.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/adc.d ${OBJECTDIR}/_ext/68640168/adc.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/delay.p1: ../PIC18F4520_Master.X/delay.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/delay.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/delay.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/delay.p1  ../PIC18F4520_Master.X/delay.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/delay.d ${OBJECTDIR}/_ext/68640168/delay.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/delay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/eeprom.p1: ../PIC18F4520_Master.X/eeprom.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/eeprom.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/eeprom.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/eeprom.p1  ../PIC18F4520_Master.X/eeprom.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/eeprom.d ${OBJECTDIR}/_ext/68640168/eeprom.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/eeprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/i2c.p1: ../PIC18F4520_Master.X/i2c.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/i2c.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/i2c.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/i2c.p1  ../PIC18F4520_Master.X/i2c.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/i2c.d ${OBJECTDIR}/_ext/68640168/i2c.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/i2c.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/serial.p1: ../PIC18F4520_Master.X/serial.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/serial.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/serial.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/serial.p1  ../PIC18F4520_Master.X/serial.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/serial.d ${OBJECTDIR}/_ext/68640168/serial.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/serial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/spi.p1: ../PIC18F4520_Master.X/spi.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/spi.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/spi.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/spi.p1  ../PIC18F4520_Master.X/spi.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/spi.d ${OBJECTDIR}/_ext/68640168/spi.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/gpio.p1: ../PIC18F4520_Master.X/gpio.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/gpio.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/gpio.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/gpio.p1  ../PIC18F4520_Master.X/gpio.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/gpio.d ${OBJECTDIR}/_ext/68640168/gpio.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/gpio.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/systick.p1: systick.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/systick.p1.d 
-	@${RM} ${OBJECTDIR}/systick.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/systick.p1  systick.c 
-	@-${MV} ${OBJECTDIR}/systick.d ${OBJECTDIR}/systick.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/systick.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/isr.p1: isr.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/isr.p1.d 
-	@${RM} ${OBJECTDIR}/isr.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/isr.p1  isr.c 
-	@-${MV} ${OBJECTDIR}/isr.d ${OBJECTDIR}/isr.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/isr.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/Nstring.p1: Nstring.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Nstring.p1.d 
-	@${RM} ${OBJECTDIR}/Nstring.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/Nstring.p1  Nstring.c 
-	@-${MV} ${OBJECTDIR}/Nstring.d ${OBJECTDIR}/Nstring.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/Nstring.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/dht11.p1: dht11.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/dht11.p1.d 
-	@${RM} ${OBJECTDIR}/dht11.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/dht11.p1  dht11.c 
-	@-${MV} ${OBJECTDIR}/dht11.d ${OBJECTDIR}/dht11.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/dht11.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/lcd.p1: ../PIC18F4520_Master.X/lcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/lcd.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/lcd.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/lcd.p1  ../PIC18F4520_Master.X/lcd.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/lcd.d ${OBJECTDIR}/_ext/68640168/lcd.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/mcp320x.p1: ../PIC18F4520_Master.X/mcp320x.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/mcp320x.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/mcp320x.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/mcp320x.p1  ../PIC18F4520_Master.X/mcp320x.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/mcp320x.d ${OBJECTDIR}/_ext/68640168/mcp320x.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/mcp320x.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/time.p1: ../PIC18F4520_Master.X/time.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/time.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/time.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/time.p1  ../PIC18F4520_Master.X/time.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/time.d ${OBJECTDIR}/_ext/68640168/time.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/time.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/hcsr04.p1: hcsr04.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/hcsr04.p1.d 
-	@${RM} ${OBJECTDIR}/hcsr04.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/hcsr04.p1  hcsr04.c 
-	@-${MV} ${OBJECTDIR}/hcsr04.d ${OBJECTDIR}/hcsr04.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/hcsr04.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/mpu6050.p1: mpu6050.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/mpu6050.p1.d 
-	@${RM} ${OBJECTDIR}/mpu6050.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/mpu6050.p1  mpu6050.c 
-	@-${MV} ${OBJECTDIR}/mpu6050.d ${OBJECTDIR}/mpu6050.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/mpu6050.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/gsm.p1: gsm.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/gsm.p1.d 
-	@${RM} ${OBJECTDIR}/gsm.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/gsm.p1  gsm.c 
-	@-${MV} ${OBJECTDIR}/gsm.d ${OBJECTDIR}/gsm.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/gsm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/demo.p1: demo.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/demo.p1.d 
 	@${RM} ${OBJECTDIR}/demo.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/demo.p1  demo.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/demo.p1  demo.c 
 	@-${MV} ${OBJECTDIR}/demo.d ${OBJECTDIR}/demo.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/demo.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -235,152 +99,152 @@ ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.p1.d 
 	@${RM} ${OBJECTDIR}/main.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/main.p1  main.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/main.p1  main.c 
 	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/delay/delay.p1: lib/delay/delay.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/delay" 
+	@${RM} ${OBJECTDIR}/lib/delay/delay.p1.d 
+	@${RM} ${OBJECTDIR}/lib/delay/delay.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/delay/delay.p1  lib/delay/delay.c 
+	@-${MV} ${OBJECTDIR}/lib/delay/delay.d ${OBJECTDIR}/lib/delay/delay.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/delay/delay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/spi/spi.p1: lib/spi/spi.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/spi" 
+	@${RM} ${OBJECTDIR}/lib/spi/spi.p1.d 
+	@${RM} ${OBJECTDIR}/lib/spi/spi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/spi/spi.p1  lib/spi/spi.c 
+	@-${MV} ${OBJECTDIR}/lib/spi/spi.d ${OBJECTDIR}/lib/spi/spi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/spi/spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/adc/adc.p1: lib/adc/adc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/adc" 
+	@${RM} ${OBJECTDIR}/lib/adc/adc.p1.d 
+	@${RM} ${OBJECTDIR}/lib/adc/adc.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/adc/adc.p1  lib/adc/adc.c 
+	@-${MV} ${OBJECTDIR}/lib/adc/adc.d ${OBJECTDIR}/lib/adc/adc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/adc/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/eeprom/eeprom.p1: lib/eeprom/eeprom.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/eeprom" 
+	@${RM} ${OBJECTDIR}/lib/eeprom/eeprom.p1.d 
+	@${RM} ${OBJECTDIR}/lib/eeprom/eeprom.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/eeprom/eeprom.p1  lib/eeprom/eeprom.c 
+	@-${MV} ${OBJECTDIR}/lib/eeprom/eeprom.d ${OBJECTDIR}/lib/eeprom/eeprom.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/eeprom/eeprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/gpio/gpio.p1: lib/gpio/gpio.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/gpio" 
+	@${RM} ${OBJECTDIR}/lib/gpio/gpio.p1.d 
+	@${RM} ${OBJECTDIR}/lib/gpio/gpio.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/gpio/gpio.p1  lib/gpio/gpio.c 
+	@-${MV} ${OBJECTDIR}/lib/gpio/gpio.d ${OBJECTDIR}/lib/gpio/gpio.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/gpio/gpio.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/i2c/i2c.p1: lib/i2c/i2c.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/i2c" 
+	@${RM} ${OBJECTDIR}/lib/i2c/i2c.p1.d 
+	@${RM} ${OBJECTDIR}/lib/i2c/i2c.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/i2c/i2c.p1  lib/i2c/i2c.c 
+	@-${MV} ${OBJECTDIR}/lib/i2c/i2c.d ${OBJECTDIR}/lib/i2c/i2c.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/i2c/i2c.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/serial/serial.p1: lib/serial/serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/serial" 
+	@${RM} ${OBJECTDIR}/lib/serial/serial.p1.d 
+	@${RM} ${OBJECTDIR}/lib/serial/serial.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/serial/serial.p1  lib/serial/serial.c 
+	@-${MV} ${OBJECTDIR}/lib/serial/serial.d ${OBJECTDIR}/lib/serial/serial.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/serial/serial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/nstring/Nstring.p1: lib/nstring/Nstring.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/nstring" 
+	@${RM} ${OBJECTDIR}/lib/nstring/Nstring.p1.d 
+	@${RM} ${OBJECTDIR}/lib/nstring/Nstring.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/nstring/Nstring.p1  lib/nstring/Nstring.c 
+	@-${MV} ${OBJECTDIR}/lib/nstring/Nstring.d ${OBJECTDIR}/lib/nstring/Nstring.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/nstring/Nstring.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/isr/isr.p1: lib/isr/isr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/isr" 
+	@${RM} ${OBJECTDIR}/lib/isr/isr.p1.d 
+	@${RM} ${OBJECTDIR}/lib/isr/isr.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/isr/isr.p1  lib/isr/isr.c 
+	@-${MV} ${OBJECTDIR}/lib/isr/isr.d ${OBJECTDIR}/lib/isr/isr.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/isr/isr.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/systick/systick.p1: lib/systick/systick.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/systick" 
+	@${RM} ${OBJECTDIR}/lib/systick/systick.p1.d 
+	@${RM} ${OBJECTDIR}/lib/systick/systick.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/systick/systick.p1  lib/systick/systick.c 
+	@-${MV} ${OBJECTDIR}/lib/systick/systick.d ${OBJECTDIR}/lib/systick/systick.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/systick/systick.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/dht11/dht11.p1: modules/dht11/dht11.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/dht11" 
+	@${RM} ${OBJECTDIR}/modules/dht11/dht11.p1.d 
+	@${RM} ${OBJECTDIR}/modules/dht11/dht11.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/dht11/dht11.p1  modules/dht11/dht11.c 
+	@-${MV} ${OBJECTDIR}/modules/dht11/dht11.d ${OBJECTDIR}/modules/dht11/dht11.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/dht11/dht11.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/gsm/gsm.p1: modules/gsm/gsm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/gsm" 
+	@${RM} ${OBJECTDIR}/modules/gsm/gsm.p1.d 
+	@${RM} ${OBJECTDIR}/modules/gsm/gsm.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/gsm/gsm.p1  modules/gsm/gsm.c 
+	@-${MV} ${OBJECTDIR}/modules/gsm/gsm.d ${OBJECTDIR}/modules/gsm/gsm.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/gsm/gsm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/hcsr04/hcsr04.p1: modules/hcsr04/hcsr04.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/hcsr04" 
+	@${RM} ${OBJECTDIR}/modules/hcsr04/hcsr04.p1.d 
+	@${RM} ${OBJECTDIR}/modules/hcsr04/hcsr04.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/hcsr04/hcsr04.p1  modules/hcsr04/hcsr04.c 
+	@-${MV} ${OBJECTDIR}/modules/hcsr04/hcsr04.d ${OBJECTDIR}/modules/hcsr04/hcsr04.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/hcsr04/hcsr04.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/lcd/lcd.p1: modules/lcd/lcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/lcd" 
+	@${RM} ${OBJECTDIR}/modules/lcd/lcd.p1.d 
+	@${RM} ${OBJECTDIR}/modules/lcd/lcd.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/lcd/lcd.p1  modules/lcd/lcd.c 
+	@-${MV} ${OBJECTDIR}/modules/lcd/lcd.d ${OBJECTDIR}/modules/lcd/lcd.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/lcd/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/mcp320x/mcp320x.p1: modules/mcp320x/mcp320x.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/mcp320x" 
+	@${RM} ${OBJECTDIR}/modules/mcp320x/mcp320x.p1.d 
+	@${RM} ${OBJECTDIR}/modules/mcp320x/mcp320x.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/mcp320x/mcp320x.p1  modules/mcp320x/mcp320x.c 
+	@-${MV} ${OBJECTDIR}/modules/mcp320x/mcp320x.d ${OBJECTDIR}/modules/mcp320x/mcp320x.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/mcp320x/mcp320x.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/mpu6050/mpu6050.p1: modules/mpu6050/mpu6050.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/mpu6050" 
+	@${RM} ${OBJECTDIR}/modules/mpu6050/mpu6050.p1.d 
+	@${RM} ${OBJECTDIR}/modules/mpu6050/mpu6050.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/mpu6050/mpu6050.p1  modules/mpu6050/mpu6050.c 
+	@-${MV} ${OBJECTDIR}/modules/mpu6050/mpu6050.d ${OBJECTDIR}/modules/mpu6050/mpu6050.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/mpu6050/mpu6050.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/rtc/time.p1: modules/rtc/time.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/rtc" 
+	@${RM} ${OBJECTDIR}/modules/rtc/time.p1.d 
+	@${RM} ${OBJECTDIR}/modules/rtc/time.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/rtc/time.p1  modules/rtc/time.c 
+	@-${MV} ${OBJECTDIR}/modules/rtc/time.d ${OBJECTDIR}/modules/rtc/time.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/rtc/time.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/_ext/68640168/adc.p1: ../PIC18F4520_Master.X/adc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/adc.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/adc.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/adc.p1  ../PIC18F4520_Master.X/adc.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/adc.d ${OBJECTDIR}/_ext/68640168/adc.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/delay.p1: ../PIC18F4520_Master.X/delay.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/delay.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/delay.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/delay.p1  ../PIC18F4520_Master.X/delay.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/delay.d ${OBJECTDIR}/_ext/68640168/delay.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/delay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/eeprom.p1: ../PIC18F4520_Master.X/eeprom.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/eeprom.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/eeprom.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/eeprom.p1  ../PIC18F4520_Master.X/eeprom.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/eeprom.d ${OBJECTDIR}/_ext/68640168/eeprom.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/eeprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/i2c.p1: ../PIC18F4520_Master.X/i2c.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/i2c.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/i2c.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/i2c.p1  ../PIC18F4520_Master.X/i2c.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/i2c.d ${OBJECTDIR}/_ext/68640168/i2c.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/i2c.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/serial.p1: ../PIC18F4520_Master.X/serial.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/serial.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/serial.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/serial.p1  ../PIC18F4520_Master.X/serial.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/serial.d ${OBJECTDIR}/_ext/68640168/serial.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/serial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/spi.p1: ../PIC18F4520_Master.X/spi.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/spi.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/spi.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/spi.p1  ../PIC18F4520_Master.X/spi.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/spi.d ${OBJECTDIR}/_ext/68640168/spi.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/gpio.p1: ../PIC18F4520_Master.X/gpio.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/gpio.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/gpio.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/gpio.p1  ../PIC18F4520_Master.X/gpio.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/gpio.d ${OBJECTDIR}/_ext/68640168/gpio.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/gpio.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/systick.p1: systick.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/systick.p1.d 
-	@${RM} ${OBJECTDIR}/systick.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/systick.p1  systick.c 
-	@-${MV} ${OBJECTDIR}/systick.d ${OBJECTDIR}/systick.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/systick.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/isr.p1: isr.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/isr.p1.d 
-	@${RM} ${OBJECTDIR}/isr.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/isr.p1  isr.c 
-	@-${MV} ${OBJECTDIR}/isr.d ${OBJECTDIR}/isr.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/isr.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/Nstring.p1: Nstring.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Nstring.p1.d 
-	@${RM} ${OBJECTDIR}/Nstring.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/Nstring.p1  Nstring.c 
-	@-${MV} ${OBJECTDIR}/Nstring.d ${OBJECTDIR}/Nstring.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/Nstring.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/dht11.p1: dht11.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/dht11.p1.d 
-	@${RM} ${OBJECTDIR}/dht11.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/dht11.p1  dht11.c 
-	@-${MV} ${OBJECTDIR}/dht11.d ${OBJECTDIR}/dht11.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/dht11.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/lcd.p1: ../PIC18F4520_Master.X/lcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/lcd.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/lcd.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/lcd.p1  ../PIC18F4520_Master.X/lcd.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/lcd.d ${OBJECTDIR}/_ext/68640168/lcd.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/mcp320x.p1: ../PIC18F4520_Master.X/mcp320x.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/mcp320x.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/mcp320x.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/mcp320x.p1  ../PIC18F4520_Master.X/mcp320x.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/mcp320x.d ${OBJECTDIR}/_ext/68640168/mcp320x.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/mcp320x.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/68640168/time.p1: ../PIC18F4520_Master.X/time.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/68640168" 
-	@${RM} ${OBJECTDIR}/_ext/68640168/time.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/68640168/time.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/68640168/time.p1  ../PIC18F4520_Master.X/time.c 
-	@-${MV} ${OBJECTDIR}/_ext/68640168/time.d ${OBJECTDIR}/_ext/68640168/time.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/68640168/time.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/hcsr04.p1: hcsr04.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/hcsr04.p1.d 
-	@${RM} ${OBJECTDIR}/hcsr04.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/hcsr04.p1  hcsr04.c 
-	@-${MV} ${OBJECTDIR}/hcsr04.d ${OBJECTDIR}/hcsr04.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/hcsr04.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/mpu6050.p1: mpu6050.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/mpu6050.p1.d 
-	@${RM} ${OBJECTDIR}/mpu6050.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/mpu6050.p1  mpu6050.c 
-	@-${MV} ${OBJECTDIR}/mpu6050.d ${OBJECTDIR}/mpu6050.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/mpu6050.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/gsm.p1: gsm.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/gsm.p1.d 
-	@${RM} ${OBJECTDIR}/gsm.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/gsm.p1  gsm.c 
-	@-${MV} ${OBJECTDIR}/gsm.d ${OBJECTDIR}/gsm.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/gsm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/demo.p1: demo.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/demo.p1.d 
 	@${RM} ${OBJECTDIR}/demo.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/demo.p1  demo.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/demo.p1  demo.c 
 	@-${MV} ${OBJECTDIR}/demo.d ${OBJECTDIR}/demo.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/demo.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -388,9 +252,145 @@ ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.p1.d 
 	@${RM} ${OBJECTDIR}/main.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/main.p1  main.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/main.p1  main.c 
 	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/delay/delay.p1: lib/delay/delay.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/delay" 
+	@${RM} ${OBJECTDIR}/lib/delay/delay.p1.d 
+	@${RM} ${OBJECTDIR}/lib/delay/delay.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/delay/delay.p1  lib/delay/delay.c 
+	@-${MV} ${OBJECTDIR}/lib/delay/delay.d ${OBJECTDIR}/lib/delay/delay.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/delay/delay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/spi/spi.p1: lib/spi/spi.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/spi" 
+	@${RM} ${OBJECTDIR}/lib/spi/spi.p1.d 
+	@${RM} ${OBJECTDIR}/lib/spi/spi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/spi/spi.p1  lib/spi/spi.c 
+	@-${MV} ${OBJECTDIR}/lib/spi/spi.d ${OBJECTDIR}/lib/spi/spi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/spi/spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/adc/adc.p1: lib/adc/adc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/adc" 
+	@${RM} ${OBJECTDIR}/lib/adc/adc.p1.d 
+	@${RM} ${OBJECTDIR}/lib/adc/adc.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/adc/adc.p1  lib/adc/adc.c 
+	@-${MV} ${OBJECTDIR}/lib/adc/adc.d ${OBJECTDIR}/lib/adc/adc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/adc/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/eeprom/eeprom.p1: lib/eeprom/eeprom.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/eeprom" 
+	@${RM} ${OBJECTDIR}/lib/eeprom/eeprom.p1.d 
+	@${RM} ${OBJECTDIR}/lib/eeprom/eeprom.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/eeprom/eeprom.p1  lib/eeprom/eeprom.c 
+	@-${MV} ${OBJECTDIR}/lib/eeprom/eeprom.d ${OBJECTDIR}/lib/eeprom/eeprom.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/eeprom/eeprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/gpio/gpio.p1: lib/gpio/gpio.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/gpio" 
+	@${RM} ${OBJECTDIR}/lib/gpio/gpio.p1.d 
+	@${RM} ${OBJECTDIR}/lib/gpio/gpio.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/gpio/gpio.p1  lib/gpio/gpio.c 
+	@-${MV} ${OBJECTDIR}/lib/gpio/gpio.d ${OBJECTDIR}/lib/gpio/gpio.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/gpio/gpio.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/i2c/i2c.p1: lib/i2c/i2c.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/i2c" 
+	@${RM} ${OBJECTDIR}/lib/i2c/i2c.p1.d 
+	@${RM} ${OBJECTDIR}/lib/i2c/i2c.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/i2c/i2c.p1  lib/i2c/i2c.c 
+	@-${MV} ${OBJECTDIR}/lib/i2c/i2c.d ${OBJECTDIR}/lib/i2c/i2c.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/i2c/i2c.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/serial/serial.p1: lib/serial/serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/serial" 
+	@${RM} ${OBJECTDIR}/lib/serial/serial.p1.d 
+	@${RM} ${OBJECTDIR}/lib/serial/serial.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/serial/serial.p1  lib/serial/serial.c 
+	@-${MV} ${OBJECTDIR}/lib/serial/serial.d ${OBJECTDIR}/lib/serial/serial.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/serial/serial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/nstring/Nstring.p1: lib/nstring/Nstring.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/nstring" 
+	@${RM} ${OBJECTDIR}/lib/nstring/Nstring.p1.d 
+	@${RM} ${OBJECTDIR}/lib/nstring/Nstring.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/nstring/Nstring.p1  lib/nstring/Nstring.c 
+	@-${MV} ${OBJECTDIR}/lib/nstring/Nstring.d ${OBJECTDIR}/lib/nstring/Nstring.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/nstring/Nstring.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/isr/isr.p1: lib/isr/isr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/isr" 
+	@${RM} ${OBJECTDIR}/lib/isr/isr.p1.d 
+	@${RM} ${OBJECTDIR}/lib/isr/isr.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/isr/isr.p1  lib/isr/isr.c 
+	@-${MV} ${OBJECTDIR}/lib/isr/isr.d ${OBJECTDIR}/lib/isr/isr.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/isr/isr.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/lib/systick/systick.p1: lib/systick/systick.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lib/systick" 
+	@${RM} ${OBJECTDIR}/lib/systick/systick.p1.d 
+	@${RM} ${OBJECTDIR}/lib/systick/systick.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/lib/systick/systick.p1  lib/systick/systick.c 
+	@-${MV} ${OBJECTDIR}/lib/systick/systick.d ${OBJECTDIR}/lib/systick/systick.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/lib/systick/systick.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/dht11/dht11.p1: modules/dht11/dht11.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/dht11" 
+	@${RM} ${OBJECTDIR}/modules/dht11/dht11.p1.d 
+	@${RM} ${OBJECTDIR}/modules/dht11/dht11.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/dht11/dht11.p1  modules/dht11/dht11.c 
+	@-${MV} ${OBJECTDIR}/modules/dht11/dht11.d ${OBJECTDIR}/modules/dht11/dht11.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/dht11/dht11.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/gsm/gsm.p1: modules/gsm/gsm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/gsm" 
+	@${RM} ${OBJECTDIR}/modules/gsm/gsm.p1.d 
+	@${RM} ${OBJECTDIR}/modules/gsm/gsm.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/gsm/gsm.p1  modules/gsm/gsm.c 
+	@-${MV} ${OBJECTDIR}/modules/gsm/gsm.d ${OBJECTDIR}/modules/gsm/gsm.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/gsm/gsm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/hcsr04/hcsr04.p1: modules/hcsr04/hcsr04.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/hcsr04" 
+	@${RM} ${OBJECTDIR}/modules/hcsr04/hcsr04.p1.d 
+	@${RM} ${OBJECTDIR}/modules/hcsr04/hcsr04.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/hcsr04/hcsr04.p1  modules/hcsr04/hcsr04.c 
+	@-${MV} ${OBJECTDIR}/modules/hcsr04/hcsr04.d ${OBJECTDIR}/modules/hcsr04/hcsr04.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/hcsr04/hcsr04.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/lcd/lcd.p1: modules/lcd/lcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/lcd" 
+	@${RM} ${OBJECTDIR}/modules/lcd/lcd.p1.d 
+	@${RM} ${OBJECTDIR}/modules/lcd/lcd.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/lcd/lcd.p1  modules/lcd/lcd.c 
+	@-${MV} ${OBJECTDIR}/modules/lcd/lcd.d ${OBJECTDIR}/modules/lcd/lcd.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/lcd/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/mcp320x/mcp320x.p1: modules/mcp320x/mcp320x.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/mcp320x" 
+	@${RM} ${OBJECTDIR}/modules/mcp320x/mcp320x.p1.d 
+	@${RM} ${OBJECTDIR}/modules/mcp320x/mcp320x.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/mcp320x/mcp320x.p1  modules/mcp320x/mcp320x.c 
+	@-${MV} ${OBJECTDIR}/modules/mcp320x/mcp320x.d ${OBJECTDIR}/modules/mcp320x/mcp320x.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/mcp320x/mcp320x.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/mpu6050/mpu6050.p1: modules/mpu6050/mpu6050.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/mpu6050" 
+	@${RM} ${OBJECTDIR}/modules/mpu6050/mpu6050.p1.d 
+	@${RM} ${OBJECTDIR}/modules/mpu6050/mpu6050.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/mpu6050/mpu6050.p1  modules/mpu6050/mpu6050.c 
+	@-${MV} ${OBJECTDIR}/modules/mpu6050/mpu6050.d ${OBJECTDIR}/modules/mpu6050/mpu6050.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/mpu6050/mpu6050.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/modules/rtc/time.p1: modules/rtc/time.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/modules/rtc" 
+	@${RM} ${OBJECTDIR}/modules/rtc/time.p1.d 
+	@${RM} ${OBJECTDIR}/modules/rtc/time.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/modules/rtc/time.p1  modules/rtc/time.c 
+	@-${MV} ${OBJECTDIR}/modules/rtc/time.d ${OBJECTDIR}/modules/rtc/time.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/modules/rtc/time.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
@@ -405,13 +405,13 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.map  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     --rom=default,-7dc0-7fff --ram=default,-5f4-5ff,-f9c-f9c,-fd4-fd4,-fdb-fdf,-fe3-fe7,-feb-fef,-ffd-fff  $(COMPARISON_BUILD) --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.map  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     --rom=default,-7dc0-7fff --ram=default,-5f4-5ff,-f9c-f9c,-fd4-fd4,-fdb-fdf,-fe3-fe7,-feb-fef,-ffd-fff  $(COMPARISON_BUILD) --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	@${RM} dist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.hex 
 	
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.map  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     $(COMPARISON_BUILD) --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.map  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -D_XTAL_FREQ=20000000 -P -N255 -I"lib/delay" -I"lib/system" -I"lib/adc" -I"lib/eeprom" -I"lib/gpio" -I"lib/i2c" -I"lib/serial" -I"lib/spi" -I"lib/nstring" -I"lib/isr" -I"lib/systick" -I"modules/dht11" -I"modules/gsm" -I"modules/hcsr04" -I"modules/lcd" -I"modules/mcp320x" -I"modules/mpu6050" -I"modules/rtc" --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     $(COMPARISON_BUILD) --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/PIC18F4520_Master.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	
 endif
 

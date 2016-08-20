@@ -95,7 +95,7 @@ void hcsr04_test()
    HCSR04_init();
    while(1)
     {
-        HCSR04_trigger();
+        HCSR04_tsrigger();
         d=(get_pulse_width()/58);
         
         sprintf(line1,"Distance :%d",d);

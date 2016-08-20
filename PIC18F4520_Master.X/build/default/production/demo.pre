@@ -3951,7 +3951,7 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 15 "delay.h"
+# 15 "lib/delay\delay.h"
 void delay_ms(unsigned int d);
 void delay_us(unsigned int d);
 
@@ -4046,7 +4046,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 20 "system.h"
+# 20 "lib/system\system.h"
 #pragma config OSC = HS
 #pragma config WDT = OFF
 #pragma config BOREN = ON
@@ -4055,7 +4055,7 @@ typedef uint16_t uintptr_t;
 #pragma warning disable 520
 #pragma warning disable 752
 
-# 16 "lcd.h"
+# 16 "modules/lcd\lcd.h"
 uint8_t lcd_data_pins[4]={0,0,0,0};
 
 uint8_t RS=0;
@@ -4069,7 +4069,7 @@ void lcd_send(uint8_t byte,uint8_t rs_pin);
 void lcd_print(const char *str);
 void lcd_print_xy(unsigned char x,unsigned char y,const char *str);
 
-# 15 "serial.h"
+# 15 "lib/serial\serial.h"
 void serial_init(unsigned int baud_rate);
 void serial_write(char ch);
 void serial_print(const char *str);
@@ -4079,33 +4079,33 @@ void serial_flush(void);
 void serial_interrupt(void);
 void serial_responce(char *str,int timeout);
 
-# 15 "adc.h"
+# 15 "lib/adc\adc.h"
 uint16_t adc_read(uint8_t pin);
 
-# 14 "eeprom.h"
+# 14 "lib/eeprom\eeprom.h"
 void eeprom_write_byte(uint8_t addr,uint8_t data);
 unsigned char eeprom_read_byte(uint8_t addr);
 
 void eeprom_print(uint8_t addr,uint8_t *str);
 void eeprom_scan(uint8_t addr,uint8_t *str);
 
-# 15 "systick.h"
+# 15 "lib/systick\systick.h"
 void systick_init(void);
 volatile unsigned char timer_count=0;
 volatile unsigned int system_tick=0;
 void sys_interrupt();
 
-# 15 "mcp320x.h"
+# 15 "modules/mcp320x\mcp320x.h"
 uint16_t read_mcp320x(uint8_t channel);
 
-# 15 "time.h"
+# 15 "modules/rtc\time.h"
 void get_time(char *time_str);
 void set_time(unsigned char h,unsigned char m,unsigned char s);
 
 void get_date(char *date_str);
 void set_date(unsigned char d,unsigned char m,unsigned char y);
 
-# 15 "i2c.h"
+# 15 "lib/i2c\i2c.h"
 void i2c_init(void);
 void i2c_start(void);
 void i2c_restart(void);
@@ -4117,18 +4117,18 @@ void i2c_stop(void);
 void i2c_device_write(unsigned char device_id,unsigned char addr,unsigned int data);
 unsigned int i2c_device_read(unsigned char device_id,unsigned char addr);
 
-# 15 "spi.h"
+# 15 "lib/spi\spi.h"
 void spi_slave_init(void);
 void spi_slave(uint8_t state);
 void spi_init(void);
 uint8_t spi_data(uint8_t tx_data);
 
-# 15 "gpio.h"
+# 15 "lib/gpio\gpio.h"
 void gpio_pin_mode(unsigned char pin,unsigned char mode);
 void gpio_pin_write(unsigned char pin,unsigned char bit_val);
 unsigned char gpio_pin_read(unsigned char pin);
 
-# 54 "dht11.h"
+# 54 "modules/dht11\dht11.h"
 extern uint8_t humidity;
 extern uint8_t temperature;
 
@@ -4136,16 +4136,16 @@ uint8_t bits[5];
 int8_t dht_readSensor(uint8_t pin, uint8_t wakeupDelay, uint8_t leadingZeroBits);
 int8_t dht_read11(uint8_t pin);
 
-# 21 "hcsr04.h"
+# 21 "modules/hcsr04\hcsr04.h"
 void HCSR04_init();
 void HCSR04_tsrigger();
 int16_t get_pulse_width();
 
-# 17 "mpu6050.h"
+# 17 "modules/mpu6050\mpu6050.h"
 void mpu6050_init();
 void mpu6050_read(int16_t *);
 
-# 15 "gsm.h"
+# 15 "modules/gsm\gsm.h"
 void gsm_cmd(const char *cmd,char *Response,unsigned int timeout);
 void gsm_init(void);
 void gsm_pname(char *pname);
@@ -4153,7 +4153,7 @@ void gsm_msg_send(const char *num,const char *msg);
 unsigned int gsm_wait(char *mid);
 void gsm_msg_read(char *num,char *msg,char *idn);
 
-void debug(char *str);
+void debug(const char *str);
 
 # 4 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\__size_t.h"
 typedef unsigned size_t;
@@ -4299,7 +4299,7 @@ lcd_print_xy(0,0,"HC-SR04");
 HCSR04_init();
 while(1)
 {
-HCSR04_trigger();
+HCSR04_tsrigger();
 d=(get_pulse_width()/58);
 
 sprintf(line1,"Distance :%d",d);

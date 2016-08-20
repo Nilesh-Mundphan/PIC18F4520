@@ -5,26 +5,25 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="Core Header" projectFiles="true">
-        <itemPath>../PIC18F4520_Master.X/adc.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/delay.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/eeprom.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/gpio.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/i2c.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/serial.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/spi.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/system.h</itemPath>
-        <itemPath>systick.h</itemPath>
-        <itemPath>isr.h</itemPath>
-        <itemPath>Nstring.h</itemPath>
+        <itemPath>lib/delay/delay.h</itemPath>
+        <itemPath>lib/adc/adc.h</itemPath>
+        <itemPath>lib/eeprom/eeprom.h</itemPath>
+        <itemPath>lib/gpio/gpio.h</itemPath>
+        <itemPath>lib/i2c/i2c.h</itemPath>
+        <itemPath>lib/serial/serial.h</itemPath>
+        <itemPath>lib/spi/spi.h</itemPath>
+        <itemPath>lib/system/system.h</itemPath>
+        <itemPath>lib/nstring/Nstring.h</itemPath>
+        <itemPath>lib/systick/systick.h</itemPath>
+        <itemPath>lib/isr/isr.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Modules" projectFiles="true">
-        <itemPath>dht11.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/lcd.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/mcp320x.h</itemPath>
-        <itemPath>../PIC18F4520_Master.X/time.h</itemPath>
-        <itemPath>hcsr04.h</itemPath>
-        <itemPath>mpu6050.h</itemPath>
-        <itemPath>gsm.h</itemPath>
+        <itemPath>modules/rtc/time.h</itemPath>
+        <itemPath>modules/dht11/dht11.h</itemPath>
+        <itemPath>modules/gsm/gsm.h</itemPath>
+        <itemPath>modules/hcsr04/hcsr04.h</itemPath>
+        <itemPath>modules/mcp320x/mcp320x.h</itemPath>
+        <itemPath>modules/mpu6050/mpu6050.h</itemPath>
       </logicalFolder>
       <itemPath>demo.h</itemPath>
     </logicalFolder>
@@ -36,26 +35,25 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="Core Source" projectFiles="true">
-        <itemPath>../PIC18F4520_Master.X/adc.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/delay.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/eeprom.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/i2c.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/serial.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/spi.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/gpio.c</itemPath>
-        <itemPath>systick.c</itemPath>
-        <itemPath>isr.c</itemPath>
-        <itemPath>Nstring.c</itemPath>
-        <itemPath>oled.h</itemPath>
+        <itemPath>lib/delay/delay.c</itemPath>
+        <itemPath>lib/spi/spi.c</itemPath>
+        <itemPath>lib/adc/adc.c</itemPath>
+        <itemPath>lib/eeprom/eeprom.c</itemPath>
+        <itemPath>lib/gpio/gpio.c</itemPath>
+        <itemPath>lib/i2c/i2c.c</itemPath>
+        <itemPath>lib/serial/serial.c</itemPath>
+        <itemPath>lib/nstring/Nstring.c</itemPath>
+        <itemPath>lib/isr/isr.c</itemPath>
+        <itemPath>lib/systick/systick.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Modules" projectFiles="true">
-        <itemPath>dht11.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/lcd.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/mcp320x.c</itemPath>
-        <itemPath>../PIC18F4520_Master.X/time.c</itemPath>
-        <itemPath>hcsr04.c</itemPath>
-        <itemPath>mpu6050.c</itemPath>
-        <itemPath>gsm.c</itemPath>
+        <itemPath>modules/dht11/dht11.c</itemPath>
+        <itemPath>modules/gsm/gsm.c</itemPath>
+        <itemPath>modules/hcsr04/hcsr04.c</itemPath>
+        <itemPath>modules/lcd/lcd.c</itemPath>
+        <itemPath>modules/mcp320x/mcp320x.c</itemPath>
+        <itemPath>modules/mpu6050/mpu6050.c</itemPath>
+        <itemPath>modules/rtc/time.c</itemPath>
       </logicalFolder>
       <itemPath>demo.c</itemPath>
       <itemPath>main.c</itemPath>
@@ -107,7 +105,8 @@
       <HI-TECH-COMP>
         <property key="asmlist" value="true"/>
         <property key="define-macros" value="_XTAL_FREQ=20000000"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="lib\delay;lib\system;lib\adc;lib\eeprom;lib\gpio;lib\i2c;lib\serial;lib\spi;lib\nstring;lib\isr;lib\systick;modules\dht11;modules\gsm;modules\hcsr04;modules\lcd;modules\mcp320x;modules\mpu6050;modules\rtc"/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
@@ -176,7 +175,6 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

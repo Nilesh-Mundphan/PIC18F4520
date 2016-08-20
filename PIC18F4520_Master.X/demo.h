@@ -12,6 +12,7 @@
 extern "C" {
 #endif
 
+void io_test();    
 void gsm_test();
 void mpu6050_test();
 void lcd_test();

@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"13 main.c
-[v _io_test `(i ~T0 @X0 0 ef ]
+"15 demo.h
+[v _io_test `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -2976,8 +2976,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 157: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 159: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 161: extern __nonreentrant void _delay3(unsigned char);
-[; ;delay.h: 15: void delay_ms(unsigned int d);
-[; ;delay.h: 16: void delay_us(unsigned int d);
+[; ;delay\delay.h: 15: void delay_ms(unsigned int d);
+[; ;delay\delay.h: 16: void delay_us(unsigned int d);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -3006,7 +3006,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-"20 system.h
+"20 lib/system\system.h
 [p x OSC=HS ]
 "21
 [p x WDT=OFF ]
@@ -3020,21 +3020,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p n 520 ]
 "26
 [p n 752 ]
-[; ;gpio.h: 15: void gpio_pin_mode(unsigned char pin,unsigned char mode);
-[; ;gpio.h: 16: void gpio_pin_write(unsigned char pin,unsigned char bit_val);
-[; ;gpio.h: 17: unsigned char gpio_pin_read(unsigned char pin);
-[; ;demo.h: 15: void gsm_test();
-[; ;demo.h: 16: void mpu6050_test();
-[; ;demo.h: 17: void lcd_test();
-[; ;demo.h: 18: void adc_test();
-[; ;demo.h: 19: void eeprom_test();
-[; ;demo.h: 20: void system_tick_test();
-[; ;demo.h: 21: void mcp32_test();
-[; ;demo.h: 22: void serial_test();
-[; ;demo.h: 23: void i2c_eeprom_test();
-[; ;demo.h: 24: void rtc_test();
-[; ;demo.h: 25: void dht11_test();
-[; ;demo.h: 26: void hcsr04_test();
+[; ;gpio\gpio.h: 15: void gpio_pin_mode(unsigned char pin,unsigned char mode);
+[; ;gpio\gpio.h: 16: void gpio_pin_write(unsigned char pin,unsigned char bit_val);
+[; ;gpio\gpio.h: 17: unsigned char gpio_pin_read(unsigned char pin);
+[; ;demo.h: 15: void io_test();
+[; ;demo.h: 16: void gsm_test();
+[; ;demo.h: 17: void mpu6050_test();
+[; ;demo.h: 18: void lcd_test();
+[; ;demo.h: 19: void adc_test();
+[; ;demo.h: 20: void eeprom_test();
+[; ;demo.h: 21: void system_tick_test();
+[; ;demo.h: 22: void mcp32_test();
+[; ;demo.h: 23: void serial_test();
+[; ;demo.h: 24: void i2c_eeprom_test();
+[; ;demo.h: 25: void rtc_test();
+[; ;demo.h: 26: void dht11_test();
+[; ;demo.h: 27: void hcsr04_test();
 "12 main.c
 [v _main `(v ~T0 @X0 1 ef ]
 {

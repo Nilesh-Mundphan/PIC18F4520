@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.37 build -260352376 
-                                                                                               Sat Aug 20 00:41:14 2016
+                                                                                               Sat Aug 20 13:42:01 2016
 
 Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110536
      1                           	processor	18F4520
@@ -32,7 +32,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
     26  00055C                     __pidataCOMRAM:
     27                           	opt stack 0
     28                           
-    29                           ;initializer for rtc_test@F3465
+    29                           ;initializer for rtc_test@F3464
     30  00055C  6E                 	db	110
     31  00055D  69                 	db	105
     32  00055E  6C                 	db	108
@@ -151,7 +151,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    145  007E0E  64                 	db	100	;'d'
    146  007E0F  20                 	db	32
    147  007E10  00                 	db	0
-   148  007E11                     STR_49:
+   148  007E11                     STR_40:
    149  007E11  2D                 	db	45
    150  007E12  2D                 	db	45
    151  007E13  2D                 	db	45
@@ -403,7 +403,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    397  007F09  0D                 	db	13
    398  007F0A  0A                 	db	10
    399  007F0B  00                 	db	0
-   400  007F0C                     STR_21:
+   400  007F0C                     STR_12:
    401  007F0C  41                 	db	65	;'A'
    402  007F0D  44                 	db	68	;'D'
    403  007F0E  43                 	db	67	;'C'
@@ -484,93 +484,93 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    478  007F59  0D                 	db	13
    479  007F5A  0A                 	db	10
    480  007F5B  00                 	db	0
-   481  007F5C                     STR_41:
-   482  007F5C  49                 	db	73	;'I'
-   483  007F5D  32                 	db	50	;'2'
-   484  007F5E  43                 	db	67	;'C'
-   485  007F5F  20                 	db	32
-   486  007F60  52                 	db	82	;'R'
-   487  007F61  54                 	db	84	;'T'
-   488  007F62  43                 	db	67	;'C'
-   489  007F63  20                 	db	32
-   490  007F64  0D                 	db	13
-   491  007F65  0A                 	db	10
-   492  007F66  00                 	db	0
-   493  007F67  4E                 	db	78	;'N'
-   494  007F68  65                 	db	101	;'e'
-   495  007F69  77                 	db	119	;'w'
+   481  007F5C  4E                 	db	78	;'N'
+   482  007F5D  65                 	db	101	;'e'
+   483  007F5E  77                 	db	119	;'w'
+   484  007F5F  20                 	db	32
+   485  007F60  53                 	db	83	;'S'
+   486  007F61  4D                 	db	77	;'M'
+   487  007F62  53                 	db	83	;'S'
+   488  007F63  20                 	db	32
+   489  007F64  21                 	db	33
+   490  007F65  21                 	db	33
+   491  007F66  00                 	db	0
+   492  007F67                     STR_32:
+   493  007F67  49                 	db	73	;'I'
+   494  007F68  32                 	db	50	;'2'
+   495  007F69  43                 	db	67	;'C'
    496  007F6A  20                 	db	32
-   497  007F6B  53                 	db	83	;'S'
-   498  007F6C  4D                 	db	77	;'M'
-   499  007F6D  53                 	db	83	;'S'
+   497  007F6B  52                 	db	82	;'R'
+   498  007F6C  54                 	db	84	;'T'
+   499  007F6D  43                 	db	67	;'C'
    500  007F6E  20                 	db	32
-   501  007F6F  21                 	db	33
-   502  007F70  21                 	db	33
+   501  007F6F  0D                 	db	13
+   502  007F70  0A                 	db	10
    503  007F71  00                 	db	0
    504  007F72  41                 	db	65	;'A'
-   505  007F73  44                 	db	68	;'D'
-   506  007F74  43                 	db	67	;'C'
-   507  007F75  20                 	db	32
-   508  007F76  30                 	db	48	;'0'
-   509  007F77  3A                 	db	58	;':'
-   510  007F78  20                 	db	32
-   511  007F79  25                 	db	37
-   512  007F7A  64                 	db	100	;'d'
+   505  007F73  54                 	db	84	;'T'
+   506  007F74  2B                 	db	43
+   507  007F75  43                 	db	67	;'C'
+   508  007F76  4D                 	db	77	;'M'
+   509  007F77  47                 	db	71	;'G'
+   510  007F78  46                 	db	70	;'F'
+   511  007F79  3D                 	db	61	;'='
+   512  007F7A  31                 	db	49	;'1'
    513  007F7B  00                 	db	0
    514  007F7C  41                 	db	65	;'A'
-   515  007F7D  54                 	db	84	;'T'
-   516  007F7E  2B                 	db	43
-   517  007F7F  43                 	db	67	;'C'
-   518  007F80  4D                 	db	77	;'M'
-   519  007F81  47                 	db	71	;'G'
-   520  007F82  46                 	db	70	;'F'
-   521  007F83  3D                 	db	61	;'='
-   522  007F84  31                 	db	49	;'1'
+   515  007F7D  44                 	db	68	;'D'
+   516  007F7E  43                 	db	67	;'C'
+   517  007F7F  20                 	db	32
+   518  007F80  30                 	db	48	;'0'
+   519  007F81  3A                 	db	58	;':'
+   520  007F82  20                 	db	32
+   521  007F83  25                 	db	37
+   522  007F84  64                 	db	100	;'d'
    523  007F85  00                 	db	0
-   524  007F86  54                 	db	84	;'T'
-   525  007F87  49                 	db	73	;'I'
-   526  007F88  43                 	db	67	;'C'
-   527  007F89  4B                 	db	75	;'K'
-   528  007F8A  3A                 	db	58	;':'
-   529  007F8B  20                 	db	32
-   530  007F8C  25                 	db	37
-   531  007F8D  64                 	db	100	;'d'
+   524  007F86  41                 	db	65	;'A'
+   525  007F87  54                 	db	84	;'T'
+   526  007F88  2B                 	db	43
+   527  007F89  43                 	db	67	;'C'
+   528  007F8A  4D                 	db	77	;'M'
+   529  007F8B  47                 	db	71	;'G'
+   530  007F8C  52                 	db	82	;'R'
+   531  007F8D  3D                 	db	61	;'='
    532  007F8E  00                 	db	0
-   533  007F8F  47                 	db	71	;'G'
-   534  007F90  53                 	db	83	;'S'
-   535  007F91  4D                 	db	77	;'M'
-   536  007F92  20                 	db	32
-   537  007F93  49                 	db	73	;'I'
-   538  007F94  6E                 	db	110	;'n'
-   539  007F95  69                 	db	105	;'i'
-   540  007F96  74                 	db	116	;'t'
+   533  007F8F  41                 	db	65	;'A'
+   534  007F90  54                 	db	84	;'T'
+   535  007F91  2B                 	db	43
+   536  007F92  43                 	db	67	;'C'
+   537  007F93  4D                 	db	77	;'M'
+   538  007F94  47                 	db	71	;'G'
+   539  007F95  53                 	db	83	;'S'
+   540  007F96  3D                 	db	61	;'='
    541  007F97  00                 	db	0
    542  007F98  41                 	db	65	;'A'
    543  007F99  54                 	db	84	;'T'
    544  007F9A  2B                 	db	43
    545  007F9B  43                 	db	67	;'C'
-   546  007F9C  4D                 	db	77	;'M'
-   547  007F9D  47                 	db	71	;'G'
-   548  007F9E  52                 	db	82	;'R'
-   549  007F9F  3D                 	db	61	;'='
+   546  007F9C  53                 	db	83	;'S'
+   547  007F9D  50                 	db	80	;'P'
+   548  007F9E  4E                 	db	78	;'N'
+   549  007F9F  3F                 	db	63	;'?'
    550  007FA0  00                 	db	0
-   551  007FA1  41                 	db	65	;'A'
-   552  007FA2  54                 	db	84	;'T'
-   553  007FA3  2B                 	db	43
-   554  007FA4  43                 	db	67	;'C'
-   555  007FA5  4D                 	db	77	;'M'
-   556  007FA6  47                 	db	71	;'G'
-   557  007FA7  53                 	db	83	;'S'
-   558  007FA8  3D                 	db	61	;'='
+   551  007FA1  54                 	db	84	;'T'
+   552  007FA2  49                 	db	73	;'I'
+   553  007FA3  43                 	db	67	;'C'
+   554  007FA4  4B                 	db	75	;'K'
+   555  007FA5  3A                 	db	58	;':'
+   556  007FA6  20                 	db	32
+   557  007FA7  25                 	db	37
+   558  007FA8  64                 	db	100	;'d'
    559  007FA9  00                 	db	0
-   560  007FAA  41                 	db	65	;'A'
-   561  007FAB  54                 	db	84	;'T'
-   562  007FAC  2B                 	db	43
-   563  007FAD  43                 	db	67	;'C'
-   564  007FAE  53                 	db	83	;'S'
-   565  007FAF  50                 	db	80	;'P'
-   566  007FB0  4E                 	db	78	;'N'
-   567  007FB1  3F                 	db	63	;'?'
+   560  007FAA  47                 	db	71	;'G'
+   561  007FAB  53                 	db	83	;'S'
+   562  007FAC  4D                 	db	77	;'M'
+   563  007FAD  20                 	db	32
+   564  007FAE  49                 	db	73	;'I'
+   565  007FAF  6E                 	db	110	;'n'
+   566  007FB0  69                 	db	105	;'i'
+   567  007FB1  74                 	db	116	;'t'
    568  007FB2  00                 	db	0
    569  007FB3  52                 	db	82	;'R'
    570  007FB4  65                 	db	101	;'e'
@@ -580,7 +580,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    574  007FB8  0D                 	db	13
    575  007FB9  0A                 	db	10
    576  007FBA  00                 	db	0
-   577  007FBB                     STR_16:
+   577  007FBB                     STR_7:
    578  007FBB  48                 	db	72	;'H'
    579  007FBC  43                 	db	67	;'C'
    580  007FBD  2D                 	db	45
@@ -638,14 +638,14 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    632  007FF1  45                 	db	69	;'E'
    633  007FF2  30                 	db	48	;'0'
    634  007FF3  00                 	db	0
-   635  007FF4  68                 	db	104	;'h'
-   636  007FF5  69                 	db	105	;'i'
+   635  007FF4  4F                 	db	79	;'O'
+   636  007FF5  4B                 	db	75	;'K'
    637  007FF6  00                 	db	0
-   638  007FF7  4F                 	db	79	;'O'
-   639  007FF8  4B                 	db	75	;'K'
+   638  007FF7  41                 	db	65	;'A'
+   639  007FF8  54                 	db	84	;'T'
    640  007FF9  00                 	db	0
-   641  007FFA  41                 	db	65	;'A'
-   642  007FFB  54                 	db	84	;'T'
+   641  007FFA  68                 	db	104	;'h'
+   642  007FFB  69                 	db	105	;'i'
    643  007FFC  00                 	db	0
    644  007FFD  0D                 	db	13
    645  007FFE  00                 	db	0
@@ -719,10 +719,10 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    713                           	psect	bssCOMRAM
    714  000001                     __pbssCOMRAM:
    715                           	opt stack 0
-   716  000001                     adc_test@F3448:
+   716  000001                     adc_test@F3447:
    717                           	opt stack 0
    718  000001                     	ds	16
-   719  000011                     system_tick_test@F3454:
+   719  000011                     system_tick_test@F3453:
    720                           	opt stack 0
    721  000011                     	ds	16
    722  000021                     _bits:
@@ -762,7 +762,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    756                           	psect	dataCOMRAM
    757  000046                     __pdataCOMRAM:
    758                           	opt stack 0
-   759  000046                     rtc_test@F3465:
+   759  000046                     rtc_test@F3464:
    760                           	opt stack 0
    761  000046                     	ds	4
    762  00004A                     _rx_Buffer_Head:
@@ -891,8 +891,8 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    885                           
    886                           ;incstack = 0
    887  000564  EC88  F002         	call	_io_test	;wreg free
-   888  000568                     l934:
-   889  000568  D7FF               	goto	l934
+   888  000568                     l170:
+   889  000568  D7FF               	goto	l170
    890  00056A                     __end_of_main:
    891                           	opt stack 0
    892                           tblptru	equ	0xFF8
@@ -956,14 +956,14 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    950  00051C  6E42               	movwf	gpio_pin_mode@mode,c
    951  00051E  0E01               	movlw	1
    952  000520  ECD4  F000         	call	_gpio_pin_mode
-   953  000524                     l851:
+   953  000524                     l87:
    954                           
    955                           ;demo.c: 24: if((gpio_pin_read(1)))
    956  000524  0E01               	movlw	1
    957  000526  EC91  F001         	call	_gpio_pin_read
    958  00052A  0900               	iorlw	0
    959  00052C  B4D8               	btfsc	status,2,c
-   960  00052E  D006               	goto	l3385
+   960  00052E  D006               	goto	l3173
    961                           
    962                           ;demo.c: 25: {
    963                           ;demo.c: 26: gpio_pin_write(0,0);
@@ -973,8 +973,8 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    967  000536  EC0D  F000         	call	_gpio_pin_write
    968                           
    969                           ;demo.c: 27: }
-   970  00053A  D7F4               	goto	l851
-   971  00053C                     l3385:
+   970  00053A  D7F4               	goto	l87
+   971  00053C                     l3173:
    972                           
    973                           ;demo.c: 28: else{
    974                           ;demo.c: 29: gpio_pin_write(0,1);
@@ -982,7 +982,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    976  00053E  6E42               	movwf	gpio_pin_write@bit_val,c
    977  000540  0E00               	movlw	0
    978  000542  EC0D  F000         	call	_gpio_pin_write
-   979  000546  D7EE               	goto	l851
+   979  000546  D7EE               	goto	l87
    980  000548                     __end_of_io_test:
    981                           	opt stack 0
    982                           tblptru	equ	0xFF8
@@ -998,7 +998,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    992                           
    993 ;; *************** function _gpio_pin_write *****************
    994 ;; Defined at:
-   995 ;;		line 68 in file "../PIC18F4520_Master.X/gpio.c"
+   995 ;;		line 68 in file "lib/gpio/gpio.c"
    996 ;; Parameters:    Size  Location     Type
    997 ;;  pin             1    wreg     unsigned char 
    998 ;;  bit_val         1   17[COMRAM] unsigned char 
@@ -1025,9 +1025,9 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1019 ;; This function is called by:
   1020 ;;		_io_test
   1021 ;;		_dht_readSensor
-  1022 ;;		_lcd_nibble
-  1023 ;;		_lcd_send
-  1024 ;;		_HCSR04_trigger
+  1022 ;;		_HCSR04_trigger
+  1023 ;;		_lcd_nibble
+  1024 ;;		_lcd_send
   1025 ;; This function uses a non-reentrant model
   1026 ;;
   1027                           
@@ -1044,13 +1044,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1038                           ;gpio.c: 70: if (pin<8)
   1039  00001C  0E08               	movlw	8
   1040  00001E  6045               	cpfslt	gpio_pin_write@pin,c
-  1041  000020  D023               	goto	l3111
+  1041  000020  D023               	goto	l3095
   1042                           
   1043                           ;gpio.c: 71: {
   1044                           ;gpio.c: 72: if (bit_val==0)
   1045  000022  5042               	movf	gpio_pin_write@bit_val,w,c
   1046  000024  A4D8               	btfss	status,2,c
-  1047  000026  D00F               	goto	l3107
+  1047  000026  D00F               	goto	l3091
   1048                           
   1049                           ;gpio.c: 73: {
   1050                           ;gpio.c: 74: PORTB = LATB & ~(1<<pin);
@@ -1058,13 +1058,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1052  00002C  0E01               	movlw	1
   1053  00002E  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1054  000030  2A43               	incf	??_gpio_pin_write,f,c
-  1055  000032  D002               	goto	u2214
-  1056  000034                     u2215:
+  1055  000032  D002               	goto	u2204
+  1056  000034                     u2205:
   1057  000034  90D8               	bcf	status,0,c
   1058  000036  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1059  000038                     u2214:
+  1059  000038                     u2204:
   1060  000038  2E43               	decfsz	??_gpio_pin_write,f,c
-  1061  00003A  D7FC               	goto	u2215
+  1061  00003A  D7FC               	goto	u2205
   1062  00003C  5044               	movf	??_gpio_pin_write+1,w,c
   1063  00003E  0AFF               	xorlw	255
   1064  000040  148A               	andwf	3978,w,c	;volatile
@@ -1072,7 +1072,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1066                           
   1067                           ;gpio.c: 75: }
   1068  000044  0012               	return	
-  1069  000046                     l3107:
+  1069  000046                     l3091:
   1070                           
   1071                           ;gpio.c: 76: else if (bit_val==1)
   1072  000046  0442               	decf	gpio_pin_write@bit_val,w,c
@@ -1085,13 +1085,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1079  000050  0E01               	movlw	1
   1080  000052  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1081  000054  2A43               	incf	??_gpio_pin_write,f,c
-  1082  000056  D002               	goto	u2234
-  1083  000058                     u2235:
+  1082  000056  D002               	goto	u2224
+  1083  000058                     u2225:
   1084  000058  90D8               	bcf	status,0,c
   1085  00005A  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1086  00005C                     u2234:
+  1086  00005C                     u2224:
   1087  00005C  2E43               	decfsz	??_gpio_pin_write,f,c
-  1088  00005E  D7FC               	goto	u2235
+  1088  00005E  D7FC               	goto	u2225
   1089  000060  5044               	movf	??_gpio_pin_write+1,w,c
   1090  000062  108A               	iorwf	3978,w,c	;volatile
   1091  000064  6E81               	movwf	3969,c	;volatile
@@ -1099,12 +1099,12 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1093                           ;gpio.c: 79: }
   1094                           ;gpio.c: 80: }
   1095  000066  0012               	return	
-  1096  000068                     l3111:
+  1096  000068                     l3095:
   1097                           
   1098                           ;gpio.c: 81: else if (pin<16)
   1099  000068  0E10               	movlw	16
   1100  00006A  6045               	cpfslt	gpio_pin_write@pin,c
-  1101  00006C  D025               	goto	l3123
+  1101  00006C  D025               	goto	l3107
   1102                           
   1103                           ;gpio.c: 82: {
   1104                           ;gpio.c: 83: pin-=8;
@@ -1114,7 +1114,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1108                           ;gpio.c: 84: if (bit_val==0)
   1109  000072  5042               	movf	gpio_pin_write@bit_val,w,c
   1110  000074  A4D8               	btfss	status,2,c
-  1111  000076  D00F               	goto	l3119
+  1111  000076  D00F               	goto	l3103
   1112                           
   1113                           ;gpio.c: 85: {
   1114                           ;gpio.c: 86: PORTD = LATD & ~(1<<pin);
@@ -1122,13 +1122,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1116  00007C  0E01               	movlw	1
   1117  00007E  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1118  000080  2A43               	incf	??_gpio_pin_write,f,c
-  1119  000082  D002               	goto	u2264
-  1120  000084                     u2265:
+  1119  000082  D002               	goto	u2254
+  1120  000084                     u2255:
   1121  000084  90D8               	bcf	status,0,c
   1122  000086  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1123  000088                     u2264:
+  1123  000088                     u2254:
   1124  000088  2E43               	decfsz	??_gpio_pin_write,f,c
-  1125  00008A  D7FC               	goto	u2265
+  1125  00008A  D7FC               	goto	u2255
   1126  00008C  5044               	movf	??_gpio_pin_write+1,w,c
   1127  00008E  0AFF               	xorlw	255
   1128  000090  148C               	andwf	3980,w,c	;volatile
@@ -1136,7 +1136,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1130                           
   1131                           ;gpio.c: 87: }
   1132  000094  0012               	return	
-  1133  000096                     l3119:
+  1133  000096                     l3103:
   1134                           
   1135                           ;gpio.c: 88: else if (bit_val==1)
   1136  000096  0442               	decf	gpio_pin_write@bit_val,w,c
@@ -1149,13 +1149,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1143  0000A0  0E01               	movlw	1
   1144  0000A2  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1145  0000A4  2A43               	incf	??_gpio_pin_write,f,c
-  1146  0000A6  D002               	goto	u2284
-  1147  0000A8                     u2285:
+  1146  0000A6  D002               	goto	u2274
+  1147  0000A8                     u2275:
   1148  0000A8  90D8               	bcf	status,0,c
   1149  0000AA  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1150  0000AC                     u2284:
+  1150  0000AC                     u2274:
   1151  0000AC  2E43               	decfsz	??_gpio_pin_write,f,c
-  1152  0000AE  D7FC               	goto	u2285
+  1152  0000AE  D7FC               	goto	u2275
   1153  0000B0  5044               	movf	??_gpio_pin_write+1,w,c
   1154  0000B2  108C               	iorwf	3980,w,c	;volatile
   1155  0000B4  6E83               	movwf	3971,c	;volatile
@@ -1163,12 +1163,12 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1157                           ;gpio.c: 91: }
   1158                           ;gpio.c: 92: }
   1159  0000B6  0012               	return	
-  1160  0000B8                     l3123:
+  1160  0000B8                     l3107:
   1161                           
   1162                           ;gpio.c: 93: else if (pin<24)
   1163  0000B8  0E18               	movlw	24
   1164  0000BA  6045               	cpfslt	gpio_pin_write@pin,c
-  1165  0000BC  D025               	goto	l3135
+  1165  0000BC  D025               	goto	l3119
   1166                           
   1167                           ;gpio.c: 94: {
   1168                           ;gpio.c: 95: pin-=16;
@@ -1178,7 +1178,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1172                           ;gpio.c: 96: if (bit_val==0)
   1173  0000C2  5042               	movf	gpio_pin_write@bit_val,w,c
   1174  0000C4  A4D8               	btfss	status,2,c
-  1175  0000C6  D00F               	goto	l3131
+  1175  0000C6  D00F               	goto	l3115
   1176                           
   1177                           ;gpio.c: 97: {
   1178                           ;gpio.c: 98: PORTC = LATC & ~(1<<pin);
@@ -1186,13 +1186,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1180  0000CC  0E01               	movlw	1
   1181  0000CE  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1182  0000D0  2A43               	incf	??_gpio_pin_write,f,c
-  1183  0000D2  D002               	goto	u2314
-  1184  0000D4                     u2315:
+  1183  0000D2  D002               	goto	u2304
+  1184  0000D4                     u2305:
   1185  0000D4  90D8               	bcf	status,0,c
   1186  0000D6  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1187  0000D8                     u2314:
+  1187  0000D8                     u2304:
   1188  0000D8  2E43               	decfsz	??_gpio_pin_write,f,c
-  1189  0000DA  D7FC               	goto	u2315
+  1189  0000DA  D7FC               	goto	u2305
   1190  0000DC  5044               	movf	??_gpio_pin_write+1,w,c
   1191  0000DE  0AFF               	xorlw	255
   1192  0000E0  148B               	andwf	3979,w,c	;volatile
@@ -1200,7 +1200,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1194                           
   1195                           ;gpio.c: 99: }
   1196  0000E4  0012               	return	
-  1197  0000E6                     l3131:
+  1197  0000E6                     l3115:
   1198                           
   1199                           ;gpio.c: 100: else if (bit_val==1)
   1200  0000E6  0442               	decf	gpio_pin_write@bit_val,w,c
@@ -1213,13 +1213,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1207  0000F0  0E01               	movlw	1
   1208  0000F2  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1209  0000F4  2A43               	incf	??_gpio_pin_write,f,c
-  1210  0000F6  D002               	goto	u2334
-  1211  0000F8                     u2335:
+  1210  0000F6  D002               	goto	u2324
+  1211  0000F8                     u2325:
   1212  0000F8  90D8               	bcf	status,0,c
   1213  0000FA  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1214  0000FC                     u2334:
+  1214  0000FC                     u2324:
   1215  0000FC  2E43               	decfsz	??_gpio_pin_write,f,c
-  1216  0000FE  D7FC               	goto	u2335
+  1216  0000FE  D7FC               	goto	u2325
   1217  000100  5044               	movf	??_gpio_pin_write+1,w,c
   1218  000102  108B               	iorwf	3979,w,c	;volatile
   1219  000104  6E82               	movwf	3970,c	;volatile
@@ -1227,12 +1227,12 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1221                           ;gpio.c: 103: }
   1222                           ;gpio.c: 104: }
   1223  000106  0012               	return	
-  1224  000108                     l3135:
+  1224  000108                     l3119:
   1225                           
   1226                           ;gpio.c: 105: else if (pin<30)
   1227  000108  0E1E               	movlw	30
   1228  00010A  6045               	cpfslt	gpio_pin_write@pin,c
-  1229  00010C  D025               	goto	l3147
+  1229  00010C  D025               	goto	l3131
   1230                           
   1231                           ;gpio.c: 106: {
   1232                           ;gpio.c: 107: pin-=24;
@@ -1242,7 +1242,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1236                           ;gpio.c: 108: if (bit_val==0)
   1237  000112  5042               	movf	gpio_pin_write@bit_val,w,c
   1238  000114  A4D8               	btfss	status,2,c
-  1239  000116  D00F               	goto	l3143
+  1239  000116  D00F               	goto	l3127
   1240                           
   1241                           ;gpio.c: 109: {
   1242                           ;gpio.c: 110: PORTA = LATA & ~(1<<pin);
@@ -1250,13 +1250,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1244  00011C  0E01               	movlw	1
   1245  00011E  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1246  000120  2A43               	incf	??_gpio_pin_write,f,c
-  1247  000122  D002               	goto	u2364
-  1248  000124                     u2365:
+  1247  000122  D002               	goto	u2354
+  1248  000124                     u2355:
   1249  000124  90D8               	bcf	status,0,c
   1250  000126  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1251  000128                     u2364:
+  1251  000128                     u2354:
   1252  000128  2E43               	decfsz	??_gpio_pin_write,f,c
-  1253  00012A  D7FC               	goto	u2365
+  1253  00012A  D7FC               	goto	u2355
   1254  00012C  5044               	movf	??_gpio_pin_write+1,w,c
   1255  00012E  0AFF               	xorlw	255
   1256  000130  1489               	andwf	3977,w,c	;volatile
@@ -1264,7 +1264,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1258                           
   1259                           ;gpio.c: 111: }
   1260  000134  0012               	return	
-  1261  000136                     l3143:
+  1261  000136                     l3127:
   1262                           
   1263                           ;gpio.c: 112: else if (bit_val==1)
   1264  000136  0442               	decf	gpio_pin_write@bit_val,w,c
@@ -1277,13 +1277,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1271  000140  0E01               	movlw	1
   1272  000142  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1273  000144  2A43               	incf	??_gpio_pin_write,f,c
-  1274  000146  D002               	goto	u2384
-  1275  000148                     u2385:
+  1274  000146  D002               	goto	u2374
+  1275  000148                     u2375:
   1276  000148  90D8               	bcf	status,0,c
   1277  00014A  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1278  00014C                     u2384:
+  1278  00014C                     u2374:
   1279  00014C  2E43               	decfsz	??_gpio_pin_write,f,c
-  1280  00014E  D7FC               	goto	u2385
+  1280  00014E  D7FC               	goto	u2375
   1281  000150  5044               	movf	??_gpio_pin_write+1,w,c
   1282  000152  1089               	iorwf	3977,w,c	;volatile
   1283  000154  6E80               	movwf	3968,c	;volatile
@@ -1291,7 +1291,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1285                           ;gpio.c: 115: }
   1286                           ;gpio.c: 116: }
   1287  000156  0012               	return	
-  1288  000158                     l3147:
+  1288  000158                     l3131:
   1289                           
   1290                           ;gpio.c: 117: else if (pin<33)
   1291  000158  0E21               	movlw	33
@@ -1306,7 +1306,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1300                           ;gpio.c: 120: if (bit_val==0)
   1301  000162  5042               	movf	gpio_pin_write@bit_val,w,c
   1302  000164  A4D8               	btfss	status,2,c
-  1303  000166  D00F               	goto	l3155
+  1303  000166  D00F               	goto	l3139
   1304                           
   1305                           ;gpio.c: 121: {
   1306                           ;gpio.c: 122: PORTE = LATE & ~(1<<pin);
@@ -1314,13 +1314,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1308  00016C  0E01               	movlw	1
   1309  00016E  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1310  000170  2A43               	incf	??_gpio_pin_write,f,c
-  1311  000172  D002               	goto	u2414
-  1312  000174                     u2415:
+  1311  000172  D002               	goto	u2404
+  1312  000174                     u2405:
   1313  000174  90D8               	bcf	status,0,c
   1314  000176  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1315  000178                     u2414:
+  1315  000178                     u2404:
   1316  000178  2E43               	decfsz	??_gpio_pin_write,f,c
-  1317  00017A  D7FC               	goto	u2415
+  1317  00017A  D7FC               	goto	u2405
   1318  00017C  5044               	movf	??_gpio_pin_write+1,w,c
   1319  00017E  0AFF               	xorlw	255
   1320  000180  148D               	andwf	3981,w,c	;volatile
@@ -1328,7 +1328,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1322                           
   1323                           ;gpio.c: 123: }
   1324  000184  0012               	return	
-  1325  000186                     l3155:
+  1325  000186                     l3139:
   1326                           
   1327                           ;gpio.c: 124: else if (bit_val==1)
   1328  000186  0442               	decf	gpio_pin_write@bit_val,w,c
@@ -1341,13 +1341,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1335  000190  0E01               	movlw	1
   1336  000192  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
   1337  000194  2A43               	incf	??_gpio_pin_write,f,c
-  1338  000196  D002               	goto	u2434
-  1339  000198                     u2435:
+  1338  000196  D002               	goto	u2424
+  1339  000198                     u2425:
   1340  000198  90D8               	bcf	status,0,c
   1341  00019A  3644               	rlcf	??_gpio_pin_write+1,f,c
-  1342  00019C                     u2434:
+  1342  00019C                     u2424:
   1343  00019C  2E43               	decfsz	??_gpio_pin_write,f,c
-  1344  00019E  D7FC               	goto	u2435
+  1344  00019E  D7FC               	goto	u2425
   1345  0001A0  5044               	movf	??_gpio_pin_write+1,w,c
   1346  0001A2  108D               	iorwf	3981,w,c	;volatile
   1347  0001A4  6E84               	movwf	3972,c	;volatile
@@ -1367,7 +1367,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1361                           
   1362 ;; *************** function _gpio_pin_read *****************
   1363 ;; Defined at:
-  1364 ;;		line 132 in file "../PIC18F4520_Master.X/gpio.c"
+  1364 ;;		line 132 in file "lib/gpio/gpio.c"
   1365 ;; Parameters:    Size  Location     Type
   1366 ;;  pin             1    wreg     unsigned char 
   1367 ;; Auto vars:     Size  Location     Type
@@ -1410,30 +1410,30 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1404                           ;gpio.c: 134: if (pin<8)
   1405  000324  0E08               	movlw	8
   1406  000326  6044               	cpfslt	gpio_pin_read@pin,c
-  1407  000328  D00D               	goto	l1875
+  1407  000328  D00D               	goto	l1695
   1408                           
   1409                           ;gpio.c: 135: {
   1410                           ;gpio.c: 136: return (((PORTB>>pin)&1));
   1411  00032A  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
   1412  00032E  CF81 F043          	movff	3969,??_gpio_pin_read+1	;volatile
   1413  000332  2A42               	incf	??_gpio_pin_read,f,c
-  1414  000334  D002               	goto	u724
-  1415  000336                     u725:
+  1414  000334  D002               	goto	u324
+  1415  000336                     u325:
   1416  000336  90D8               	bcf	status,0,c
   1417  000338  3243               	rrcf	??_gpio_pin_read+1,f,c
-  1418  00033A                     u724:
+  1418  00033A                     u324:
   1419  00033A  2E42               	decfsz	??_gpio_pin_read,f,c
-  1420  00033C  D7FC               	goto	u725
+  1420  00033C  D7FC               	goto	u325
   1421  00033E                     L1:
   1422  00033E  5043               	movf	??_gpio_pin_read+1,w,c
   1423  000340  0B01               	andlw	1
   1424  000342  0012               	return	
-  1425  000344                     l1875:
+  1425  000344                     l1695:
   1426                           
   1427                           ;gpio.c: 138: else if (pin<16)
   1428  000344  0E10               	movlw	16
   1429  000346  6044               	cpfslt	gpio_pin_read@pin,c
-  1430  000348  D00D               	goto	l1883
+  1430  000348  D00D               	goto	l1703
   1431                           
   1432                           ;gpio.c: 139: {
   1433                           ;gpio.c: 140: pin-=8;
@@ -1444,20 +1444,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1438  00034E  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
   1439  000352  CF83 F043          	movff	3971,??_gpio_pin_read+1	;volatile
   1440  000356  2A42               	incf	??_gpio_pin_read,f,c
-  1441  000358  D002               	goto	u744
-  1442  00035A                     u745:
+  1441  000358  D002               	goto	u344
+  1442  00035A                     u345:
   1443  00035A  90D8               	bcf	status,0,c
   1444  00035C  3243               	rrcf	??_gpio_pin_read+1,f,c
-  1445  00035E                     u744:
+  1445  00035E                     u344:
   1446  00035E  2E42               	decfsz	??_gpio_pin_read,f,c
-  1447  000360  D7FC               	goto	u745
+  1447  000360  D7FC               	goto	u345
   1448  000362  D7ED               	goto	L1
-  1449  000364                     l1883:
+  1449  000364                     l1703:
   1450                           
   1451                           ;gpio.c: 143: else if (pin<24)
   1452  000364  0E18               	movlw	24
   1453  000366  6044               	cpfslt	gpio_pin_read@pin,c
-  1454  000368  D00D               	goto	l1891
+  1454  000368  D00D               	goto	l1711
   1455                           
   1456                           ;gpio.c: 144: {
   1457                           ;gpio.c: 145: pin-=16;
@@ -1468,20 +1468,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1462  00036E  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
   1463  000372  CF82 F043          	movff	3970,??_gpio_pin_read+1	;volatile
   1464  000376  2A42               	incf	??_gpio_pin_read,f,c
-  1465  000378  D002               	goto	u764
-  1466  00037A                     u765:
+  1465  000378  D002               	goto	u364
+  1466  00037A                     u365:
   1467  00037A  90D8               	bcf	status,0,c
   1468  00037C  3243               	rrcf	??_gpio_pin_read+1,f,c
-  1469  00037E                     u764:
+  1469  00037E                     u364:
   1470  00037E  2E42               	decfsz	??_gpio_pin_read,f,c
-  1471  000380  D7FC               	goto	u765
+  1471  000380  D7FC               	goto	u365
   1472  000382  D7DD               	goto	L1
-  1473  000384                     l1891:
+  1473  000384                     l1711:
   1474                           
   1475                           ;gpio.c: 148: else if (pin<30)
   1476  000384  0E1E               	movlw	30
   1477  000386  6044               	cpfslt	gpio_pin_read@pin,c
-  1478  000388  D00D               	goto	l1899
+  1478  000388  D00D               	goto	l1719
   1479                           
   1480                           ;gpio.c: 149: {
   1481                           ;gpio.c: 150: pin-=24;
@@ -1492,20 +1492,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1486  00038E  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
   1487  000392  CF80 F043          	movff	3968,??_gpio_pin_read+1	;volatile
   1488  000396  2A42               	incf	??_gpio_pin_read,f,c
-  1489  000398  D002               	goto	u784
-  1490  00039A                     u785:
+  1489  000398  D002               	goto	u384
+  1490  00039A                     u385:
   1491  00039A  90D8               	bcf	status,0,c
   1492  00039C  3243               	rrcf	??_gpio_pin_read+1,f,c
-  1493  00039E                     u784:
+  1493  00039E                     u384:
   1494  00039E  2E42               	decfsz	??_gpio_pin_read,f,c
-  1495  0003A0  D7FC               	goto	u785
+  1495  0003A0  D7FC               	goto	u385
   1496  0003A2  D7CD               	goto	L1
-  1497  0003A4                     l1899:
+  1497  0003A4                     l1719:
   1498                           
   1499                           ;gpio.c: 153: else if (pin<33)
   1500  0003A4  0E21               	movlw	33
   1501  0003A6  6044               	cpfslt	gpio_pin_read@pin,c
-  1502  0003A8  D00D               	goto	l1905
+  1502  0003A8  D00D               	goto	l1725
   1503                           
   1504                           ;gpio.c: 154: {
   1505                           ;gpio.c: 155: pin-=30;
@@ -1516,15 +1516,15 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1510  0003AE  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
   1511  0003B2  CF84 F043          	movff	3972,??_gpio_pin_read+1	;volatile
   1512  0003B6  2A42               	incf	??_gpio_pin_read,f,c
-  1513  0003B8  D002               	goto	u804
-  1514  0003BA                     u805:
+  1513  0003B8  D002               	goto	u404
+  1514  0003BA                     u405:
   1515  0003BA  90D8               	bcf	status,0,c
   1516  0003BC  3243               	rrcf	??_gpio_pin_read+1,f,c
-  1517  0003BE                     u804:
+  1517  0003BE                     u404:
   1518  0003BE  2E42               	decfsz	??_gpio_pin_read,f,c
-  1519  0003C0  D7FC               	goto	u805
+  1519  0003C0  D7FC               	goto	u405
   1520  0003C2  D7BD               	goto	L1
-  1521  0003C4                     l1905:
+  1521  0003C4                     l1725:
   1522                           
   1523                           ;gpio.c: 157: }
   1524                           ;gpio.c: 158: return 0;
@@ -1545,7 +1545,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1539                           
   1540 ;; *************** function _gpio_pin_mode *****************
   1541 ;; Defined at:
-  1542 ;;		line 4 in file "../PIC18F4520_Master.X/gpio.c"
+  1542 ;;		line 4 in file "lib/gpio/gpio.c"
   1543 ;; Parameters:    Size  Location     Type
   1544 ;;  pin             1    wreg     unsigned char 
   1545 ;;  mode            1   17[COMRAM] unsigned char 
@@ -1572,8 +1572,8 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1566 ;; This function is called by:
   1567 ;;		_io_test
   1568 ;;		_dht_readSensor
-  1569 ;;		_lcd_init
-  1570 ;;		_HCSR04_init
+  1569 ;;		_HCSR04_init
+  1570 ;;		_lcd_init
   1571 ;; This function uses a non-reentrant model
   1572 ;;
   1573                           
@@ -1590,13 +1590,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1584                           ;gpio.c: 6: if (pin < 8)
   1585  0001AA  0E08               	movlw	8
   1586  0001AC  6045               	cpfslt	gpio_pin_mode@pin,c
-  1587  0001AE  D021               	goto	l3053
+  1587  0001AE  D021               	goto	l3037
   1588                           
   1589                           ;gpio.c: 7: {
   1590                           ;gpio.c: 8: if (mode==0)
   1591  0001B0  5042               	movf	gpio_pin_mode@mode,w,c
   1592  0001B2  A4D8               	btfss	status,2,c
-  1593  0001B4  D00E               	goto	l3049
+  1593  0001B4  D00E               	goto	l3033
   1594                           
   1595                           ;gpio.c: 9: {
   1596                           ;gpio.c: 10: TRISB &=~(1<<pin);
@@ -1604,20 +1604,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1598  0001BA  0E01               	movlw	1
   1599  0001BC  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1600  0001BE  2A43               	incf	??_gpio_pin_mode,f,c
-  1601  0001C0  D002               	goto	u1964
-  1602  0001C2                     u1965:
+  1601  0001C0  D002               	goto	u1954
+  1602  0001C2                     u1955:
   1603  0001C2  90D8               	bcf	status,0,c
   1604  0001C4  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1605  0001C6                     u1964:
+  1605  0001C6                     u1954:
   1606  0001C6  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1607  0001C8  D7FC               	goto	u1965
+  1607  0001C8  D7FC               	goto	u1955
   1608  0001CA  5044               	movf	??_gpio_pin_mode+1,w,c
   1609  0001CC  0AFF               	xorlw	255
   1610  0001CE  1693               	andwf	3987,f,c	;volatile
   1611                           
   1612                           ;gpio.c: 11: }
   1613  0001D0  0012               	return	
-  1614  0001D2                     l3049:
+  1614  0001D2                     l3033:
   1615                           
   1616                           ;gpio.c: 12: else if (mode==1)
   1617  0001D2  0442               	decf	gpio_pin_mode@mode,w,c
@@ -1630,25 +1630,25 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1624  0001DC  0E01               	movlw	1
   1625  0001DE  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1626  0001E0  2A43               	incf	??_gpio_pin_mode,f,c
-  1627  0001E2  D002               	goto	u1984
-  1628  0001E4                     u1985:
+  1627  0001E2  D002               	goto	u1974
+  1628  0001E4                     u1975:
   1629  0001E4  90D8               	bcf	status,0,c
   1630  0001E6  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1631  0001E8                     u1984:
+  1631  0001E8                     u1974:
   1632  0001E8  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1633  0001EA  D7FC               	goto	u1985
+  1633  0001EA  D7FC               	goto	u1975
   1634  0001EC  5044               	movf	??_gpio_pin_mode+1,w,c
   1635  0001EE  1293               	iorwf	3987,f,c	;volatile
   1636                           
   1637                           ;gpio.c: 15: }
   1638                           ;gpio.c: 16: }
   1639  0001F0  0012               	return	
-  1640  0001F2                     l3053:
+  1640  0001F2                     l3037:
   1641                           
   1642                           ;gpio.c: 17: else if (pin<16)
   1643  0001F2  0E10               	movlw	16
   1644  0001F4  6045               	cpfslt	gpio_pin_mode@pin,c
-  1645  0001F6  D023               	goto	l3065
+  1645  0001F6  D023               	goto	l3049
   1646                           
   1647                           ;gpio.c: 18: {
   1648                           ;gpio.c: 19: pin-=8;
@@ -1658,7 +1658,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1652                           ;gpio.c: 20: if (mode==0)
   1653  0001FC  5042               	movf	gpio_pin_mode@mode,w,c
   1654  0001FE  A4D8               	btfss	status,2,c
-  1655  000200  D00E               	goto	l3061
+  1655  000200  D00E               	goto	l3045
   1656                           
   1657                           ;gpio.c: 21: {
   1658                           ;gpio.c: 22: TRISD &=~(1<<pin);
@@ -1666,20 +1666,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1660  000206  0E01               	movlw	1
   1661  000208  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1662  00020A  2A43               	incf	??_gpio_pin_mode,f,c
-  1663  00020C  D002               	goto	u2014
-  1664  00020E                     u2015:
+  1663  00020C  D002               	goto	u2004
+  1664  00020E                     u2005:
   1665  00020E  90D8               	bcf	status,0,c
   1666  000210  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1667  000212                     u2014:
+  1667  000212                     u2004:
   1668  000212  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1669  000214  D7FC               	goto	u2015
+  1669  000214  D7FC               	goto	u2005
   1670  000216  5044               	movf	??_gpio_pin_mode+1,w,c
   1671  000218  0AFF               	xorlw	255
   1672  00021A  1695               	andwf	3989,f,c	;volatile
   1673                           
   1674                           ;gpio.c: 23: }
   1675  00021C  0012               	return	
-  1676  00021E                     l3061:
+  1676  00021E                     l3045:
   1677                           
   1678                           ;gpio.c: 24: else if (mode==1)
   1679  00021E  0442               	decf	gpio_pin_mode@mode,w,c
@@ -1692,25 +1692,25 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1686  000228  0E01               	movlw	1
   1687  00022A  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1688  00022C  2A43               	incf	??_gpio_pin_mode,f,c
-  1689  00022E  D002               	goto	u2034
-  1690  000230                     u2035:
+  1689  00022E  D002               	goto	u2024
+  1690  000230                     u2025:
   1691  000230  90D8               	bcf	status,0,c
   1692  000232  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1693  000234                     u2034:
+  1693  000234                     u2024:
   1694  000234  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1695  000236  D7FC               	goto	u2035
+  1695  000236  D7FC               	goto	u2025
   1696  000238  5044               	movf	??_gpio_pin_mode+1,w,c
   1697  00023A  1295               	iorwf	3989,f,c	;volatile
   1698                           
   1699                           ;gpio.c: 27: }
   1700                           ;gpio.c: 28: }
   1701  00023C  0012               	return	
-  1702  00023E                     l3065:
+  1702  00023E                     l3049:
   1703                           
   1704                           ;gpio.c: 29: else if (pin<24)
   1705  00023E  0E18               	movlw	24
   1706  000240  6045               	cpfslt	gpio_pin_mode@pin,c
-  1707  000242  D023               	goto	l3077
+  1707  000242  D023               	goto	l3061
   1708                           
   1709                           ;gpio.c: 30: {
   1710                           ;gpio.c: 31: pin-=16;
@@ -1720,7 +1720,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1714                           ;gpio.c: 32: if (mode==0)
   1715  000248  5042               	movf	gpio_pin_mode@mode,w,c
   1716  00024A  A4D8               	btfss	status,2,c
-  1717  00024C  D00E               	goto	l3073
+  1717  00024C  D00E               	goto	l3057
   1718                           
   1719                           ;gpio.c: 33: {
   1720                           ;gpio.c: 34: TRISC &=~(1<<pin);
@@ -1728,20 +1728,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1722  000252  0E01               	movlw	1
   1723  000254  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1724  000256  2A43               	incf	??_gpio_pin_mode,f,c
-  1725  000258  D002               	goto	u2064
-  1726  00025A                     u2065:
+  1725  000258  D002               	goto	u2054
+  1726  00025A                     u2055:
   1727  00025A  90D8               	bcf	status,0,c
   1728  00025C  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1729  00025E                     u2064:
+  1729  00025E                     u2054:
   1730  00025E  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1731  000260  D7FC               	goto	u2065
+  1731  000260  D7FC               	goto	u2055
   1732  000262  5044               	movf	??_gpio_pin_mode+1,w,c
   1733  000264  0AFF               	xorlw	255
   1734  000266  1694               	andwf	3988,f,c	;volatile
   1735                           
   1736                           ;gpio.c: 35: }
   1737  000268  0012               	return	
-  1738  00026A                     l3073:
+  1738  00026A                     l3057:
   1739                           
   1740                           ;gpio.c: 36: else if (mode==1)
   1741  00026A  0442               	decf	gpio_pin_mode@mode,w,c
@@ -1754,25 +1754,25 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1748  000274  0E01               	movlw	1
   1749  000276  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1750  000278  2A43               	incf	??_gpio_pin_mode,f,c
-  1751  00027A  D002               	goto	u2084
-  1752  00027C                     u2085:
+  1751  00027A  D002               	goto	u2074
+  1752  00027C                     u2075:
   1753  00027C  90D8               	bcf	status,0,c
   1754  00027E  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1755  000280                     u2084:
+  1755  000280                     u2074:
   1756  000280  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1757  000282  D7FC               	goto	u2085
+  1757  000282  D7FC               	goto	u2075
   1758  000284  5044               	movf	??_gpio_pin_mode+1,w,c
   1759  000286  1294               	iorwf	3988,f,c	;volatile
   1760                           
   1761                           ;gpio.c: 39: }
   1762                           ;gpio.c: 40: }
   1763  000288  0012               	return	
-  1764  00028A                     l3077:
+  1764  00028A                     l3061:
   1765                           
   1766                           ;gpio.c: 41: else if (pin<30)
   1767  00028A  0E1E               	movlw	30
   1768  00028C  6045               	cpfslt	gpio_pin_mode@pin,c
-  1769  00028E  D023               	goto	l3089
+  1769  00028E  D023               	goto	l3073
   1770                           
   1771                           ;gpio.c: 42: {
   1772                           ;gpio.c: 43: pin-=24;
@@ -1782,7 +1782,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1776                           ;gpio.c: 44: if (mode==0)
   1777  000294  5042               	movf	gpio_pin_mode@mode,w,c
   1778  000296  A4D8               	btfss	status,2,c
-  1779  000298  D00E               	goto	l3085
+  1779  000298  D00E               	goto	l3069
   1780                           
   1781                           ;gpio.c: 45: {
   1782                           ;gpio.c: 46: TRISA &=~(1<<pin);
@@ -1790,20 +1790,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1784  00029E  0E01               	movlw	1
   1785  0002A0  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1786  0002A2  2A43               	incf	??_gpio_pin_mode,f,c
-  1787  0002A4  D002               	goto	u2114
-  1788  0002A6                     u2115:
+  1787  0002A4  D002               	goto	u2104
+  1788  0002A6                     u2105:
   1789  0002A6  90D8               	bcf	status,0,c
   1790  0002A8  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1791  0002AA                     u2114:
+  1791  0002AA                     u2104:
   1792  0002AA  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1793  0002AC  D7FC               	goto	u2115
+  1793  0002AC  D7FC               	goto	u2105
   1794  0002AE  5044               	movf	??_gpio_pin_mode+1,w,c
   1795  0002B0  0AFF               	xorlw	255
   1796  0002B2  1692               	andwf	3986,f,c	;volatile
   1797                           
   1798                           ;gpio.c: 47: }
   1799  0002B4  0012               	return	
-  1800  0002B6                     l3085:
+  1800  0002B6                     l3069:
   1801                           
   1802                           ;gpio.c: 48: else if (mode==1)
   1803  0002B6  0442               	decf	gpio_pin_mode@mode,w,c
@@ -1816,20 +1816,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1810  0002C0  0E01               	movlw	1
   1811  0002C2  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1812  0002C4  2A43               	incf	??_gpio_pin_mode,f,c
-  1813  0002C6  D002               	goto	u2134
-  1814  0002C8                     u2135:
+  1813  0002C6  D002               	goto	u2124
+  1814  0002C8                     u2125:
   1815  0002C8  90D8               	bcf	status,0,c
   1816  0002CA  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1817  0002CC                     u2134:
+  1817  0002CC                     u2124:
   1818  0002CC  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1819  0002CE  D7FC               	goto	u2135
+  1819  0002CE  D7FC               	goto	u2125
   1820  0002D0  5044               	movf	??_gpio_pin_mode+1,w,c
   1821  0002D2  1292               	iorwf	3986,f,c	;volatile
   1822                           
   1823                           ;gpio.c: 51: }
   1824                           ;gpio.c: 52: }
   1825  0002D4  0012               	return	
-  1826  0002D6                     l3089:
+  1826  0002D6                     l3073:
   1827                           
   1828                           ;gpio.c: 53: else if (pin<33)
   1829  0002D6  0E21               	movlw	33
@@ -1844,7 +1844,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1838                           ;gpio.c: 56: if (mode==0)
   1839  0002E0  5042               	movf	gpio_pin_mode@mode,w,c
   1840  0002E2  A4D8               	btfss	status,2,c
-  1841  0002E4  D00E               	goto	l3097
+  1841  0002E4  D00E               	goto	l3081
   1842                           
   1843                           ;gpio.c: 57: {
   1844                           ;gpio.c: 58: TRISE &=~(1<<pin);
@@ -1852,20 +1852,20 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1846  0002EA  0E01               	movlw	1
   1847  0002EC  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1848  0002EE  2A43               	incf	??_gpio_pin_mode,f,c
-  1849  0002F0  D002               	goto	u2164
-  1850  0002F2                     u2165:
+  1849  0002F0  D002               	goto	u2154
+  1850  0002F2                     u2155:
   1851  0002F2  90D8               	bcf	status,0,c
   1852  0002F4  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1853  0002F6                     u2164:
+  1853  0002F6                     u2154:
   1854  0002F6  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1855  0002F8  D7FC               	goto	u2165
+  1855  0002F8  D7FC               	goto	u2155
   1856  0002FA  5044               	movf	??_gpio_pin_mode+1,w,c
   1857  0002FC  0AFF               	xorlw	255
   1858  0002FE  1696               	andwf	3990,f,c	;volatile
   1859                           
   1860                           ;gpio.c: 59: }
   1861  000300  0012               	return	
-  1862  000302                     l3097:
+  1862  000302                     l3081:
   1863                           
   1864                           ;gpio.c: 60: else if (mode==1)
   1865  000302  0442               	decf	gpio_pin_mode@mode,w,c
@@ -1878,13 +1878,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1872  00030C  0E01               	movlw	1
   1873  00030E  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
   1874  000310  2A43               	incf	??_gpio_pin_mode,f,c
-  1875  000312  D002               	goto	u2184
-  1876  000314                     u2185:
+  1875  000312  D002               	goto	u2174
+  1876  000314                     u2175:
   1877  000314  90D8               	bcf	status,0,c
   1878  000316  3644               	rlcf	??_gpio_pin_mode+1,f,c
-  1879  000318                     u2184:
+  1879  000318                     u2174:
   1880  000318  2E43               	decfsz	??_gpio_pin_mode,f,c
-  1881  00031A  D7FC               	goto	u2185
+  1881  00031A  D7FC               	goto	u2175
   1882  00031C  5044               	movf	??_gpio_pin_mode+1,w,c
   1883  00031E  1296               	iorwf	3990,f,c	;volatile
   1884  000320  0012               	return	
@@ -1903,7 +1903,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1897                           
   1898 ;; *************** function _ISR *****************
   1899 ;; Defined at:
-  1900 ;;		line 5 in file "isr.c"
+  1900 ;;		line 5 in file "lib/isr/isr.c"
   1901 ;; Parameters:    Size  Location     Type
   1902 ;;		None
   1903 ;; Auto vars:     Size  Location     Type
@@ -1978,7 +1978,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1972                           ;isr.c: 7: if (RCIE && RCIF) {
   1973  0003FA  BA9D               	btfsc	3997,5,c	;volatile
   1974  0003FC  AA9E               	btfss	3998,5,c	;volatile
-  1975  0003FE  D003               	goto	i2l395
+  1975  0003FE  D003               	goto	i2l668
   1976                           
   1977                           ;isr.c: 8: serial_interrupt();
   1978  000400  EC27  F002         	call	_serial_interrupt	;wreg free
@@ -1986,13 +1986,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1980                           ;isr.c: 10: }
   1981                           
   1982                           ;isr.c: 9: return;
-  1983  000404  D006               	goto	i2l396
-  1984  000406                     i2l395:
+  1983  000404  D006               	goto	i2l669
+  1984  000406                     i2l668:
   1985                           
   1986                           ;isr.c: 12: else if(TMR0IE && TMR0IF)
   1987  000406  BAF2               	btfsc	intcon,5,c	;volatile
   1988  000408  A4F2               	btfss	intcon,2,c	;volatile
-  1989  00040A  D003               	goto	i2l396
+  1989  00040A  D003               	goto	i2l669
   1990                           
   1991                           ;isr.c: 13: {
   1992                           ;isr.c: 14: sys_interrupt();
@@ -2000,7 +2000,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1994                           
   1995                           ;isr.c: 15: TMR0IF=0;
   1996  000410  94F2               	bcf	intcon,2,c	;volatile
-  1997  000412                     i2l396:
+  1997  000412                     i2l669:
   1998  000412  C041  FFF5         	movff	??_ISR+13,tablat
   1999  000416  C040  FFF8         	movff	??_ISR+12,tblptru
   2000  00041A  C03F  FFF7         	movff	??_ISR+11,tblptrh
@@ -2041,7 +2041,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   2035                           
   2036 ;; *************** function _sys_interrupt *****************
   2037 ;; Defined at:
-  2038 ;;		line 20 in file "systick.c"
+  2038 ;;		line 20 in file "lib/systick/systick.c"
   2039 ;; Parameters:    Size  Location     Type
   2040 ;;		None
   2041 ;; Auto vars:     Size  Location     Type
@@ -2118,7 +2118,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   2112                           
   2113 ;; *************** function _serial_interrupt *****************
   2114 ;; Defined at:
-  2115 ;;		line 82 in file "../PIC18F4520_Master.X/serial.c"
+  2115 ;;		line 82 in file "lib/serial/serial.c"
   2116 ;; Parameters:    Size  Location     Type
   2117 ;;		None
   2118 ;; Auto vars:     Size  Location     Type
@@ -2161,12 +2161,12 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   2154  000452  284C               	incf	_rx_Buffer_Tail,w,c	;volatile
   2155  000454  104D               	iorwf	_rx_Buffer_Tail+1,w,c	;volatile
   2156  000456  A4D8               	btfss	status,2,c
-  2157  000458  D004               	goto	i2l2235
+  2157  000458  D004               	goto	i2l1991
   2158  00045A  504A               	movf	_rx_Buffer_Head,w,c	;volatile
   2159  00045C  104B               	iorwf	_rx_Buffer_Head+1,w,c	;volatile
   2160  00045E  B4D8               	btfsc	status,2,c
-  2161  000460  D00D               	goto	i2l2237
-  2162  000462                     i2l2235:
+  2161  000460  D00D               	goto	i2l1993
+  2162  000462                     i2l1991:
   2163  000462  0E01               	movlw	1
   2164  000464  244C               	addwf	_rx_Buffer_Tail,w,c	;volatile
   2165  000466  6E31               	movwf	??_serial_interrupt& (0+255),c
@@ -2175,58 +2175,58 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   2168  00046C  6E32               	movwf	(??_serial_interrupt+1)& (0+255),c
   2169  00046E  504A               	movf	_rx_Buffer_Head,w,c	;volatile
   2170  000470  1831               	xorwf	??_serial_interrupt,w,c
-  2171  000472  E106               	bnz	i2l2239
+  2171  000472  E106               	bnz	i2l1995
   2172  000474  504B               	movf	_rx_Buffer_Head+1,w,c	;volatile
   2173  000476  1832               	xorwf	??_serial_interrupt+1,w,c
   2174  000478  A4D8               	btfss	status,2,c
-  2175  00047A  D002               	goto	i2l2239
-  2176  00047C                     i2l2237:
+  2175  00047A  D002               	goto	i2l1995
+  2176  00047C                     i2l1993:
   2177                           
   2178                           ;serial.c: 86: {
   2179                           ;serial.c: 87: rx_Buffer_Head++;
   2180  00047C  4A4A               	infsnz	_rx_Buffer_Head,f,c	;volatile
   2181  00047E  2A4B               	incf	_rx_Buffer_Head+1,f,c	;volatile
-  2182  000480                     i2l2239:
+  2182  000480                     i2l1995:
   2183                           
   2184                           ;serial.c: 88: }
   2185                           ;serial.c: 90: if(rx_Buffer_Head == 256 || rx_Buffer_Head == -1)
   2186  000480  044B               	decf	_rx_Buffer_Head+1,w,c	;volatile
   2187  000482  104A               	iorwf	_rx_Buffer_Head,w,c	;volatile
   2188  000484  B4D8               	btfsc	status,2,c
-  2189  000486  D005               	goto	i2l2243
+  2189  000486  D005               	goto	i2l1999
   2190  000488  284A               	incf	_rx_Buffer_Head,w,c	;volatile
-  2191  00048A  E107               	bnz	i2l2245
+  2191  00048A  E107               	bnz	i2l2001
   2192  00048C  284B               	incf	_rx_Buffer_Head+1,w,c	;volatile
   2193  00048E  A4D8               	btfss	status,2,c
-  2194  000490  D004               	goto	i2l2245
-  2195  000492                     i2l2243:
+  2194  000490  D004               	goto	i2l2001
+  2195  000492                     i2l1999:
   2196                           
   2197                           ;serial.c: 91: rx_Buffer_Head=0;
   2198  000492  0E00               	movlw	0
   2199  000494  6E4B               	movwf	_rx_Buffer_Head+1,c	;volatile
   2200  000496  0E00               	movlw	0
   2201  000498  6E4A               	movwf	_rx_Buffer_Head,c	;volatile
-  2202  00049A                     i2l2245:
+  2202  00049A                     i2l2001:
   2203                           
   2204                           ;serial.c: 93: if(rx_Buffer_Tail == 256 - 1)
   2205  00049A  284C               	incf	_rx_Buffer_Tail,w,c	;volatile
   2206  00049C  104D               	iorwf	_rx_Buffer_Tail+1,w,c	;volatile
   2207  00049E  A4D8               	btfss	status,2,c
-  2208  0004A0  D005               	goto	i2l2249
+  2208  0004A0  D005               	goto	i2l2005
   2209                           
   2210                           ;serial.c: 94: rx_Buffer_Tail=0;
   2211  0004A2  0E00               	movlw	0
   2212  0004A4  6E4D               	movwf	_rx_Buffer_Tail+1,c	;volatile
   2213  0004A6  0E00               	movlw	0
   2214  0004A8  6E4C               	movwf	_rx_Buffer_Tail,c	;volatile
-  2215  0004AA  D002               	goto	i2l2251
-  2216  0004AC                     i2l2249:
+  2215  0004AA  D002               	goto	i2l2007
+  2216  0004AC                     i2l2005:
   2217                           
   2218                           ;serial.c: 95: else
   2219                           ;serial.c: 96: rx_Buffer_Tail++;
   2220  0004AC  4A4C               	infsnz	_rx_Buffer_Tail,f,c	;volatile
   2221  0004AE  2A4D               	incf	_rx_Buffer_Tail+1,f,c	;volatile
-  2222  0004B0                     i2l2251:
+  2222  0004B0                     i2l2007:
   2223                           
   2224                           ;serial.c: 97: rxBuffer[rx_Buffer_Tail]=rxData;
   2225  0004B0  0E00               	movlw	low _rxBuffer
@@ -2495,78 +2495,78 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.37 build -260352376 
-Symbol Table                                                                                   Sat Aug 20 00:41:14 2016
+Symbol Table                                                                                   Sat Aug 20 13:42:01 2016
 
-              _SSPSTATbits 000FC7                         _EN 002C                         _RS 002D  
-              __CFG_OSC$HS 000000          gpio_pin_mode@mode 0042                        l851 0524  
-                      l934 0568                        _GIE 007F97                        _ISR 0008  
-                      u804 03BE                        u724 033A                        u805 03BA  
-                      u725 0336                        _PSA 007EAB                        u744 035E  
-                      u745 035A                        u764 037E                        u765 037A  
-                      u784 039E                        u785 039A                        wreg 000FE8  
+              _SSPSTATbits 000FC7                         _EN 002C                         l87 0524  
+                       _RS 002D                __CFG_OSC$HS 000000          gpio_pin_mode@mode 0042  
+                      l170 0568                        _GIE 007F97                        u404 03BE  
+                      u324 033A                        u405 03BA                        u325 0336  
+                      u344 035E                        u345 035A                        u364 037E  
+                      _ISR 0008                        u365 037A                        u384 039E  
+                      u385 039A                        _PSA 007EAB                        wreg 000FE8  
              __CFG_LVP$OFF 000000                       ?_ISR 0031               __CFG_WDT$OFF 000000  
-                     l3111 0068                       l3131 00E6                       l3123 00B8  
-                     l3107 0046                       l3061 021E                       l3053 01F2  
-                     l3143 0136                       l3135 0108                       l3119 0096  
-                     l3073 026A                       l3065 023E                       l3049 01D2  
-                     l3155 0186                       l3147 0158                       l3085 02B6  
-                     l3077 028A                       l3097 0302                       l3089 02D6  
-                     l1905 03C4                       l3385 053C                       l1891 0384  
-                     l1883 0364                       l1875 0344                       l1899 03A4  
-                     _ADON 007E10                       _EEIF 007D0C                       STR_1 7FEF  
-                     STR_2 7FFA                       STR_3 7F7C                       STR_4 7FAA  
-                     STR_5 7FFD                       STR_6 7FA1                       STR_7 7F67  
-                     STR_8 7F98                       STR_9 7FF7                       _T0CS 007EAD  
-                     u2014 0212                       u2015 020E                       u2114 02AA  
-                     u2034 0234                       u2115 02A6                       u2035 0230  
-                     _LATA 000F89                       u2134 02CC                       u2214 0038  
-                     _LATB 000F8A                       u2135 02C8                       u2215 0034  
-                     _LATC 000F8B                       u2064 025E                       _LATD 000F8C  
-                     u2065 025A                       _LATE 000F8D                       u2314 00D8  
-                     u2234 005C                       u2315 00D4                       u2235 0058  
-                     u2164 02F6                       u2084 0280                       u2165 02F2  
-                     u2085 027C                       u2414 0178                       u2334 00FC  
-                     u2415 0174                       u2335 00F8                       u2184 0318  
-                     u2264 0088                       u2185 0314                       u2265 0084  
-                     u2434 019C                       u2435 0198                       u2364 0128  
-                     u2284 00AC                       u2365 0124                       u2285 00A8  
-                     u2384 014C                       u2385 0148                       _PEIE 007F96  
-                     u1964 01C6                       u1965 01C2                       u1984 01E8  
-                     u1985 01E4                       _RCIE 007CED                       _RCIF 007CF5  
-                     _TMR1 000FCE                       _bits 0021                       _main 0564  
-                     fsr0h 000FEA                       fsr1h 000FE2                       fsr0l 000FE9  
-                     fsr2h 000FDA                       fsr1l 000FE1                       indf2 000FDF  
-                     fsr2l 000FD9                       btemp 004E                       pclat 000FFA  
-            __CFG_BOREN$ON 000000                       prodh 000FF4                       prodl 000FF3  
-                     start 0016               ___param_bank 000010                      ??_ISR 0034  
-                    ?_main 0031          gpio_pin_write@pin 0045                      _ADRES 000FC3  
-                    _EEADR 000FA9                      STR_10 7F8F                      STR_11 7FE8  
-                    STR_20 7F28                      STR_12 7ED1                      STR_21 7F0C  
-                    STR_13 7EE1                      STR_22 7F72                      STR_30 7E54  
-                    STR_14 7DE9                      STR_31 7E9F                      STR_23 7E8E  
-                    STR_40 7FC3                      STR_16 7FBB                      STR_24 7E7B  
-                    STR_32 7E28                      STR_41 7F5C                      STR_17 7F36  
-                    STR_25 7F1A                      STR_42 7FDA                      STR_50 7EC1  
-                    STR_34 7EB0                      STR_26 7E68                      STR_43 7FF4  
-                    STR_27 7FD3                      STR_19 7FCB                      STR_52 7F43  
-                    STR_36 7E3F                      STR_45 7FE1                      STR_29 7F86  
-                    STR_37 7EF0                      STR_38 7EFE                      STR_39 7FB3  
-                    STR_48 7F50                      STR_49 7E11                      _T0PS0 007EA8  
-                    _T0PS1 007EA9                      _T0PS2 007EAA                      i2l395 0406  
-                    i2l396 0412                      _RCREG 000FAE                      _SPBRG 000FAF  
+                     l3103 0096                       l3033 01D2                       l3131 0158  
+                     l3115 00E6                       l3107 00B8                       l3061 028A  
+                     l3045 021E                       l3037 01F2                       l1711 0384  
+                     l1703 0364                       l3127 0136                       l3119 0108  
+                     l3081 0302                       l3073 02D6                       l3057 026A  
+                     l3049 023E                       l3139 0186                       l3091 0046  
+                     l3069 02B6                       l1725 03C4                       l3173 053C  
+                     l1719 03A4                       l3095 0068                       l1695 0344  
+                     _ADON 007E10                       _EEIF 007D0C                       STR_1 7FAA  
+                     STR_2 7FE8                       STR_3 7ED1                       STR_4 7EE1  
+                     STR_5 7DE9                       STR_7 7FBB                       STR_8 7F36  
+                     _T0CS 007EAD                       u2004 0212                       u2005 020E  
+                     u2104 02AA                       u2024 0234                       u2105 02A6  
+                     u2025 0230                       u2124 02CC                       u2204 0038  
+                     u2125 02C8                       u2205 0034                       _LATA 000F89  
+                     u2054 025E                       _LATB 000F8A                       u2055 025A  
+                     _LATC 000F8B                       u2304 00D8                       u2224 005C  
+                     _LATD 000F8C                       u2305 00D4                       u2225 0058  
+                     _LATE 000F8D                       u2154 02F6                       u2074 0280  
+                     u2155 02F2                       u2075 027C                       u2404 0178  
+                     u2324 00FC                       u2405 0174                       u2325 00F8  
+                     u2174 0318                       u2254 0088                       u2175 0314  
+                     u2255 0084                       u2424 019C                       u2425 0198  
+                     u2354 0128                       u2274 00AC                       u2355 0124  
+                     u2275 00A8                       u2374 014C                       u2375 0148  
+                     u1954 01C6                       u1955 01C2                       _PEIE 007F96  
+                     u1974 01E8                       u1975 01E4                       _RCIE 007CED  
+                     _RCIF 007CF5                       _TMR1 000FCE                       _bits 0021  
+                     _main 0564                       fsr0h 000FEA                       fsr1h 000FE2  
+                     fsr0l 000FE9                       fsr2h 000FDA                       fsr1l 000FE1  
+                     indf2 000FDF                       fsr2l 000FD9                       btemp 004E  
+                     pclat 000FFA              __CFG_BOREN$ON 000000                       prodh 000FF4  
+                     prodl 000FF3                       start 0016               ___param_bank 000010  
+                    ??_ISR 0034                      ?_main 0031          gpio_pin_write@pin 0045  
+                    _ADRES 000FC3                      _EEADR 000FA9                      STR_10 7FCB  
+                    STR_11 7F28                      STR_20 7FA1                      STR_12 7F0C  
+                    STR_13 7F7C                      STR_21 7E54                      STR_30 7FB3  
+                    STR_22 7E9F                      STR_14 7E8E                      STR_31 7FC3  
+                    STR_15 7E7B                      STR_23 7E28                      STR_32 7F67  
+                    STR_16 7F1A                      STR_40 7E11                      STR_33 7FDA  
+                    STR_41 7EC1                      STR_25 7EB0                      STR_17 7E68  
+                    STR_50 7FFD                      STR_34 7FFA                      STR_18 7FD3  
+                    STR_51 7F8F                      STR_43 7F43                      STR_27 7E3F  
+                    STR_36 7FE1                      STR_52 7F5C                      STR_28 7EF0  
+                    STR_53 7F86                      STR_29 7EFE                      STR_54 7FF4  
+                    STR_46 7FEF                      STR_47 7FF7                      STR_39 7F50  
+                    STR_48 7F72                      STR_49 7F98                      _T0PS0 007EA8  
+                    _T0PS1 007EA9                      _T0PS2 007EAA                      i2l668 0406  
+                    i2l669 0412                      _RCREG 000FAE                      _SPBRG 000FAF  
                     _PORTA 000F80                      _PORTB 000F81                      _PORTC 000F82  
                     _PORTD 000F83                      _PORTE 000F84                      _TRISA 000F92  
                     _TRISB 000F93                      _TRISC 000F94                      _TRISD 000F95  
-                    _TRISE 000F96              rtc_test@F3465 0046                      _TXREG 000FAD  
+                    _TRISE 000F96              rtc_test@F3464 0046                      _TXREG 000FAD  
           __end_of_dpowers 7DE9            __end_of_io_test 0548     __size_of_gpio_pin_read 00A6  
    __size_of_gpio_pin_mode 017A                      tablat 000FF5                      status 000FD8  
           __initialization 04C2                _system_tick 002A               __end_of_main 056A  
                    ??_main 0046              __activetblptr 000002                     _ADCON0 000FC2  
                    _ADCON1 000FC1                     _ADCON2 000FC0                     _EEDATA 000FA8  
                    _EECON2 000FA7                     _T08BIT 007EAE                     _GODONE 007E11  
- __end_of_serial_interrupt 04C2                     i2l2251 04B0                     i2l2243 0492  
-                   i2l2235 0462                     i2l2245 049A                     i2l2237 047C  
-                   i2l2239 0480                     i2l2249 04AC                     _TMR0IE 007F95  
+ __end_of_serial_interrupt 04C2                     i2l2001 049A                     i2l2005 04AC  
+                   i2l2007 04B0                     i2l1991 0462                     i2l1993 047C  
+                   i2l1995 0480                     i2l1999 0492                     _TMR0IE 007F95  
                    _TMR0IF 007F92                     _TMR0ON 007EAF                     _TMR1ON 007E68  
                    _SSPADD 000FC8                     _SSPBUF 000FC9              _gpio_pin_read 0322  
             _gpio_pin_mode 01A8                     clear_0 04CA                     clear_1 04DC  
@@ -2576,7 +2576,7 @@ Symbol Table                                                                    
           __CFG_PBADEN$OFF 000000     serial_interrupt@rxData 0033              ___rparam_used 000001  
            __pcstackCOMRAM 0031             ?_gpio_pin_read 0031             ?_gpio_pin_mode 0042  
                __pbssBANK1 0100     __size_of_sys_interrupt 0014                    _T1CKPS0 007E6C  
-    system_tick_test@F3454 0011      gpio_pin_write@bit_val 0042                    _SSPCON1 000FC6  
+    system_tick_test@F3453 0011      gpio_pin_write@bit_val 0042                    _SSPCON1 000FC6  
                   _SSPSTAT 000FC7                    __Hparam 0000                    __Lparam 0000  
           ??_gpio_pin_read 0042            ??_gpio_pin_mode 0043              _sys_interrupt 0548  
                   __pcinit 04C2                    __ramtop 0600                    __ptext0 0564  
@@ -2592,7 +2592,7 @@ Symbol Table                                                                    
             __pidataCOMRAM 055C            ?_gpio_pin_write 0042        start_initialization 04C2  
               __end_of_ISR 044E            ??_sys_interrupt 0031                __pbssCOMRAM 0001  
                 __pintcode 0008              __pmediumconst 7DDE                   ?_io_test 0031  
-            adc_test@F3448 0001                   _PIR1bits 000F9E      __end_of_gpio_pin_read 03C8  
+            adc_test@F3447 0001                   _PIR1bits 000F9E      __end_of_gpio_pin_read 03C8  
     __end_of_gpio_pin_mode 0322  __size_of_serial_interrupt 0074                  copy_data0 04F6  
                _EECON1bits 000FA6                   __Hrparam 0000                   __Lrparam 0000  
          ??_gpio_pin_write 0043           __size_of_io_test 0038              __size_of_main 0006  
