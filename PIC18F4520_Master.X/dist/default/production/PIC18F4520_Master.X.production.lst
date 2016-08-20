@@ -1,0 +1,2602 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.37 build -260352376 
+                                                                                               Sat Aug 20 00:41:14 2016
+
+Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110536
+     1                           	processor	18F4520
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1
+     6                           	psect	mediumconst,global,reloc=2,class=MEDIUMCONST,delta=1
+     7                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     8                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1
+    10                           	psect	bssBANK1,global,class=BANK1,space=1,delta=1
+    11                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+    12                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    17                           	psect	intcode,global,reloc=2,class=CODE,delta=1
+    18                           	psect	intcode_body,global,reloc=2,class=CODE,delta=1
+    19                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    20                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    21                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    22                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    23                           	psect	temp,global,ovrld,common,class=COMRAM,space=1,delta=1
+    24  0000                     
+    25                           	psect	idataCOMRAM
+    26  00055C                     __pidataCOMRAM:
+    27                           	opt stack 0
+    28                           
+    29                           ;initializer for rtc_test@F3465
+    30  00055C  6E                 	db	110
+    31  00055D  69                 	db	105
+    32  00055E  6C                 	db	108
+    33  00055F  00                 	db	0
+    34                           
+    35                           ;initializer for _rx_Buffer_Head
+    36  000560  FFFF               	dw	65535
+    37                           
+    38                           ;initializer for _rx_Buffer_Tail
+    39  000562  FFFF               	dw	65535
+    40                           
+    41                           	psect	mediumconst
+    42  007DDE                     __pmediumconst:
+    43                           	opt stack 0
+    44  007DDE  00                 	db	0
+    45  007DDF  0001               	dw	1
+    46  007DE1  000A               	dw	10
+    47  007DE3  0064               	dw	100
+    48  007DE5  03E8               	dw	1000
+    49  007DE7  2710               	dw	10000
+    50  007DE9                     __end_of_dpowers:
+    51                           	opt stack 0
+    52  0000                     _ADRES	set	4035
+    53  0000                     _TMR1	set	4046
+    54  0000                     _ADCON0	set	4034
+    55  0000                     _ADCON1	set	4033
+    56  0000                     _ADCON2	set	4032
+    57  0000                     _EEADR	set	4009
+    58  0000                     _EECON1bits	set	4006
+    59  0000                     _EECON2	set	4007
+    60  0000                     _EEDATA	set	4008
+    61  0000                     _INTCONbits	set	4082
+    62  0000                     _LATA	set	3977
+    63  0000                     _LATB	set	3978
+    64  0000                     _LATC	set	3979
+    65  0000                     _LATD	set	3980
+    66  0000                     _LATE	set	3981
+    67  0000                     _PIR1bits	set	3998
+    68  0000                     _PORTA	set	3968
+    69  0000                     _PORTB	set	3969
+    70  0000                     _PORTC	set	3970
+    71  0000                     _PORTD	set	3971
+    72  0000                     _PORTE	set	3972
+    73  0000                     _RCREG	set	4014
+    74  0000                     _RCSTAbits	set	4011
+    75  0000                     _SPBRG	set	4015
+    76  0000                     _SSPADD	set	4040
+    77  0000                     _SSPBUF	set	4041
+    78  0000                     _SSPCON1	set	4038
+    79  0000                     _SSPCON2bits	set	4037
+    80  0000                     _SSPSTAT	set	4039
+    81  0000                     _SSPSTATbits	set	4039
+    82  0000                     _TRISA	set	3986
+    83  0000                     _TRISB	set	3987
+    84  0000                     _TRISC	set	3988
+    85  0000                     _TRISCbits	set	3988
+    86  0000                     _TRISD	set	3989
+    87  0000                     _TRISE	set	3990
+    88  0000                     _TXREG	set	4013
+    89  0000                     _TXSTAbits	set	4012
+    90  0000                     _ADON	set	32272
+    91  0000                     _EEIF	set	32012
+    92  0000                     _GIE	set	32663
+    93  0000                     _GODONE	set	32273
+    94  0000                     _PEIE	set	32662
+    95  0000                     _PSA	set	32427
+    96  0000                     _RCIE	set	31981
+    97  0000                     _RCIF	set	31989
+    98  0000                     _T08BIT	set	32430
+    99  0000                     _T0CS	set	32429
+   100  0000                     _T0PS0	set	32424
+   101  0000                     _T0PS1	set	32425
+   102  0000                     _T0PS2	set	32426
+   103  0000                     _T1CKPS0	set	32364
+   104  0000                     _TMR0IE	set	32661
+   105  0000                     _TMR0IF	set	32658
+   106  0000                     _TMR0ON	set	32431
+   107  0000                     _TMR1ON	set	32360
+   108  007DE9  41                 	db	65	;'A'
+   109  007DEA  63                 	db	99	;'c'
+   110  007DEB  58                 	db	88	;'X'
+   111  007DEC  20                 	db	32
+   112  007DED  3D                 	db	61	;'='
+   113  007DEE  25                 	db	37
+   114  007DEF  64                 	db	100	;'d'
+   115  007DF0  20                 	db	32
+   116  007DF1  7C                 	db	124
+   117  007DF2  20                 	db	32
+   118  007DF3  41                 	db	65	;'A'
+   119  007DF4  63                 	db	99	;'c'
+   120  007DF5  59                 	db	89	;'Y'
+   121  007DF6  20                 	db	32
+   122  007DF7  3D                 	db	61	;'='
+   123  007DF8  25                 	db	37
+   124  007DF9  64                 	db	100	;'d'
+   125  007DFA  20                 	db	32
+   126  007DFB  7C                 	db	124
+   127  007DFC  20                 	db	32
+   128  007DFD  41                 	db	65	;'A'
+   129  007DFE  63                 	db	99	;'c'
+   130  007DFF  5A                 	db	90	;'Z'
+   131  007E00  20                 	db	32
+   132  007E01  3D                 	db	61	;'='
+   133  007E02  25                 	db	37
+   134  007E03  64                 	db	100	;'d'
+   135  007E04  20                 	db	32
+   136  007E05  7C                 	db	124
+   137  007E06  20                 	db	32
+   138  007E07  54                 	db	84	;'T'
+   139  007E08  65                 	db	101	;'e'
+   140  007E09  6D                 	db	109	;'m'
+   141  007E0A  70                 	db	112	;'p'
+   142  007E0B  20                 	db	32
+   143  007E0C  3D                 	db	61	;'='
+   144  007E0D  25                 	db	37
+   145  007E0E  64                 	db	100	;'d'
+   146  007E0F  20                 	db	32
+   147  007E10  00                 	db	0
+   148  007E11                     STR_49:
+   149  007E11  2D                 	db	45
+   150  007E12  2D                 	db	45
+   151  007E13  2D                 	db	45
+   152  007E14  2D                 	db	45
+   153  007E15  2D                 	db	45
+   154  007E16  2D                 	db	45
+   155  007E17  2D                 	db	45
+   156  007E18  2D                 	db	45
+   157  007E19  2D                 	db	45
+   158  007E1A  2D                 	db	45
+   159  007E1B  2D                 	db	45
+   160  007E1C  2D                 	db	45
+   161  007E1D  2D                 	db	45
+   162  007E1E  2D                 	db	45
+   163  007E1F  2D                 	db	45
+   164  007E20  2D                 	db	45
+   165  007E21  2D                 	db	45
+   166  007E22  2D                 	db	45
+   167  007E23  2D                 	db	45
+   168  007E24  2D                 	db	45
+   169  007E25  0D                 	db	13
+   170  007E26  0A                 	db	10
+   171  007E27  00                 	db	0
+   172  007E28  2D                 	db	45
+   173  007E29  2D                 	db	45
+   174  007E2A  2D                 	db	45
+   175  007E2B  2D                 	db	45
+   176  007E2C  2D                 	db	45
+   177  007E2D  2D                 	db	45
+   178  007E2E  2D                 	db	45
+   179  007E2F  2D                 	db	45
+   180  007E30  2D                 	db	45
+   181  007E31  2D                 	db	45
+   182  007E32  2D                 	db	45
+   183  007E33  2D                 	db	45
+   184  007E34  2D                 	db	45
+   185  007E35  2D                 	db	45
+   186  007E36  2D                 	db	45
+   187  007E37  2D                 	db	45
+   188  007E38  2D                 	db	45
+   189  007E39  2D                 	db	45
+   190  007E3A  2D                 	db	45
+   191  007E3B  2D                 	db	45
+   192  007E3C  2D                 	db	45
+   193  007E3D  2D                 	db	45
+   194  007E3E  00                 	db	0
+   195  007E3F  50                 	db	80	;'P'
+   196  007E40  49                 	db	73	;'I'
+   197  007E41  43                 	db	67	;'C'
+   198  007E42  31                 	db	49	;'1'
+   199  007E43  38                 	db	56	;'8'
+   200  007E44  46                 	db	70	;'F'
+   201  007E45  20                 	db	32
+   202  007E46  53                 	db	83	;'S'
+   203  007E47  65                 	db	101	;'e'
+   204  007E48  72                 	db	114	;'r'
+   205  007E49  69                 	db	105	;'i'
+   206  007E4A  61                 	db	97	;'a'
+   207  007E4B  6C                 	db	108	;'l'
+   208  007E4C  20                 	db	32
+   209  007E4D  54                 	db	84	;'T'
+   210  007E4E  65                 	db	101	;'e'
+   211  007E4F  73                 	db	115	;'s'
+   212  007E50  74                 	db	116	;'t'
+   213  007E51  0D                 	db	13
+   214  007E52  0A                 	db	10
+   215  007E53  00                 	db	0
+   216  007E54  45                 	db	69	;'E'
+   217  007E55  78                 	db	120	;'x'
+   218  007E56  74                 	db	116	;'t'
+   219  007E57  65                 	db	101	;'e'
+   220  007E58  72                 	db	114	;'r'
+   221  007E59  6E                 	db	110	;'n'
+   222  007E5A  61                 	db	97	;'a'
+   223  007E5B  6C                 	db	108	;'l'
+   224  007E5C  20                 	db	32
+   225  007E5D  53                 	db	83	;'S'
+   226  007E5E  50                 	db	80	;'P'
+   227  007E5F  49                 	db	73	;'I'
+   228  007E60  20                 	db	32
+   229  007E61  54                 	db	84	;'T'
+   230  007E62  65                 	db	101	;'e'
+   231  007E63  73                 	db	115	;'s'
+   232  007E64  74                 	db	116	;'t'
+   233  007E65  0D                 	db	13
+   234  007E66  0A                 	db	10
+   235  007E67  00                 	db	0
+   236  007E68  52                 	db	82	;'R'
+   237  007E69  65                 	db	101	;'e'
+   238  007E6A  61                 	db	97	;'a'
+   239  007E6B  64                 	db	100	;'d'
+   240  007E6C  69                 	db	105	;'i'
+   241  007E6D  6E                 	db	110	;'n'
+   242  007E6E  67                 	db	103	;'g'
+   243  007E6F  20                 	db	32
+   244  007E70  74                 	db	116	;'t'
+   245  007E71  68                 	db	104	;'h'
+   246  007E72  65                 	db	101	;'e'
+   247  007E73  20                 	db	32
+   248  007E74  64                 	db	100	;'d'
+   249  007E75  61                 	db	97	;'a'
+   250  007E76  74                 	db	116	;'t'
+   251  007E77  61                 	db	97	;'a'
+   252  007E78  0D                 	db	13
+   253  007E79  0A                 	db	10
+   254  007E7A  00                 	db	0
+   255  007E7B  57                 	db	87	;'W'
+   256  007E7C  72                 	db	114	;'r'
+   257  007E7D  69                 	db	105	;'i'
+   258  007E7E  74                 	db	116	;'t'
+   259  007E7F  69                 	db	105	;'i'
+   260  007E80  6E                 	db	110	;'n'
+   261  007E81  67                 	db	103	;'g'
+   262  007E82  20                 	db	32
+   263  007E83  74                 	db	116	;'t'
+   264  007E84  68                 	db	104	;'h'
+   265  007E85  65                 	db	101	;'e'
+   266  007E86  20                 	db	32
+   267  007E87  64                 	db	100	;'d'
+   268  007E88  61                 	db	97	;'a'
+   269  007E89  74                 	db	116	;'t'
+   270  007E8A  61                 	db	97	;'a'
+   271  007E8B  0D                 	db	13
+   272  007E8C  0A                 	db	10
+   273  007E8D  00                 	db	0
+   274  007E8E  45                 	db	69	;'E'
+   275  007E8F  45                 	db	69	;'E'
+   276  007E90  50                 	db	80	;'P'
+   277  007E91  52                 	db	82	;'R'
+   278  007E92  4F                 	db	79	;'O'
+   279  007E93  4D                 	db	77	;'M'
+   280  007E94  20                 	db	32
+   281  007E95  54                 	db	84	;'T'
+   282  007E96  65                 	db	101	;'e'
+   283  007E97  73                 	db	115	;'s'
+   284  007E98  74                 	db	116	;'t'
+   285  007E99  69                 	db	105	;'i'
+   286  007E9A  6E                 	db	110	;'n'
+   287  007E9B  67                 	db	103	;'g'
+   288  007E9C  0D                 	db	13
+   289  007E9D  0A                 	db	10
+   290  007E9E  00                 	db	0
+   291  007E9F  43                 	db	67	;'C'
+   292  007EA0  68                 	db	104	;'h'
+   293  007EA1  61                 	db	97	;'a'
+   294  007EA2  6E                 	db	110	;'n'
+   295  007EA3  6E                 	db	110	;'n'
+   296  007EA4  65                 	db	101	;'e'
+   297  007EA5  6C                 	db	108	;'l'
+   298  007EA6  20                 	db	32
+   299  007EA7  30                 	db	48	;'0'
+   300  007EA8  20                 	db	32
+   301  007EA9  3A                 	db	58	;':'
+   302  007EAA  25                 	db	37
+   303  007EAB  35                 	db	53	;'5'
+   304  007EAC  2E                 	db	46
+   305  007EAD  30                 	db	48	;'0'
+   306  007EAE  64                 	db	100	;'d'
+   307  007EAF  00                 	db	0
+   308  007EB0  43                 	db	67	;'C'
+   309  007EB1  68                 	db	104	;'h'
+   310  007EB2  61                 	db	97	;'a'
+   311  007EB3  6E                 	db	110	;'n'
+   312  007EB4  6E                 	db	110	;'n'
+   313  007EB5  65                 	db	101	;'e'
+   314  007EB6  6C                 	db	108	;'l'
+   315  007EB7  20                 	db	32
+   316  007EB8  31                 	db	49	;'1'
+   317  007EB9  20                 	db	32
+   318  007EBA  3A                 	db	58	;':'
+   319  007EBB  25                 	db	37
+   320  007EBC  35                 	db	53	;'5'
+   321  007EBD  2E                 	db	46
+   322  007EBE  30                 	db	48	;'0'
+   323  007EBF  64                 	db	100	;'d'
+   324  007EC0  00                 	db	0
+   325  007EC1  54                 	db	84	;'T'
+   326  007EC2  65                 	db	101	;'e'
+   327  007EC3  6D                 	db	109	;'m'
+   328  007EC4  70                 	db	112	;'p'
+   329  007EC5  65                 	db	101	;'e'
+   330  007EC6  72                 	db	114	;'r'
+   331  007EC7  61                 	db	97	;'a'
+   332  007EC8  74                 	db	116	;'t'
+   333  007EC9  75                 	db	117	;'u'
+   334  007ECA  72                 	db	114	;'r'
+   335  007ECB  65                 	db	101	;'e'
+   336  007ECC  20                 	db	32
+   337  007ECD  3A                 	db	58	;':'
+   338  007ECE  25                 	db	37
+   339  007ECF  64                 	db	100	;'d'
+   340  007ED0  00                 	db	0
+   341  007ED1  57                 	db	87	;'W'
+   342  007ED2  61                 	db	97	;'a'
+   343  007ED3  69                 	db	105	;'i'
+   344  007ED4  74                 	db	116	;'t'
+   345  007ED5  69                 	db	105	;'i'
+   346  007ED6  6E                 	db	110	;'n'
+   347  007ED7  67                 	db	103	;'g'
+   348  007ED8  20                 	db	32
+   349  007ED9  46                 	db	70	;'F'
+   350  007EDA  6F                 	db	111	;'o'
+   351  007EDB  72                 	db	114	;'r'
+   352  007EDC  20                 	db	32
+   353  007EDD  4D                 	db	77	;'M'
+   354  007EDE  73                 	db	115	;'s'
+   355  007EDF  67                 	db	103	;'g'
+   356  007EE0  00                 	db	0
+   357  007EE1  4D                 	db	77	;'M'
+   358  007EE2  50                 	db	80	;'P'
+   359  007EE3  55                 	db	85	;'U'
+   360  007EE4  36                 	db	54	;'6'
+   361  007EE5  30                 	db	48	;'0'
+   362  007EE6  35                 	db	53	;'5'
+   363  007EE7  30                 	db	48	;'0'
+   364  007EE8  20                 	db	32
+   365  007EE9  54                 	db	84	;'T'
+   366  007EEA  65                 	db	101	;'e'
+   367  007EEB  73                 	db	115	;'s'
+   368  007EEC  74                 	db	116	;'t'
+   369  007EED  0D                 	db	13
+   370  007EEE  0A                 	db	10
+   371  007EEF  00                 	db	0
+   372  007EF0  49                 	db	73	;'I'
+   373  007EF1  32                 	db	50	;'2'
+   374  007EF2  43                 	db	67	;'C'
+   375  007EF3  20                 	db	32
+   376  007EF4  45                 	db	69	;'E'
+   377  007EF5  45                 	db	69	;'E'
+   378  007EF6  50                 	db	80	;'P'
+   379  007EF7  52                 	db	82	;'R'
+   380  007EF8  4F                 	db	79	;'O'
+   381  007EF9  4D                 	db	77	;'M'
+   382  007EFA  20                 	db	32
+   383  007EFB  0D                 	db	13
+   384  007EFC  0A                 	db	10
+   385  007EFD  00                 	db	0
+   386  007EFE  57                 	db	87	;'W'
+   387  007EFF  72                 	db	114	;'r'
+   388  007F00  69                 	db	105	;'i'
+   389  007F01  74                 	db	116	;'t'
+   390  007F02  65                 	db	101	;'e'
+   391  007F03  20                 	db	32
+   392  007F04  44                 	db	68	;'D'
+   393  007F05  6F                 	db	111	;'o'
+   394  007F06  6E                 	db	110	;'n'
+   395  007F07  65                 	db	101	;'e'
+   396  007F08  20                 	db	32
+   397  007F09  0D                 	db	13
+   398  007F0A  0A                 	db	10
+   399  007F0B  00                 	db	0
+   400  007F0C                     STR_21:
+   401  007F0C  41                 	db	65	;'A'
+   402  007F0D  44                 	db	68	;'D'
+   403  007F0E  43                 	db	67	;'C'
+   404  007F0F  20                 	db	32
+   405  007F10  54                 	db	84	;'T'
+   406  007F11  65                 	db	101	;'e'
+   407  007F12  73                 	db	115	;'s'
+   408  007F13  74                 	db	116	;'t'
+   409  007F14  20                 	db	32
+   410  007F15  2E                 	db	46
+   411  007F16  2E                 	db	46
+   412  007F17  2E                 	db	46
+   413  007F18  2E                 	db	46
+   414  007F19  00                 	db	0
+   415  007F1A  50                 	db	80	;'P'
+   416  007F1B  49                 	db	73	;'I'
+   417  007F1C  43                 	db	67	;'C'
+   418  007F1D  31                 	db	49	;'1'
+   419  007F1E  38                 	db	56	;'8'
+   420  007F1F  46                 	db	70	;'F'
+   421  007F20  20                 	db	32
+   422  007F21  45                 	db	69	;'E'
+   423  007F22  45                 	db	69	;'E'
+   424  007F23  50                 	db	80	;'P'
+   425  007F24  52                 	db	82	;'R'
+   426  007F25  4F                 	db	79	;'O'
+   427  007F26  4D                 	db	77	;'M'
+   428  007F27  00                 	db	0
+   429  007F28  50                 	db	80	;'P'
+   430  007F29  49                 	db	73	;'I'
+   431  007F2A  43                 	db	67	;'C'
+   432  007F2B  20                 	db	32
+   433  007F2C  4C                 	db	76	;'L'
+   434  007F2D  69                 	db	105	;'i'
+   435  007F2E  62                 	db	98	;'b'
+   436  007F2F  72                 	db	114	;'r'
+   437  007F30  61                 	db	97	;'a'
+   438  007F31  72                 	db	114	;'r'
+   439  007F32  69                 	db	105	;'i'
+   440  007F33  65                 	db	101	;'e'
+   441  007F34  73                 	db	115	;'s'
+   442  007F35  00                 	db	0
+   443  007F36  44                 	db	68	;'D'
+   444  007F37  69                 	db	105	;'i'
+   445  007F38  73                 	db	115	;'s'
+   446  007F39  74                 	db	116	;'t'
+   447  007F3A  61                 	db	97	;'a'
+   448  007F3B  6E                 	db	110	;'n'
+   449  007F3C  63                 	db	99	;'c'
+   450  007F3D  65                 	db	101	;'e'
+   451  007F3E  20                 	db	32
+   452  007F3F  3A                 	db	58	;':'
+   453  007F40  25                 	db	37
+   454  007F41  64                 	db	100	;'d'
+   455  007F42  00                 	db	0
+   456  007F43  48                 	db	72	;'H'
+   457  007F44  75                 	db	117	;'u'
+   458  007F45  6D                 	db	109	;'m'
+   459  007F46  69                 	db	105	;'i'
+   460  007F47  64                 	db	100	;'d'
+   461  007F48  69                 	db	105	;'i'
+   462  007F49  74                 	db	116	;'t'
+   463  007F4A  79                 	db	121	;'y'
+   464  007F4B  20                 	db	32
+   465  007F4C  3A                 	db	58	;':'
+   466  007F4D  25                 	db	37
+   467  007F4E  64                 	db	100	;'d'
+   468  007F4F  00                 	db	0
+   469  007F50  48                 	db	72	;'H'
+   470  007F51  65                 	db	101	;'e'
+   471  007F52  6C                 	db	108	;'l'
+   472  007F53  6C                 	db	108	;'l'
+   473  007F54  6F                 	db	111	;'o'
+   474  007F55  20                 	db	32
+   475  007F56  50                 	db	80	;'P'
+   476  007F57  49                 	db	73	;'I'
+   477  007F58  43                 	db	67	;'C'
+   478  007F59  0D                 	db	13
+   479  007F5A  0A                 	db	10
+   480  007F5B  00                 	db	0
+   481  007F5C                     STR_41:
+   482  007F5C  49                 	db	73	;'I'
+   483  007F5D  32                 	db	50	;'2'
+   484  007F5E  43                 	db	67	;'C'
+   485  007F5F  20                 	db	32
+   486  007F60  52                 	db	82	;'R'
+   487  007F61  54                 	db	84	;'T'
+   488  007F62  43                 	db	67	;'C'
+   489  007F63  20                 	db	32
+   490  007F64  0D                 	db	13
+   491  007F65  0A                 	db	10
+   492  007F66  00                 	db	0
+   493  007F67  4E                 	db	78	;'N'
+   494  007F68  65                 	db	101	;'e'
+   495  007F69  77                 	db	119	;'w'
+   496  007F6A  20                 	db	32
+   497  007F6B  53                 	db	83	;'S'
+   498  007F6C  4D                 	db	77	;'M'
+   499  007F6D  53                 	db	83	;'S'
+   500  007F6E  20                 	db	32
+   501  007F6F  21                 	db	33
+   502  007F70  21                 	db	33
+   503  007F71  00                 	db	0
+   504  007F72  41                 	db	65	;'A'
+   505  007F73  44                 	db	68	;'D'
+   506  007F74  43                 	db	67	;'C'
+   507  007F75  20                 	db	32
+   508  007F76  30                 	db	48	;'0'
+   509  007F77  3A                 	db	58	;':'
+   510  007F78  20                 	db	32
+   511  007F79  25                 	db	37
+   512  007F7A  64                 	db	100	;'d'
+   513  007F7B  00                 	db	0
+   514  007F7C  41                 	db	65	;'A'
+   515  007F7D  54                 	db	84	;'T'
+   516  007F7E  2B                 	db	43
+   517  007F7F  43                 	db	67	;'C'
+   518  007F80  4D                 	db	77	;'M'
+   519  007F81  47                 	db	71	;'G'
+   520  007F82  46                 	db	70	;'F'
+   521  007F83  3D                 	db	61	;'='
+   522  007F84  31                 	db	49	;'1'
+   523  007F85  00                 	db	0
+   524  007F86  54                 	db	84	;'T'
+   525  007F87  49                 	db	73	;'I'
+   526  007F88  43                 	db	67	;'C'
+   527  007F89  4B                 	db	75	;'K'
+   528  007F8A  3A                 	db	58	;':'
+   529  007F8B  20                 	db	32
+   530  007F8C  25                 	db	37
+   531  007F8D  64                 	db	100	;'d'
+   532  007F8E  00                 	db	0
+   533  007F8F  47                 	db	71	;'G'
+   534  007F90  53                 	db	83	;'S'
+   535  007F91  4D                 	db	77	;'M'
+   536  007F92  20                 	db	32
+   537  007F93  49                 	db	73	;'I'
+   538  007F94  6E                 	db	110	;'n'
+   539  007F95  69                 	db	105	;'i'
+   540  007F96  74                 	db	116	;'t'
+   541  007F97  00                 	db	0
+   542  007F98  41                 	db	65	;'A'
+   543  007F99  54                 	db	84	;'T'
+   544  007F9A  2B                 	db	43
+   545  007F9B  43                 	db	67	;'C'
+   546  007F9C  4D                 	db	77	;'M'
+   547  007F9D  47                 	db	71	;'G'
+   548  007F9E  52                 	db	82	;'R'
+   549  007F9F  3D                 	db	61	;'='
+   550  007FA0  00                 	db	0
+   551  007FA1  41                 	db	65	;'A'
+   552  007FA2  54                 	db	84	;'T'
+   553  007FA3  2B                 	db	43
+   554  007FA4  43                 	db	67	;'C'
+   555  007FA5  4D                 	db	77	;'M'
+   556  007FA6  47                 	db	71	;'G'
+   557  007FA7  53                 	db	83	;'S'
+   558  007FA8  3D                 	db	61	;'='
+   559  007FA9  00                 	db	0
+   560  007FAA  41                 	db	65	;'A'
+   561  007FAB  54                 	db	84	;'T'
+   562  007FAC  2B                 	db	43
+   563  007FAD  43                 	db	67	;'C'
+   564  007FAE  53                 	db	83	;'S'
+   565  007FAF  50                 	db	80	;'P'
+   566  007FB0  4E                 	db	78	;'N'
+   567  007FB1  3F                 	db	63	;'?'
+   568  007FB2  00                 	db	0
+   569  007FB3  52                 	db	82	;'R'
+   570  007FB4  65                 	db	101	;'e'
+   571  007FB5  61                 	db	97	;'a'
+   572  007FB6  64                 	db	100	;'d'
+   573  007FB7  20                 	db	32
+   574  007FB8  0D                 	db	13
+   575  007FB9  0A                 	db	10
+   576  007FBA  00                 	db	0
+   577  007FBB                     STR_16:
+   578  007FBB  48                 	db	72	;'H'
+   579  007FBC  43                 	db	67	;'C'
+   580  007FBD  2D                 	db	45
+   581  007FBE  53                 	db	83	;'S'
+   582  007FBF  52                 	db	82	;'R'
+   583  007FC0  30                 	db	48	;'0'
+   584  007FC1  34                 	db	52	;'4'
+   585  007FC2  00                 	db	0
+   586  007FC3  49                 	db	73	;'I'
+   587  007FC4  32                 	db	50	;'2'
+   588  007FC5  43                 	db	67	;'C'
+   589  007FC6  20                 	db	32
+   590  007FC7  52                 	db	82	;'R'
+   591  007FC8  54                 	db	84	;'T'
+   592  007FC9  43                 	db	67	;'C'
+   593  007FCA  00                 	db	0
+   594  007FCB  20                 	db	32
+   595  007FCC  4D                 	db	77	;'M'
+   596  007FCD  61                 	db	97	;'a'
+   597  007FCE  73                 	db	115	;'s'
+   598  007FCF  74                 	db	116	;'t'
+   599  007FD0  65                 	db	101	;'e'
+   600  007FD1  72                 	db	114	;'r'
+   601  007FD2  00                 	db	0
+   602  007FD3  44                 	db	68	;'D'
+   603  007FD4  61                 	db	97	;'a'
+   604  007FD5  74                 	db	116	;'t'
+   605  007FD6  61                 	db	97	;'a'
+   606  007FD7  20                 	db	32
+   607  007FD8  3A                 	db	58	;':'
+   608  007FD9  00                 	db	0
+   609  007FDA  54                 	db	84	;'T'
+   610  007FDB  69                 	db	105	;'i'
+   611  007FDC  6D                 	db	109	;'m'
+   612  007FDD  65                 	db	101	;'e'
+   613  007FDE  20                 	db	32
+   614  007FDF  3A                 	db	58	;':'
+   615  007FE0  00                 	db	0
+   616  007FE1  44                 	db	68	;'D'
+   617  007FE2  61                 	db	97	;'a'
+   618  007FE3  74                 	db	116	;'t'
+   619  007FE4  65                 	db	101	;'e'
+   620  007FE5  20                 	db	32
+   621  007FE6  3A                 	db	58	;':'
+   622  007FE7  00                 	db	0
+   623  007FE8  53                 	db	83	;'S'
+   624  007FE9  49                 	db	73	;'I'
+   625  007FEA  4D                 	db	77	;'M'
+   626  007FEB  20                 	db	32
+   627  007FEC  49                 	db	73	;'I'
+   628  007FED  73                 	db	115	;'s'
+   629  007FEE  00                 	db	0
+   630  007FEF  41                 	db	65	;'A'
+   631  007FF0  54                 	db	84	;'T'
+   632  007FF1  45                 	db	69	;'E'
+   633  007FF2  30                 	db	48	;'0'
+   634  007FF3  00                 	db	0
+   635  007FF4  68                 	db	104	;'h'
+   636  007FF5  69                 	db	105	;'i'
+   637  007FF6  00                 	db	0
+   638  007FF7  4F                 	db	79	;'O'
+   639  007FF8  4B                 	db	75	;'K'
+   640  007FF9  00                 	db	0
+   641  007FFA  41                 	db	65	;'A'
+   642  007FFB  54                 	db	84	;'T'
+   643  007FFC  00                 	db	0
+   644  007FFD  0D                 	db	13
+   645  007FFE  00                 	db	0
+   646  0000                     
+   647                           ; #config settings
+   648  007FFF  00                 	db	0	; dummy byte at the end
+   649  0000                     
+   650                           	psect	cinit
+   651  0004C2                     __pcinit:
+   652                           	opt stack 0
+   653  0004C2                     start_initialization:
+   654                           	opt stack 0
+   655  0004C2                     __initialization:
+   656                           	opt stack 0
+   657                           
+   658                           ; Clear objects allocated to BANK1 (256 bytes)
+   659  0004C2  EE01  F000         	lfsr	0,__pbssBANK1
+   660  0004C6  EE11 F000          	lfsr	1,256
+   661  0004CA                     clear_0:
+   662  0004CA  6AEE               	clrf	postinc0,c
+   663  0004CC  50E5               	movf	postdec1,w,c
+   664  0004CE  50E1               	movf	fsr1l,w,c
+   665  0004D0  E1FC               	bnz	clear_0
+   666  0004D2  50E2               	movf	fsr1h,w,c
+   667  0004D4  E1FA               	bnz	clear_0
+   668                           
+   669                           ; Clear objects allocated to COMRAM (48 bytes)
+   670  0004D6  EE00  F001         	lfsr	0,__pbssCOMRAM
+   671  0004DA  0E30               	movlw	48
+   672  0004DC                     clear_1:
+   673  0004DC  6AEE               	clrf	postinc0,c
+   674  0004DE  06E8               	decf	wreg,f,c
+   675  0004E0  E1FD               	bnz	clear_1
+   676                           
+   677                           ; Initialize objects allocated to COMRAM (8 bytes)
+   678                           ; load TBLPTR registers with __pidataCOMRAM
+   679  0004E2  0E5C               	movlw	low __pidataCOMRAM
+   680  0004E4  6EF6               	movwf	tblptrl,c
+   681  0004E6  0E05               	movlw	high __pidataCOMRAM
+   682  0004E8  6EF7               	movwf	tblptrh,c
+   683  0004EA  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   684  0004EC  6EF8               	movwf	tblptru,c
+   685  0004EE  EE00  F046         	lfsr	0,__pdataCOMRAM
+   686  0004F2  EE10 F008          	lfsr	1,8
+   687  0004F6                     copy_data0:
+   688  0004F6  0009               	tblrd		*+
+   689  0004F8  CFF5 FFEE          	movff	tablat,postinc0
+   690  0004FC  50E5               	movf	postdec1,w,c
+   691  0004FE  50E1               	movf	fsr1l,w,c
+   692  000500  E1FA               	bnz	copy_data0
+   693  000502                     end_of_initialization:
+   694                           	opt stack 0
+   695  000502                     __end_of__initialization:
+   696                           	opt stack 0
+   697  000502  904E               	bcf	int$flags,0,c	;clear compiler interrupt flag (level 1)
+   698  000504  924E               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
+   699  000506  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   700  000508  6EF8               	movwf	tblptru,c
+   701  00050A  0100               	movlb	0
+   702  00050C  EFB2  F002         	goto	_main	;jump to C main() function
+   703                           tblptru	equ	0xFF8
+   704                           tblptrh	equ	0xFF7
+   705                           tblptrl	equ	0xFF6
+   706                           tablat	equ	0xFF5
+   707                           postinc0	equ	0xFEE
+   708                           wreg	equ	0xFE8
+   709                           postdec1	equ	0xFE5
+   710                           fsr1h	equ	0xFE2
+   711                           fsr1l	equ	0xFE1
+   712                           
+   713                           	psect	bssCOMRAM
+   714  000001                     __pbssCOMRAM:
+   715                           	opt stack 0
+   716  000001                     adc_test@F3448:
+   717                           	opt stack 0
+   718  000001                     	ds	16
+   719  000011                     system_tick_test@F3454:
+   720                           	opt stack 0
+   721  000011                     	ds	16
+   722  000021                     _bits:
+   723                           	opt stack 0
+   724  000021                     	ds	5
+   725  000026                     _lcd_data_pins:
+   726                           	opt stack 0
+   727  000026                     	ds	4
+   728  00002A                     _system_tick:
+   729                           	opt stack 0
+   730  00002A                     	ds	2
+   731  00002C                     _EN:
+   732                           	opt stack 0
+   733  00002C                     	ds	1
+   734  00002D                     _RS:
+   735                           	opt stack 0
+   736  00002D                     	ds	1
+   737  00002E                     _humidity:
+   738                           	opt stack 0
+   739  00002E                     	ds	1
+   740  00002F                     _temperature:
+   741                           	opt stack 0
+   742  00002F                     	ds	1
+   743  000030                     _timer_count:
+   744                           	opt stack 0
+   745  000030                     	ds	1
+   746                           tblptru	equ	0xFF8
+   747                           tblptrh	equ	0xFF7
+   748                           tblptrl	equ	0xFF6
+   749                           tablat	equ	0xFF5
+   750                           postinc0	equ	0xFEE
+   751                           wreg	equ	0xFE8
+   752                           postdec1	equ	0xFE5
+   753                           fsr1h	equ	0xFE2
+   754                           fsr1l	equ	0xFE1
+   755                           
+   756                           	psect	dataCOMRAM
+   757  000046                     __pdataCOMRAM:
+   758                           	opt stack 0
+   759  000046                     rtc_test@F3465:
+   760                           	opt stack 0
+   761  000046                     	ds	4
+   762  00004A                     _rx_Buffer_Head:
+   763                           	opt stack 0
+   764  00004A                     	ds	2
+   765  00004C                     _rx_Buffer_Tail:
+   766                           	opt stack 0
+   767  00004C                     	ds	2
+   768                           tblptru	equ	0xFF8
+   769                           tblptrh	equ	0xFF7
+   770                           tblptrl	equ	0xFF6
+   771                           tablat	equ	0xFF5
+   772                           postinc0	equ	0xFEE
+   773                           wreg	equ	0xFE8
+   774                           postdec1	equ	0xFE5
+   775                           fsr1h	equ	0xFE2
+   776                           fsr1l	equ	0xFE1
+   777                           
+   778                           	psect	bssBANK1
+   779  000100                     __pbssBANK1:
+   780                           	opt stack 0
+   781  000100                     _rxBuffer:
+   782                           	opt stack 0
+   783  000100                     	ds	256
+   784                           tblptru	equ	0xFF8
+   785                           tblptrh	equ	0xFF7
+   786                           tblptrl	equ	0xFF6
+   787                           tablat	equ	0xFF5
+   788                           postinc0	equ	0xFEE
+   789                           wreg	equ	0xFE8
+   790                           postdec1	equ	0xFE5
+   791                           fsr1h	equ	0xFE2
+   792                           fsr1l	equ	0xFE1
+   793                           
+   794                           	psect	cstackCOMRAM
+   795  000031                     __pcstackCOMRAM:
+   796                           	opt stack 0
+   797  000031                     ??_serial_interrupt:
+   798  000031                     
+   799                           ; 1 bytes @ 0x0
+   800  000031                     	ds	2
+   801  000033                     serial_interrupt@rxData:
+   802                           	opt stack 0
+   803                           
+   804                           ; 1 bytes @ 0x2
+   805  000033                     	ds	1
+   806  000034                     ??_ISR:
+   807                           
+   808                           ; 1 bytes @ 0x3
+   809  000034                     	ds	14
+   810  000042                     ??_gpio_pin_read:
+   811  000042                     gpio_pin_mode@mode:
+   812                           	opt stack 0
+   813  000042                     gpio_pin_write@bit_val:
+   814                           	opt stack 0
+   815                           
+   816                           ; 1 bytes @ 0x11
+   817  000042                     	ds	1
+   818  000043                     ??_gpio_pin_mode:
+   819  000043                     ??_gpio_pin_write:
+   820                           
+   821                           ; 1 bytes @ 0x12
+   822  000043                     	ds	1
+   823  000044                     gpio_pin_read@pin:
+   824                           	opt stack 0
+   825                           
+   826                           ; 1 bytes @ 0x13
+   827  000044                     	ds	1
+   828  000045                     gpio_pin_mode@pin:
+   829                           	opt stack 0
+   830  000045                     gpio_pin_write@pin:
+   831                           	opt stack 0
+   832                           
+   833                           ; 1 bytes @ 0x14
+   834  000045                     	ds	1
+   835  000046                     tblptru	equ	0xFF8
+   836                           tblptrh	equ	0xFF7
+   837                           tblptrl	equ	0xFF6
+   838                           tablat	equ	0xFF5
+   839                           postinc0	equ	0xFEE
+   840                           wreg	equ	0xFE8
+   841                           postdec1	equ	0xFE5
+   842                           fsr1h	equ	0xFE2
+   843                           fsr1l	equ	0xFE1
+   844                           
+   845                           ; 1 bytes @ 0x15
+   846 ;;
+   847 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   848 ;;
+   849 ;; *************** function _main *****************
+   850 ;; Defined at:
+   851 ;;		line 12 in file "main.c"
+   852 ;; Parameters:    Size  Location     Type
+   853 ;;		None
+   854 ;; Auto vars:     Size  Location     Type
+   855 ;;		None
+   856 ;; Return value:  Size  Location     Type
+   857 ;;                  1    wreg      void 
+   858 ;; Registers used:
+   859 ;;		wreg, status,2, status,0, cstack
+   860 ;; Tracked objects:
+   861 ;;		On entry : 0/0
+   862 ;;		On exit  : 0/0
+   863 ;;		Unchanged: 0/0
+   864 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+   865 ;;      Params:         0       0       0       0       0       0       0
+   866 ;;      Locals:         0       0       0       0       0       0       0
+   867 ;;      Temps:          0       0       0       0       0       0       0
+   868 ;;      Totals:         0       0       0       0       0       0       0
+   869 ;;Total ram usage:        0 bytes
+   870 ;; Hardware stack levels required when called:    4
+   871 ;; This function calls:
+   872 ;;		_io_test
+   873 ;; This function is called by:
+   874 ;;		Startup code after reset
+   875 ;; This function uses a non-reentrant model
+   876 ;;
+   877                           
+   878                           	psect	text0
+   879  000564                     __ptext0:
+   880                           	opt stack 0
+   881  000564                     _main:
+   882                           	opt stack 27
+   883                           
+   884                           ;main.c: 13: io_test();
+   885                           
+   886                           ;incstack = 0
+   887  000564  EC88  F002         	call	_io_test	;wreg free
+   888  000568                     l934:
+   889  000568  D7FF               	goto	l934
+   890  00056A                     __end_of_main:
+   891                           	opt stack 0
+   892                           tblptru	equ	0xFF8
+   893                           tblptrh	equ	0xFF7
+   894                           tblptrl	equ	0xFF6
+   895                           tablat	equ	0xFF5
+   896                           postinc0	equ	0xFEE
+   897                           wreg	equ	0xFE8
+   898                           postdec1	equ	0xFE5
+   899                           fsr1h	equ	0xFE2
+   900                           fsr1l	equ	0xFE1
+   901                           
+   902 ;; *************** function _io_test *****************
+   903 ;; Defined at:
+   904 ;;		line 18 in file "demo.c"
+   905 ;; Parameters:    Size  Location     Type
+   906 ;;		None
+   907 ;; Auto vars:     Size  Location     Type
+   908 ;;		None
+   909 ;; Return value:  Size  Location     Type
+   910 ;;                  1    wreg      void 
+   911 ;; Registers used:
+   912 ;;		wreg, status,2, status,0, cstack
+   913 ;; Tracked objects:
+   914 ;;		On entry : 0/0
+   915 ;;		On exit  : 0/0
+   916 ;;		Unchanged: 0/0
+   917 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+   918 ;;      Params:         0       0       0       0       0       0       0
+   919 ;;      Locals:         0       0       0       0       0       0       0
+   920 ;;      Temps:          0       0       0       0       0       0       0
+   921 ;;      Totals:         0       0       0       0       0       0       0
+   922 ;;Total ram usage:        0 bytes
+   923 ;; Hardware stack levels used:    1
+   924 ;; Hardware stack levels required when called:    3
+   925 ;; This function calls:
+   926 ;;		_gpio_pin_mode
+   927 ;;		_gpio_pin_read
+   928 ;;		_gpio_pin_write
+   929 ;; This function is called by:
+   930 ;;		_main
+   931 ;; This function uses a non-reentrant model
+   932 ;;
+   933                           
+   934                           	psect	text1
+   935  000510                     __ptext1:
+   936                           	opt stack 0
+   937  000510                     _io_test:
+   938                           	opt stack 27
+   939                           
+   940                           ;demo.c: 20: gpio_pin_mode(0,0);
+   941                           
+   942                           ;incstack = 0
+   943  000510  0E00               	movlw	0
+   944  000512  6E42               	movwf	gpio_pin_mode@mode,c
+   945  000514  0E00               	movlw	0
+   946  000516  ECD4  F000         	call	_gpio_pin_mode
+   947                           
+   948                           ;demo.c: 21: gpio_pin_mode(1,1);
+   949  00051A  0E01               	movlw	1
+   950  00051C  6E42               	movwf	gpio_pin_mode@mode,c
+   951  00051E  0E01               	movlw	1
+   952  000520  ECD4  F000         	call	_gpio_pin_mode
+   953  000524                     l851:
+   954                           
+   955                           ;demo.c: 24: if((gpio_pin_read(1)))
+   956  000524  0E01               	movlw	1
+   957  000526  EC91  F001         	call	_gpio_pin_read
+   958  00052A  0900               	iorlw	0
+   959  00052C  B4D8               	btfsc	status,2,c
+   960  00052E  D006               	goto	l3385
+   961                           
+   962                           ;demo.c: 25: {
+   963                           ;demo.c: 26: gpio_pin_write(0,0);
+   964  000530  0E00               	movlw	0
+   965  000532  6E42               	movwf	gpio_pin_write@bit_val,c
+   966  000534  0E00               	movlw	0
+   967  000536  EC0D  F000         	call	_gpio_pin_write
+   968                           
+   969                           ;demo.c: 27: }
+   970  00053A  D7F4               	goto	l851
+   971  00053C                     l3385:
+   972                           
+   973                           ;demo.c: 28: else{
+   974                           ;demo.c: 29: gpio_pin_write(0,1);
+   975  00053C  0E01               	movlw	1
+   976  00053E  6E42               	movwf	gpio_pin_write@bit_val,c
+   977  000540  0E00               	movlw	0
+   978  000542  EC0D  F000         	call	_gpio_pin_write
+   979  000546  D7EE               	goto	l851
+   980  000548                     __end_of_io_test:
+   981                           	opt stack 0
+   982                           tblptru	equ	0xFF8
+   983                           tblptrh	equ	0xFF7
+   984                           tblptrl	equ	0xFF6
+   985                           tablat	equ	0xFF5
+   986                           postinc0	equ	0xFEE
+   987                           wreg	equ	0xFE8
+   988                           postdec1	equ	0xFE5
+   989                           fsr1h	equ	0xFE2
+   990                           fsr1l	equ	0xFE1
+   991                           status	equ	0xFD8
+   992                           
+   993 ;; *************** function _gpio_pin_write *****************
+   994 ;; Defined at:
+   995 ;;		line 68 in file "../PIC18F4520_Master.X/gpio.c"
+   996 ;; Parameters:    Size  Location     Type
+   997 ;;  pin             1    wreg     unsigned char 
+   998 ;;  bit_val         1   17[COMRAM] unsigned char 
+   999 ;; Auto vars:     Size  Location     Type
+  1000 ;;  pin             1   20[COMRAM] unsigned char 
+  1001 ;; Return value:  Size  Location     Type
+  1002 ;;                  1    wreg      void 
+  1003 ;; Registers used:
+  1004 ;;		wreg, status,2, status,0
+  1005 ;; Tracked objects:
+  1006 ;;		On entry : 0/0
+  1007 ;;		On exit  : 0/0
+  1008 ;;		Unchanged: 0/0
+  1009 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+  1010 ;;      Params:         1       0       0       0       0       0       0
+  1011 ;;      Locals:         1       0       0       0       0       0       0
+  1012 ;;      Temps:          2       0       0       0       0       0       0
+  1013 ;;      Totals:         4       0       0       0       0       0       0
+  1014 ;;Total ram usage:        4 bytes
+  1015 ;; Hardware stack levels used:    1
+  1016 ;; Hardware stack levels required when called:    2
+  1017 ;; This function calls:
+  1018 ;;		Nothing
+  1019 ;; This function is called by:
+  1020 ;;		_io_test
+  1021 ;;		_dht_readSensor
+  1022 ;;		_lcd_nibble
+  1023 ;;		_lcd_send
+  1024 ;;		_HCSR04_trigger
+  1025 ;; This function uses a non-reentrant model
+  1026 ;;
+  1027                           
+  1028                           	psect	text2
+  1029  00001A                     __ptext2:
+  1030                           	opt stack 0
+  1031  00001A                     _gpio_pin_write:
+  1032                           	opt stack 27
+  1033                           
+  1034                           ;incstack = 0
+  1035                           ;gpio_pin_write@pin stored from wreg
+  1036  00001A  6E45               	movwf	gpio_pin_write@pin,c
+  1037                           
+  1038                           ;gpio.c: 70: if (pin<8)
+  1039  00001C  0E08               	movlw	8
+  1040  00001E  6045               	cpfslt	gpio_pin_write@pin,c
+  1041  000020  D023               	goto	l3111
+  1042                           
+  1043                           ;gpio.c: 71: {
+  1044                           ;gpio.c: 72: if (bit_val==0)
+  1045  000022  5042               	movf	gpio_pin_write@bit_val,w,c
+  1046  000024  A4D8               	btfss	status,2,c
+  1047  000026  D00F               	goto	l3107
+  1048                           
+  1049                           ;gpio.c: 73: {
+  1050                           ;gpio.c: 74: PORTB = LATB & ~(1<<pin);
+  1051  000028  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1052  00002C  0E01               	movlw	1
+  1053  00002E  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1054  000030  2A43               	incf	??_gpio_pin_write,f,c
+  1055  000032  D002               	goto	u2214
+  1056  000034                     u2215:
+  1057  000034  90D8               	bcf	status,0,c
+  1058  000036  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1059  000038                     u2214:
+  1060  000038  2E43               	decfsz	??_gpio_pin_write,f,c
+  1061  00003A  D7FC               	goto	u2215
+  1062  00003C  5044               	movf	??_gpio_pin_write+1,w,c
+  1063  00003E  0AFF               	xorlw	255
+  1064  000040  148A               	andwf	3978,w,c	;volatile
+  1065  000042  6E81               	movwf	3969,c	;volatile
+  1066                           
+  1067                           ;gpio.c: 75: }
+  1068  000044  0012               	return	
+  1069  000046                     l3107:
+  1070                           
+  1071                           ;gpio.c: 76: else if (bit_val==1)
+  1072  000046  0442               	decf	gpio_pin_write@bit_val,w,c
+  1073  000048  A4D8               	btfss	status,2,c
+  1074  00004A  0012               	return	
+  1075                           
+  1076                           ;gpio.c: 77: {
+  1077                           ;gpio.c: 78: PORTB = LATB |(1<<pin);
+  1078  00004C  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1079  000050  0E01               	movlw	1
+  1080  000052  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1081  000054  2A43               	incf	??_gpio_pin_write,f,c
+  1082  000056  D002               	goto	u2234
+  1083  000058                     u2235:
+  1084  000058  90D8               	bcf	status,0,c
+  1085  00005A  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1086  00005C                     u2234:
+  1087  00005C  2E43               	decfsz	??_gpio_pin_write,f,c
+  1088  00005E  D7FC               	goto	u2235
+  1089  000060  5044               	movf	??_gpio_pin_write+1,w,c
+  1090  000062  108A               	iorwf	3978,w,c	;volatile
+  1091  000064  6E81               	movwf	3969,c	;volatile
+  1092                           
+  1093                           ;gpio.c: 79: }
+  1094                           ;gpio.c: 80: }
+  1095  000066  0012               	return	
+  1096  000068                     l3111:
+  1097                           
+  1098                           ;gpio.c: 81: else if (pin<16)
+  1099  000068  0E10               	movlw	16
+  1100  00006A  6045               	cpfslt	gpio_pin_write@pin,c
+  1101  00006C  D025               	goto	l3123
+  1102                           
+  1103                           ;gpio.c: 82: {
+  1104                           ;gpio.c: 83: pin-=8;
+  1105  00006E  0E08               	movlw	8
+  1106  000070  5E45               	subwf	gpio_pin_write@pin,f,c
+  1107                           
+  1108                           ;gpio.c: 84: if (bit_val==0)
+  1109  000072  5042               	movf	gpio_pin_write@bit_val,w,c
+  1110  000074  A4D8               	btfss	status,2,c
+  1111  000076  D00F               	goto	l3119
+  1112                           
+  1113                           ;gpio.c: 85: {
+  1114                           ;gpio.c: 86: PORTD = LATD & ~(1<<pin);
+  1115  000078  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1116  00007C  0E01               	movlw	1
+  1117  00007E  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1118  000080  2A43               	incf	??_gpio_pin_write,f,c
+  1119  000082  D002               	goto	u2264
+  1120  000084                     u2265:
+  1121  000084  90D8               	bcf	status,0,c
+  1122  000086  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1123  000088                     u2264:
+  1124  000088  2E43               	decfsz	??_gpio_pin_write,f,c
+  1125  00008A  D7FC               	goto	u2265
+  1126  00008C  5044               	movf	??_gpio_pin_write+1,w,c
+  1127  00008E  0AFF               	xorlw	255
+  1128  000090  148C               	andwf	3980,w,c	;volatile
+  1129  000092  6E83               	movwf	3971,c	;volatile
+  1130                           
+  1131                           ;gpio.c: 87: }
+  1132  000094  0012               	return	
+  1133  000096                     l3119:
+  1134                           
+  1135                           ;gpio.c: 88: else if (bit_val==1)
+  1136  000096  0442               	decf	gpio_pin_write@bit_val,w,c
+  1137  000098  A4D8               	btfss	status,2,c
+  1138  00009A  0012               	return	
+  1139                           
+  1140                           ;gpio.c: 89: {
+  1141                           ;gpio.c: 90: PORTD = LATD |(1<<pin);
+  1142  00009C  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1143  0000A0  0E01               	movlw	1
+  1144  0000A2  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1145  0000A4  2A43               	incf	??_gpio_pin_write,f,c
+  1146  0000A6  D002               	goto	u2284
+  1147  0000A8                     u2285:
+  1148  0000A8  90D8               	bcf	status,0,c
+  1149  0000AA  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1150  0000AC                     u2284:
+  1151  0000AC  2E43               	decfsz	??_gpio_pin_write,f,c
+  1152  0000AE  D7FC               	goto	u2285
+  1153  0000B0  5044               	movf	??_gpio_pin_write+1,w,c
+  1154  0000B2  108C               	iorwf	3980,w,c	;volatile
+  1155  0000B4  6E83               	movwf	3971,c	;volatile
+  1156                           
+  1157                           ;gpio.c: 91: }
+  1158                           ;gpio.c: 92: }
+  1159  0000B6  0012               	return	
+  1160  0000B8                     l3123:
+  1161                           
+  1162                           ;gpio.c: 93: else if (pin<24)
+  1163  0000B8  0E18               	movlw	24
+  1164  0000BA  6045               	cpfslt	gpio_pin_write@pin,c
+  1165  0000BC  D025               	goto	l3135
+  1166                           
+  1167                           ;gpio.c: 94: {
+  1168                           ;gpio.c: 95: pin-=16;
+  1169  0000BE  0E10               	movlw	16
+  1170  0000C0  5E45               	subwf	gpio_pin_write@pin,f,c
+  1171                           
+  1172                           ;gpio.c: 96: if (bit_val==0)
+  1173  0000C2  5042               	movf	gpio_pin_write@bit_val,w,c
+  1174  0000C4  A4D8               	btfss	status,2,c
+  1175  0000C6  D00F               	goto	l3131
+  1176                           
+  1177                           ;gpio.c: 97: {
+  1178                           ;gpio.c: 98: PORTC = LATC & ~(1<<pin);
+  1179  0000C8  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1180  0000CC  0E01               	movlw	1
+  1181  0000CE  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1182  0000D0  2A43               	incf	??_gpio_pin_write,f,c
+  1183  0000D2  D002               	goto	u2314
+  1184  0000D4                     u2315:
+  1185  0000D4  90D8               	bcf	status,0,c
+  1186  0000D6  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1187  0000D8                     u2314:
+  1188  0000D8  2E43               	decfsz	??_gpio_pin_write,f,c
+  1189  0000DA  D7FC               	goto	u2315
+  1190  0000DC  5044               	movf	??_gpio_pin_write+1,w,c
+  1191  0000DE  0AFF               	xorlw	255
+  1192  0000E0  148B               	andwf	3979,w,c	;volatile
+  1193  0000E2  6E82               	movwf	3970,c	;volatile
+  1194                           
+  1195                           ;gpio.c: 99: }
+  1196  0000E4  0012               	return	
+  1197  0000E6                     l3131:
+  1198                           
+  1199                           ;gpio.c: 100: else if (bit_val==1)
+  1200  0000E6  0442               	decf	gpio_pin_write@bit_val,w,c
+  1201  0000E8  A4D8               	btfss	status,2,c
+  1202  0000EA  0012               	return	
+  1203                           
+  1204                           ;gpio.c: 101: {
+  1205                           ;gpio.c: 102: PORTC = LATC |(1<<pin);
+  1206  0000EC  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1207  0000F0  0E01               	movlw	1
+  1208  0000F2  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1209  0000F4  2A43               	incf	??_gpio_pin_write,f,c
+  1210  0000F6  D002               	goto	u2334
+  1211  0000F8                     u2335:
+  1212  0000F8  90D8               	bcf	status,0,c
+  1213  0000FA  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1214  0000FC                     u2334:
+  1215  0000FC  2E43               	decfsz	??_gpio_pin_write,f,c
+  1216  0000FE  D7FC               	goto	u2335
+  1217  000100  5044               	movf	??_gpio_pin_write+1,w,c
+  1218  000102  108B               	iorwf	3979,w,c	;volatile
+  1219  000104  6E82               	movwf	3970,c	;volatile
+  1220                           
+  1221                           ;gpio.c: 103: }
+  1222                           ;gpio.c: 104: }
+  1223  000106  0012               	return	
+  1224  000108                     l3135:
+  1225                           
+  1226                           ;gpio.c: 105: else if (pin<30)
+  1227  000108  0E1E               	movlw	30
+  1228  00010A  6045               	cpfslt	gpio_pin_write@pin,c
+  1229  00010C  D025               	goto	l3147
+  1230                           
+  1231                           ;gpio.c: 106: {
+  1232                           ;gpio.c: 107: pin-=24;
+  1233  00010E  0E18               	movlw	24
+  1234  000110  5E45               	subwf	gpio_pin_write@pin,f,c
+  1235                           
+  1236                           ;gpio.c: 108: if (bit_val==0)
+  1237  000112  5042               	movf	gpio_pin_write@bit_val,w,c
+  1238  000114  A4D8               	btfss	status,2,c
+  1239  000116  D00F               	goto	l3143
+  1240                           
+  1241                           ;gpio.c: 109: {
+  1242                           ;gpio.c: 110: PORTA = LATA & ~(1<<pin);
+  1243  000118  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1244  00011C  0E01               	movlw	1
+  1245  00011E  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1246  000120  2A43               	incf	??_gpio_pin_write,f,c
+  1247  000122  D002               	goto	u2364
+  1248  000124                     u2365:
+  1249  000124  90D8               	bcf	status,0,c
+  1250  000126  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1251  000128                     u2364:
+  1252  000128  2E43               	decfsz	??_gpio_pin_write,f,c
+  1253  00012A  D7FC               	goto	u2365
+  1254  00012C  5044               	movf	??_gpio_pin_write+1,w,c
+  1255  00012E  0AFF               	xorlw	255
+  1256  000130  1489               	andwf	3977,w,c	;volatile
+  1257  000132  6E80               	movwf	3968,c	;volatile
+  1258                           
+  1259                           ;gpio.c: 111: }
+  1260  000134  0012               	return	
+  1261  000136                     l3143:
+  1262                           
+  1263                           ;gpio.c: 112: else if (bit_val==1)
+  1264  000136  0442               	decf	gpio_pin_write@bit_val,w,c
+  1265  000138  A4D8               	btfss	status,2,c
+  1266  00013A  0012               	return	
+  1267                           
+  1268                           ;gpio.c: 113: {
+  1269                           ;gpio.c: 114: PORTA = LATA |(1<<pin);
+  1270  00013C  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1271  000140  0E01               	movlw	1
+  1272  000142  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1273  000144  2A43               	incf	??_gpio_pin_write,f,c
+  1274  000146  D002               	goto	u2384
+  1275  000148                     u2385:
+  1276  000148  90D8               	bcf	status,0,c
+  1277  00014A  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1278  00014C                     u2384:
+  1279  00014C  2E43               	decfsz	??_gpio_pin_write,f,c
+  1280  00014E  D7FC               	goto	u2385
+  1281  000150  5044               	movf	??_gpio_pin_write+1,w,c
+  1282  000152  1089               	iorwf	3977,w,c	;volatile
+  1283  000154  6E80               	movwf	3968,c	;volatile
+  1284                           
+  1285                           ;gpio.c: 115: }
+  1286                           ;gpio.c: 116: }
+  1287  000156  0012               	return	
+  1288  000158                     l3147:
+  1289                           
+  1290                           ;gpio.c: 117: else if (pin<33)
+  1291  000158  0E21               	movlw	33
+  1292  00015A  6045               	cpfslt	gpio_pin_write@pin,c
+  1293  00015C  0012               	return	
+  1294                           
+  1295                           ;gpio.c: 118: {
+  1296                           ;gpio.c: 119: pin-=30;
+  1297  00015E  0E1E               	movlw	30
+  1298  000160  5E45               	subwf	gpio_pin_write@pin,f,c
+  1299                           
+  1300                           ;gpio.c: 120: if (bit_val==0)
+  1301  000162  5042               	movf	gpio_pin_write@bit_val,w,c
+  1302  000164  A4D8               	btfss	status,2,c
+  1303  000166  D00F               	goto	l3155
+  1304                           
+  1305                           ;gpio.c: 121: {
+  1306                           ;gpio.c: 122: PORTE = LATE & ~(1<<pin);
+  1307  000168  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1308  00016C  0E01               	movlw	1
+  1309  00016E  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1310  000170  2A43               	incf	??_gpio_pin_write,f,c
+  1311  000172  D002               	goto	u2414
+  1312  000174                     u2415:
+  1313  000174  90D8               	bcf	status,0,c
+  1314  000176  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1315  000178                     u2414:
+  1316  000178  2E43               	decfsz	??_gpio_pin_write,f,c
+  1317  00017A  D7FC               	goto	u2415
+  1318  00017C  5044               	movf	??_gpio_pin_write+1,w,c
+  1319  00017E  0AFF               	xorlw	255
+  1320  000180  148D               	andwf	3981,w,c	;volatile
+  1321  000182  6E84               	movwf	3972,c	;volatile
+  1322                           
+  1323                           ;gpio.c: 123: }
+  1324  000184  0012               	return	
+  1325  000186                     l3155:
+  1326                           
+  1327                           ;gpio.c: 124: else if (bit_val==1)
+  1328  000186  0442               	decf	gpio_pin_write@bit_val,w,c
+  1329  000188  A4D8               	btfss	status,2,c
+  1330  00018A  0012               	return	
+  1331                           
+  1332                           ;gpio.c: 125: {
+  1333                           ;gpio.c: 126: PORTE = LATE |(1<<pin);
+  1334  00018C  C045  F043         	movff	gpio_pin_write@pin,??_gpio_pin_write
+  1335  000190  0E01               	movlw	1
+  1336  000192  6E44               	movwf	(??_gpio_pin_write+1)& (0+255),c
+  1337  000194  2A43               	incf	??_gpio_pin_write,f,c
+  1338  000196  D002               	goto	u2434
+  1339  000198                     u2435:
+  1340  000198  90D8               	bcf	status,0,c
+  1341  00019A  3644               	rlcf	??_gpio_pin_write+1,f,c
+  1342  00019C                     u2434:
+  1343  00019C  2E43               	decfsz	??_gpio_pin_write,f,c
+  1344  00019E  D7FC               	goto	u2435
+  1345  0001A0  5044               	movf	??_gpio_pin_write+1,w,c
+  1346  0001A2  108D               	iorwf	3981,w,c	;volatile
+  1347  0001A4  6E84               	movwf	3972,c	;volatile
+  1348  0001A6  0012               	return	
+  1349  0001A8                     __end_of_gpio_pin_write:
+  1350                           	opt stack 0
+  1351                           tblptru	equ	0xFF8
+  1352                           tblptrh	equ	0xFF7
+  1353                           tblptrl	equ	0xFF6
+  1354                           tablat	equ	0xFF5
+  1355                           postinc0	equ	0xFEE
+  1356                           wreg	equ	0xFE8
+  1357                           postdec1	equ	0xFE5
+  1358                           fsr1h	equ	0xFE2
+  1359                           fsr1l	equ	0xFE1
+  1360                           status	equ	0xFD8
+  1361                           
+  1362 ;; *************** function _gpio_pin_read *****************
+  1363 ;; Defined at:
+  1364 ;;		line 132 in file "../PIC18F4520_Master.X/gpio.c"
+  1365 ;; Parameters:    Size  Location     Type
+  1366 ;;  pin             1    wreg     unsigned char 
+  1367 ;; Auto vars:     Size  Location     Type
+  1368 ;;  pin             1   19[COMRAM] unsigned char 
+  1369 ;; Return value:  Size  Location     Type
+  1370 ;;                  1    wreg      unsigned char 
+  1371 ;; Registers used:
+  1372 ;;		wreg, status,2, status,0
+  1373 ;; Tracked objects:
+  1374 ;;		On entry : 0/0
+  1375 ;;		On exit  : 0/0
+  1376 ;;		Unchanged: 0/0
+  1377 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+  1378 ;;      Params:         0       0       0       0       0       0       0
+  1379 ;;      Locals:         1       0       0       0       0       0       0
+  1380 ;;      Temps:          2       0       0       0       0       0       0
+  1381 ;;      Totals:         3       0       0       0       0       0       0
+  1382 ;;Total ram usage:        3 bytes
+  1383 ;; Hardware stack levels used:    1
+  1384 ;; Hardware stack levels required when called:    2
+  1385 ;; This function calls:
+  1386 ;;		Nothing
+  1387 ;; This function is called by:
+  1388 ;;		_io_test
+  1389 ;;		_dht_readSensor
+  1390 ;;		_get_pulse_width
+  1391 ;; This function uses a non-reentrant model
+  1392 ;;
+  1393                           
+  1394                           	psect	text3
+  1395  000322                     __ptext3:
+  1396                           	opt stack 0
+  1397  000322                     _gpio_pin_read:
+  1398                           	opt stack 27
+  1399                           
+  1400                           ;incstack = 0
+  1401                           ;gpio_pin_read@pin stored from wreg
+  1402  000322  6E44               	movwf	gpio_pin_read@pin,c
+  1403                           
+  1404                           ;gpio.c: 134: if (pin<8)
+  1405  000324  0E08               	movlw	8
+  1406  000326  6044               	cpfslt	gpio_pin_read@pin,c
+  1407  000328  D00D               	goto	l1875
+  1408                           
+  1409                           ;gpio.c: 135: {
+  1410                           ;gpio.c: 136: return (((PORTB>>pin)&1));
+  1411  00032A  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
+  1412  00032E  CF81 F043          	movff	3969,??_gpio_pin_read+1	;volatile
+  1413  000332  2A42               	incf	??_gpio_pin_read,f,c
+  1414  000334  D002               	goto	u724
+  1415  000336                     u725:
+  1416  000336  90D8               	bcf	status,0,c
+  1417  000338  3243               	rrcf	??_gpio_pin_read+1,f,c
+  1418  00033A                     u724:
+  1419  00033A  2E42               	decfsz	??_gpio_pin_read,f,c
+  1420  00033C  D7FC               	goto	u725
+  1421  00033E                     L1:
+  1422  00033E  5043               	movf	??_gpio_pin_read+1,w,c
+  1423  000340  0B01               	andlw	1
+  1424  000342  0012               	return	
+  1425  000344                     l1875:
+  1426                           
+  1427                           ;gpio.c: 138: else if (pin<16)
+  1428  000344  0E10               	movlw	16
+  1429  000346  6044               	cpfslt	gpio_pin_read@pin,c
+  1430  000348  D00D               	goto	l1883
+  1431                           
+  1432                           ;gpio.c: 139: {
+  1433                           ;gpio.c: 140: pin-=8;
+  1434  00034A  0E08               	movlw	8
+  1435  00034C  5E44               	subwf	gpio_pin_read@pin,f,c
+  1436                           
+  1437                           ;gpio.c: 141: return (((PORTD>>pin)&1));
+  1438  00034E  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
+  1439  000352  CF83 F043          	movff	3971,??_gpio_pin_read+1	;volatile
+  1440  000356  2A42               	incf	??_gpio_pin_read,f,c
+  1441  000358  D002               	goto	u744
+  1442  00035A                     u745:
+  1443  00035A  90D8               	bcf	status,0,c
+  1444  00035C  3243               	rrcf	??_gpio_pin_read+1,f,c
+  1445  00035E                     u744:
+  1446  00035E  2E42               	decfsz	??_gpio_pin_read,f,c
+  1447  000360  D7FC               	goto	u745
+  1448  000362  D7ED               	goto	L1
+  1449  000364                     l1883:
+  1450                           
+  1451                           ;gpio.c: 143: else if (pin<24)
+  1452  000364  0E18               	movlw	24
+  1453  000366  6044               	cpfslt	gpio_pin_read@pin,c
+  1454  000368  D00D               	goto	l1891
+  1455                           
+  1456                           ;gpio.c: 144: {
+  1457                           ;gpio.c: 145: pin-=16;
+  1458  00036A  0E10               	movlw	16
+  1459  00036C  5E44               	subwf	gpio_pin_read@pin,f,c
+  1460                           
+  1461                           ;gpio.c: 146: return (((PORTC>>pin)&1));
+  1462  00036E  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
+  1463  000372  CF82 F043          	movff	3970,??_gpio_pin_read+1	;volatile
+  1464  000376  2A42               	incf	??_gpio_pin_read,f,c
+  1465  000378  D002               	goto	u764
+  1466  00037A                     u765:
+  1467  00037A  90D8               	bcf	status,0,c
+  1468  00037C  3243               	rrcf	??_gpio_pin_read+1,f,c
+  1469  00037E                     u764:
+  1470  00037E  2E42               	decfsz	??_gpio_pin_read,f,c
+  1471  000380  D7FC               	goto	u765
+  1472  000382  D7DD               	goto	L1
+  1473  000384                     l1891:
+  1474                           
+  1475                           ;gpio.c: 148: else if (pin<30)
+  1476  000384  0E1E               	movlw	30
+  1477  000386  6044               	cpfslt	gpio_pin_read@pin,c
+  1478  000388  D00D               	goto	l1899
+  1479                           
+  1480                           ;gpio.c: 149: {
+  1481                           ;gpio.c: 150: pin-=24;
+  1482  00038A  0E18               	movlw	24
+  1483  00038C  5E44               	subwf	gpio_pin_read@pin,f,c
+  1484                           
+  1485                           ;gpio.c: 151: return (((PORTA>>pin)&1));
+  1486  00038E  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
+  1487  000392  CF80 F043          	movff	3968,??_gpio_pin_read+1	;volatile
+  1488  000396  2A42               	incf	??_gpio_pin_read,f,c
+  1489  000398  D002               	goto	u784
+  1490  00039A                     u785:
+  1491  00039A  90D8               	bcf	status,0,c
+  1492  00039C  3243               	rrcf	??_gpio_pin_read+1,f,c
+  1493  00039E                     u784:
+  1494  00039E  2E42               	decfsz	??_gpio_pin_read,f,c
+  1495  0003A0  D7FC               	goto	u785
+  1496  0003A2  D7CD               	goto	L1
+  1497  0003A4                     l1899:
+  1498                           
+  1499                           ;gpio.c: 153: else if (pin<33)
+  1500  0003A4  0E21               	movlw	33
+  1501  0003A6  6044               	cpfslt	gpio_pin_read@pin,c
+  1502  0003A8  D00D               	goto	l1905
+  1503                           
+  1504                           ;gpio.c: 154: {
+  1505                           ;gpio.c: 155: pin-=30;
+  1506  0003AA  0E1E               	movlw	30
+  1507  0003AC  5E44               	subwf	gpio_pin_read@pin,f,c
+  1508                           
+  1509                           ;gpio.c: 156: return (((PORTE>>pin)&1));
+  1510  0003AE  C044  F042         	movff	gpio_pin_read@pin,??_gpio_pin_read
+  1511  0003B2  CF84 F043          	movff	3972,??_gpio_pin_read+1	;volatile
+  1512  0003B6  2A42               	incf	??_gpio_pin_read,f,c
+  1513  0003B8  D002               	goto	u804
+  1514  0003BA                     u805:
+  1515  0003BA  90D8               	bcf	status,0,c
+  1516  0003BC  3243               	rrcf	??_gpio_pin_read+1,f,c
+  1517  0003BE                     u804:
+  1518  0003BE  2E42               	decfsz	??_gpio_pin_read,f,c
+  1519  0003C0  D7FC               	goto	u805
+  1520  0003C2  D7BD               	goto	L1
+  1521  0003C4                     l1905:
+  1522                           
+  1523                           ;gpio.c: 157: }
+  1524                           ;gpio.c: 158: return 0;
+  1525  0003C4  0E00               	movlw	0
+  1526  0003C6  0012               	return	
+  1527  0003C8                     __end_of_gpio_pin_read:
+  1528                           	opt stack 0
+  1529                           tblptru	equ	0xFF8
+  1530                           tblptrh	equ	0xFF7
+  1531                           tblptrl	equ	0xFF6
+  1532                           tablat	equ	0xFF5
+  1533                           postinc0	equ	0xFEE
+  1534                           wreg	equ	0xFE8
+  1535                           postdec1	equ	0xFE5
+  1536                           fsr1h	equ	0xFE2
+  1537                           fsr1l	equ	0xFE1
+  1538                           status	equ	0xFD8
+  1539                           
+  1540 ;; *************** function _gpio_pin_mode *****************
+  1541 ;; Defined at:
+  1542 ;;		line 4 in file "../PIC18F4520_Master.X/gpio.c"
+  1543 ;; Parameters:    Size  Location     Type
+  1544 ;;  pin             1    wreg     unsigned char 
+  1545 ;;  mode            1   17[COMRAM] unsigned char 
+  1546 ;; Auto vars:     Size  Location     Type
+  1547 ;;  pin             1   20[COMRAM] unsigned char 
+  1548 ;; Return value:  Size  Location     Type
+  1549 ;;                  1    wreg      void 
+  1550 ;; Registers used:
+  1551 ;;		wreg, status,2, status,0
+  1552 ;; Tracked objects:
+  1553 ;;		On entry : 0/0
+  1554 ;;		On exit  : 0/0
+  1555 ;;		Unchanged: 0/0
+  1556 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+  1557 ;;      Params:         1       0       0       0       0       0       0
+  1558 ;;      Locals:         1       0       0       0       0       0       0
+  1559 ;;      Temps:          2       0       0       0       0       0       0
+  1560 ;;      Totals:         4       0       0       0       0       0       0
+  1561 ;;Total ram usage:        4 bytes
+  1562 ;; Hardware stack levels used:    1
+  1563 ;; Hardware stack levels required when called:    2
+  1564 ;; This function calls:
+  1565 ;;		Nothing
+  1566 ;; This function is called by:
+  1567 ;;		_io_test
+  1568 ;;		_dht_readSensor
+  1569 ;;		_lcd_init
+  1570 ;;		_HCSR04_init
+  1571 ;; This function uses a non-reentrant model
+  1572 ;;
+  1573                           
+  1574                           	psect	text4
+  1575  0001A8                     __ptext4:
+  1576                           	opt stack 0
+  1577  0001A8                     _gpio_pin_mode:
+  1578                           	opt stack 27
+  1579                           
+  1580                           ;incstack = 0
+  1581                           ;gpio_pin_mode@pin stored from wreg
+  1582  0001A8  6E45               	movwf	gpio_pin_mode@pin,c
+  1583                           
+  1584                           ;gpio.c: 6: if (pin < 8)
+  1585  0001AA  0E08               	movlw	8
+  1586  0001AC  6045               	cpfslt	gpio_pin_mode@pin,c
+  1587  0001AE  D021               	goto	l3053
+  1588                           
+  1589                           ;gpio.c: 7: {
+  1590                           ;gpio.c: 8: if (mode==0)
+  1591  0001B0  5042               	movf	gpio_pin_mode@mode,w,c
+  1592  0001B2  A4D8               	btfss	status,2,c
+  1593  0001B4  D00E               	goto	l3049
+  1594                           
+  1595                           ;gpio.c: 9: {
+  1596                           ;gpio.c: 10: TRISB &=~(1<<pin);
+  1597  0001B6  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1598  0001BA  0E01               	movlw	1
+  1599  0001BC  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1600  0001BE  2A43               	incf	??_gpio_pin_mode,f,c
+  1601  0001C0  D002               	goto	u1964
+  1602  0001C2                     u1965:
+  1603  0001C2  90D8               	bcf	status,0,c
+  1604  0001C4  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1605  0001C6                     u1964:
+  1606  0001C6  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1607  0001C8  D7FC               	goto	u1965
+  1608  0001CA  5044               	movf	??_gpio_pin_mode+1,w,c
+  1609  0001CC  0AFF               	xorlw	255
+  1610  0001CE  1693               	andwf	3987,f,c	;volatile
+  1611                           
+  1612                           ;gpio.c: 11: }
+  1613  0001D0  0012               	return	
+  1614  0001D2                     l3049:
+  1615                           
+  1616                           ;gpio.c: 12: else if (mode==1)
+  1617  0001D2  0442               	decf	gpio_pin_mode@mode,w,c
+  1618  0001D4  A4D8               	btfss	status,2,c
+  1619  0001D6  0012               	return	
+  1620                           
+  1621                           ;gpio.c: 13: {
+  1622                           ;gpio.c: 14: TRISB |=(1<<pin);
+  1623  0001D8  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1624  0001DC  0E01               	movlw	1
+  1625  0001DE  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1626  0001E0  2A43               	incf	??_gpio_pin_mode,f,c
+  1627  0001E2  D002               	goto	u1984
+  1628  0001E4                     u1985:
+  1629  0001E4  90D8               	bcf	status,0,c
+  1630  0001E6  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1631  0001E8                     u1984:
+  1632  0001E8  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1633  0001EA  D7FC               	goto	u1985
+  1634  0001EC  5044               	movf	??_gpio_pin_mode+1,w,c
+  1635  0001EE  1293               	iorwf	3987,f,c	;volatile
+  1636                           
+  1637                           ;gpio.c: 15: }
+  1638                           ;gpio.c: 16: }
+  1639  0001F0  0012               	return	
+  1640  0001F2                     l3053:
+  1641                           
+  1642                           ;gpio.c: 17: else if (pin<16)
+  1643  0001F2  0E10               	movlw	16
+  1644  0001F4  6045               	cpfslt	gpio_pin_mode@pin,c
+  1645  0001F6  D023               	goto	l3065
+  1646                           
+  1647                           ;gpio.c: 18: {
+  1648                           ;gpio.c: 19: pin-=8;
+  1649  0001F8  0E08               	movlw	8
+  1650  0001FA  5E45               	subwf	gpio_pin_mode@pin,f,c
+  1651                           
+  1652                           ;gpio.c: 20: if (mode==0)
+  1653  0001FC  5042               	movf	gpio_pin_mode@mode,w,c
+  1654  0001FE  A4D8               	btfss	status,2,c
+  1655  000200  D00E               	goto	l3061
+  1656                           
+  1657                           ;gpio.c: 21: {
+  1658                           ;gpio.c: 22: TRISD &=~(1<<pin);
+  1659  000202  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1660  000206  0E01               	movlw	1
+  1661  000208  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1662  00020A  2A43               	incf	??_gpio_pin_mode,f,c
+  1663  00020C  D002               	goto	u2014
+  1664  00020E                     u2015:
+  1665  00020E  90D8               	bcf	status,0,c
+  1666  000210  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1667  000212                     u2014:
+  1668  000212  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1669  000214  D7FC               	goto	u2015
+  1670  000216  5044               	movf	??_gpio_pin_mode+1,w,c
+  1671  000218  0AFF               	xorlw	255
+  1672  00021A  1695               	andwf	3989,f,c	;volatile
+  1673                           
+  1674                           ;gpio.c: 23: }
+  1675  00021C  0012               	return	
+  1676  00021E                     l3061:
+  1677                           
+  1678                           ;gpio.c: 24: else if (mode==1)
+  1679  00021E  0442               	decf	gpio_pin_mode@mode,w,c
+  1680  000220  A4D8               	btfss	status,2,c
+  1681  000222  0012               	return	
+  1682                           
+  1683                           ;gpio.c: 25: {
+  1684                           ;gpio.c: 26: TRISD|=(1<<pin);
+  1685  000224  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1686  000228  0E01               	movlw	1
+  1687  00022A  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1688  00022C  2A43               	incf	??_gpio_pin_mode,f,c
+  1689  00022E  D002               	goto	u2034
+  1690  000230                     u2035:
+  1691  000230  90D8               	bcf	status,0,c
+  1692  000232  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1693  000234                     u2034:
+  1694  000234  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1695  000236  D7FC               	goto	u2035
+  1696  000238  5044               	movf	??_gpio_pin_mode+1,w,c
+  1697  00023A  1295               	iorwf	3989,f,c	;volatile
+  1698                           
+  1699                           ;gpio.c: 27: }
+  1700                           ;gpio.c: 28: }
+  1701  00023C  0012               	return	
+  1702  00023E                     l3065:
+  1703                           
+  1704                           ;gpio.c: 29: else if (pin<24)
+  1705  00023E  0E18               	movlw	24
+  1706  000240  6045               	cpfslt	gpio_pin_mode@pin,c
+  1707  000242  D023               	goto	l3077
+  1708                           
+  1709                           ;gpio.c: 30: {
+  1710                           ;gpio.c: 31: pin-=16;
+  1711  000244  0E10               	movlw	16
+  1712  000246  5E45               	subwf	gpio_pin_mode@pin,f,c
+  1713                           
+  1714                           ;gpio.c: 32: if (mode==0)
+  1715  000248  5042               	movf	gpio_pin_mode@mode,w,c
+  1716  00024A  A4D8               	btfss	status,2,c
+  1717  00024C  D00E               	goto	l3073
+  1718                           
+  1719                           ;gpio.c: 33: {
+  1720                           ;gpio.c: 34: TRISC &=~(1<<pin);
+  1721  00024E  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1722  000252  0E01               	movlw	1
+  1723  000254  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1724  000256  2A43               	incf	??_gpio_pin_mode,f,c
+  1725  000258  D002               	goto	u2064
+  1726  00025A                     u2065:
+  1727  00025A  90D8               	bcf	status,0,c
+  1728  00025C  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1729  00025E                     u2064:
+  1730  00025E  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1731  000260  D7FC               	goto	u2065
+  1732  000262  5044               	movf	??_gpio_pin_mode+1,w,c
+  1733  000264  0AFF               	xorlw	255
+  1734  000266  1694               	andwf	3988,f,c	;volatile
+  1735                           
+  1736                           ;gpio.c: 35: }
+  1737  000268  0012               	return	
+  1738  00026A                     l3073:
+  1739                           
+  1740                           ;gpio.c: 36: else if (mode==1)
+  1741  00026A  0442               	decf	gpio_pin_mode@mode,w,c
+  1742  00026C  A4D8               	btfss	status,2,c
+  1743  00026E  0012               	return	
+  1744                           
+  1745                           ;gpio.c: 37: {
+  1746                           ;gpio.c: 38: TRISC|=(1<<pin);
+  1747  000270  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1748  000274  0E01               	movlw	1
+  1749  000276  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1750  000278  2A43               	incf	??_gpio_pin_mode,f,c
+  1751  00027A  D002               	goto	u2084
+  1752  00027C                     u2085:
+  1753  00027C  90D8               	bcf	status,0,c
+  1754  00027E  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1755  000280                     u2084:
+  1756  000280  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1757  000282  D7FC               	goto	u2085
+  1758  000284  5044               	movf	??_gpio_pin_mode+1,w,c
+  1759  000286  1294               	iorwf	3988,f,c	;volatile
+  1760                           
+  1761                           ;gpio.c: 39: }
+  1762                           ;gpio.c: 40: }
+  1763  000288  0012               	return	
+  1764  00028A                     l3077:
+  1765                           
+  1766                           ;gpio.c: 41: else if (pin<30)
+  1767  00028A  0E1E               	movlw	30
+  1768  00028C  6045               	cpfslt	gpio_pin_mode@pin,c
+  1769  00028E  D023               	goto	l3089
+  1770                           
+  1771                           ;gpio.c: 42: {
+  1772                           ;gpio.c: 43: pin-=24;
+  1773  000290  0E18               	movlw	24
+  1774  000292  5E45               	subwf	gpio_pin_mode@pin,f,c
+  1775                           
+  1776                           ;gpio.c: 44: if (mode==0)
+  1777  000294  5042               	movf	gpio_pin_mode@mode,w,c
+  1778  000296  A4D8               	btfss	status,2,c
+  1779  000298  D00E               	goto	l3085
+  1780                           
+  1781                           ;gpio.c: 45: {
+  1782                           ;gpio.c: 46: TRISA &=~(1<<pin);
+  1783  00029A  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1784  00029E  0E01               	movlw	1
+  1785  0002A0  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1786  0002A2  2A43               	incf	??_gpio_pin_mode,f,c
+  1787  0002A4  D002               	goto	u2114
+  1788  0002A6                     u2115:
+  1789  0002A6  90D8               	bcf	status,0,c
+  1790  0002A8  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1791  0002AA                     u2114:
+  1792  0002AA  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1793  0002AC  D7FC               	goto	u2115
+  1794  0002AE  5044               	movf	??_gpio_pin_mode+1,w,c
+  1795  0002B0  0AFF               	xorlw	255
+  1796  0002B2  1692               	andwf	3986,f,c	;volatile
+  1797                           
+  1798                           ;gpio.c: 47: }
+  1799  0002B4  0012               	return	
+  1800  0002B6                     l3085:
+  1801                           
+  1802                           ;gpio.c: 48: else if (mode==1)
+  1803  0002B6  0442               	decf	gpio_pin_mode@mode,w,c
+  1804  0002B8  A4D8               	btfss	status,2,c
+  1805  0002BA  0012               	return	
+  1806                           
+  1807                           ;gpio.c: 49: {
+  1808                           ;gpio.c: 50: TRISA|=(1<<pin);
+  1809  0002BC  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1810  0002C0  0E01               	movlw	1
+  1811  0002C2  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1812  0002C4  2A43               	incf	??_gpio_pin_mode,f,c
+  1813  0002C6  D002               	goto	u2134
+  1814  0002C8                     u2135:
+  1815  0002C8  90D8               	bcf	status,0,c
+  1816  0002CA  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1817  0002CC                     u2134:
+  1818  0002CC  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1819  0002CE  D7FC               	goto	u2135
+  1820  0002D0  5044               	movf	??_gpio_pin_mode+1,w,c
+  1821  0002D2  1292               	iorwf	3986,f,c	;volatile
+  1822                           
+  1823                           ;gpio.c: 51: }
+  1824                           ;gpio.c: 52: }
+  1825  0002D4  0012               	return	
+  1826  0002D6                     l3089:
+  1827                           
+  1828                           ;gpio.c: 53: else if (pin<33)
+  1829  0002D6  0E21               	movlw	33
+  1830  0002D8  6045               	cpfslt	gpio_pin_mode@pin,c
+  1831  0002DA  0012               	return	
+  1832                           
+  1833                           ;gpio.c: 54: {
+  1834                           ;gpio.c: 55: pin-=30;
+  1835  0002DC  0E1E               	movlw	30
+  1836  0002DE  5E45               	subwf	gpio_pin_mode@pin,f,c
+  1837                           
+  1838                           ;gpio.c: 56: if (mode==0)
+  1839  0002E0  5042               	movf	gpio_pin_mode@mode,w,c
+  1840  0002E2  A4D8               	btfss	status,2,c
+  1841  0002E4  D00E               	goto	l3097
+  1842                           
+  1843                           ;gpio.c: 57: {
+  1844                           ;gpio.c: 58: TRISE &=~(1<<pin);
+  1845  0002E6  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1846  0002EA  0E01               	movlw	1
+  1847  0002EC  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1848  0002EE  2A43               	incf	??_gpio_pin_mode,f,c
+  1849  0002F0  D002               	goto	u2164
+  1850  0002F2                     u2165:
+  1851  0002F2  90D8               	bcf	status,0,c
+  1852  0002F4  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1853  0002F6                     u2164:
+  1854  0002F6  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1855  0002F8  D7FC               	goto	u2165
+  1856  0002FA  5044               	movf	??_gpio_pin_mode+1,w,c
+  1857  0002FC  0AFF               	xorlw	255
+  1858  0002FE  1696               	andwf	3990,f,c	;volatile
+  1859                           
+  1860                           ;gpio.c: 59: }
+  1861  000300  0012               	return	
+  1862  000302                     l3097:
+  1863                           
+  1864                           ;gpio.c: 60: else if (mode==1)
+  1865  000302  0442               	decf	gpio_pin_mode@mode,w,c
+  1866  000304  A4D8               	btfss	status,2,c
+  1867  000306  0012               	return	
+  1868                           
+  1869                           ;gpio.c: 61: {
+  1870                           ;gpio.c: 62: TRISE|=(1<<pin);
+  1871  000308  C045  F043         	movff	gpio_pin_mode@pin,??_gpio_pin_mode
+  1872  00030C  0E01               	movlw	1
+  1873  00030E  6E44               	movwf	(??_gpio_pin_mode+1)& (0+255),c
+  1874  000310  2A43               	incf	??_gpio_pin_mode,f,c
+  1875  000312  D002               	goto	u2184
+  1876  000314                     u2185:
+  1877  000314  90D8               	bcf	status,0,c
+  1878  000316  3644               	rlcf	??_gpio_pin_mode+1,f,c
+  1879  000318                     u2184:
+  1880  000318  2E43               	decfsz	??_gpio_pin_mode,f,c
+  1881  00031A  D7FC               	goto	u2185
+  1882  00031C  5044               	movf	??_gpio_pin_mode+1,w,c
+  1883  00031E  1296               	iorwf	3990,f,c	;volatile
+  1884  000320  0012               	return	
+  1885  000322                     __end_of_gpio_pin_mode:
+  1886                           	opt stack 0
+  1887                           tblptru	equ	0xFF8
+  1888                           tblptrh	equ	0xFF7
+  1889                           tblptrl	equ	0xFF6
+  1890                           tablat	equ	0xFF5
+  1891                           postinc0	equ	0xFEE
+  1892                           wreg	equ	0xFE8
+  1893                           postdec1	equ	0xFE5
+  1894                           fsr1h	equ	0xFE2
+  1895                           fsr1l	equ	0xFE1
+  1896                           status	equ	0xFD8
+  1897                           
+  1898 ;; *************** function _ISR *****************
+  1899 ;; Defined at:
+  1900 ;;		line 5 in file "isr.c"
+  1901 ;; Parameters:    Size  Location     Type
+  1902 ;;		None
+  1903 ;; Auto vars:     Size  Location     Type
+  1904 ;;		None
+  1905 ;; Return value:  Size  Location     Type
+  1906 ;;                  1    wreg      void 
+  1907 ;; Registers used:
+  1908 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+  1909 ;; Tracked objects:
+  1910 ;;		On entry : 0/0
+  1911 ;;		On exit  : 0/0
+  1912 ;;		Unchanged: 0/0
+  1913 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+  1914 ;;      Params:         0       0       0       0       0       0       0
+  1915 ;;      Locals:         0       0       0       0       0       0       0
+  1916 ;;      Temps:         14       0       0       0       0       0       0
+  1917 ;;      Totals:        14       0       0       0       0       0       0
+  1918 ;;Total ram usage:       14 bytes
+  1919 ;; Hardware stack levels used:    1
+  1920 ;; Hardware stack levels required when called:    1
+  1921 ;; This function calls:
+  1922 ;;		_serial_interrupt
+  1923 ;;		_sys_interrupt
+  1924 ;; This function is called by:
+  1925 ;;		Interrupt level 2
+  1926 ;; This function uses a non-reentrant model
+  1927 ;;
+  1928                           
+  1929                           	psect	intcode
+  1930  000008                     __pintcode:
+  1931                           	opt stack 0
+  1932  000008                     _ISR:
+  1933                           	opt stack 27
+  1934                           
+  1935                           ;incstack = 0
+  1936  000008  824E               	bsf	btemp,1,c	;set compiler interrupt flag (level 2)
+  1937  00000A  CFFA F034          	movff	pclath,??_ISR
+  1938  00000E  CFFB F035          	movff	pclatu,??_ISR+1
+  1939  000012  EDE4  F001         	call	int_func,f	;refresh shadow registers
+  1940                           pclatu	equ	0xFFB
+  1941                           pclath	equ	0xFFA
+  1942                           tblptru	equ	0xFF8
+  1943                           tblptrh	equ	0xFF7
+  1944                           tblptrl	equ	0xFF6
+  1945                           tablat	equ	0xFF5
+  1946                           postinc0	equ	0xFEE
+  1947                           wreg	equ	0xFE8
+  1948                           postdec1	equ	0xFE5
+  1949                           fsr1h	equ	0xFE2
+  1950                           fsr1l	equ	0xFE1
+  1951                           status	equ	0xFD8
+  1952                           
+  1953                           	psect	intcode_body
+  1954  0003C8                     __pintcode_body:
+  1955                           	opt stack 27
+  1956  0003C8                     int_func:
+  1957                           	opt stack 27
+  1958  0003C8  0006               	pop		; remove dummy address from shadow register refresh
+  1959  0003CA  CFE9 F036          	movff	fsr0l,??_ISR+2
+  1960  0003CE  CFEA F037          	movff	fsr0h,??_ISR+3
+  1961  0003D2  CFE1 F038          	movff	fsr1l,??_ISR+4
+  1962  0003D6  CFE2 F039          	movff	fsr1h,??_ISR+5
+  1963  0003DA  CFD9 F03A          	movff	fsr2l,??_ISR+6
+  1964  0003DE  CFDA F03B          	movff	fsr2h,??_ISR+7
+  1965  0003E2  CFF3 F03C          	movff	prodl,??_ISR+8
+  1966  0003E6  CFF4 F03D          	movff	prodh,??_ISR+9
+  1967  0003EA  CFF6 F03E          	movff	tblptrl,??_ISR+10
+  1968  0003EE  CFF7 F03F          	movff	tblptrh,??_ISR+11
+  1969  0003F2  CFF8 F040          	movff	tblptru,??_ISR+12
+  1970  0003F6  CFF5 F041          	movff	tablat,??_ISR+13
+  1971                           
+  1972                           ;isr.c: 7: if (RCIE && RCIF) {
+  1973  0003FA  BA9D               	btfsc	3997,5,c	;volatile
+  1974  0003FC  AA9E               	btfss	3998,5,c	;volatile
+  1975  0003FE  D003               	goto	i2l395
+  1976                           
+  1977                           ;isr.c: 8: serial_interrupt();
+  1978  000400  EC27  F002         	call	_serial_interrupt	;wreg free
+  1979                           
+  1980                           ;isr.c: 10: }
+  1981                           
+  1982                           ;isr.c: 9: return;
+  1983  000404  D006               	goto	i2l396
+  1984  000406                     i2l395:
+  1985                           
+  1986                           ;isr.c: 12: else if(TMR0IE && TMR0IF)
+  1987  000406  BAF2               	btfsc	intcon,5,c	;volatile
+  1988  000408  A4F2               	btfss	intcon,2,c	;volatile
+  1989  00040A  D003               	goto	i2l396
+  1990                           
+  1991                           ;isr.c: 13: {
+  1992                           ;isr.c: 14: sys_interrupt();
+  1993  00040C  ECA4  F002         	call	_sys_interrupt	;wreg free
+  1994                           
+  1995                           ;isr.c: 15: TMR0IF=0;
+  1996  000410  94F2               	bcf	intcon,2,c	;volatile
+  1997  000412                     i2l396:
+  1998  000412  C041  FFF5         	movff	??_ISR+13,tablat
+  1999  000416  C040  FFF8         	movff	??_ISR+12,tblptru
+  2000  00041A  C03F  FFF7         	movff	??_ISR+11,tblptrh
+  2001  00041E  C03E  FFF6         	movff	??_ISR+10,tblptrl
+  2002  000422  C03D  FFF4         	movff	??_ISR+9,prodh
+  2003  000426  C03C  FFF3         	movff	??_ISR+8,prodl
+  2004  00042A  C03B  FFDA         	movff	??_ISR+7,fsr2h
+  2005  00042E  C03A  FFD9         	movff	??_ISR+6,fsr2l
+  2006  000432  C039  FFE2         	movff	??_ISR+5,fsr1h
+  2007  000436  C038  FFE1         	movff	??_ISR+4,fsr1l
+  2008  00043A  C037  FFEA         	movff	??_ISR+3,fsr0h
+  2009  00043E  C036  FFE9         	movff	??_ISR+2,fsr0l
+  2010  000442  C035  FFFB         	movff	??_ISR+1,pclatu
+  2011  000446  C034  FFFA         	movff	??_ISR,pclath
+  2012  00044A  924E               	bcf	btemp,1,c	;clear compiler interrupt flag (level 2)
+  2013  00044C  0011               	retfie		f
+  2014  00044E                     __end_of_ISR:
+  2015                           	opt stack 0
+  2016                           pclatu	equ	0xFFB
+  2017                           pclath	equ	0xFFA
+  2018                           tblptru	equ	0xFF8
+  2019                           tblptrh	equ	0xFF7
+  2020                           tblptrl	equ	0xFF6
+  2021                           tablat	equ	0xFF5
+  2022                           prodh	equ	0xFF4
+  2023                           prodl	equ	0xFF3
+  2024                           intcon	equ	0xFF2
+  2025                           postinc0	equ	0xFEE
+  2026                           fsr0h	equ	0xFEA
+  2027                           fsr0l	equ	0xFE9
+  2028                           wreg	equ	0xFE8
+  2029                           postdec1	equ	0xFE5
+  2030                           fsr1h	equ	0xFE2
+  2031                           fsr1l	equ	0xFE1
+  2032                           fsr2h	equ	0xFDA
+  2033                           fsr2l	equ	0xFD9
+  2034                           status	equ	0xFD8
+  2035                           
+  2036 ;; *************** function _sys_interrupt *****************
+  2037 ;; Defined at:
+  2038 ;;		line 20 in file "systick.c"
+  2039 ;; Parameters:    Size  Location     Type
+  2040 ;;		None
+  2041 ;; Auto vars:     Size  Location     Type
+  2042 ;;		None
+  2043 ;; Return value:  Size  Location     Type
+  2044 ;;                  1    wreg      void 
+  2045 ;; Registers used:
+  2046 ;;		wreg, status,2, status,0
+  2047 ;; Tracked objects:
+  2048 ;;		On entry : 0/0
+  2049 ;;		On exit  : 0/0
+  2050 ;;		Unchanged: 0/0
+  2051 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+  2052 ;;      Params:         0       0       0       0       0       0       0
+  2053 ;;      Locals:         0       0       0       0       0       0       0
+  2054 ;;      Temps:          0       0       0       0       0       0       0
+  2055 ;;      Totals:         0       0       0       0       0       0       0
+  2056 ;;Total ram usage:        0 bytes
+  2057 ;; Hardware stack levels used:    1
+  2058 ;; This function calls:
+  2059 ;;		Nothing
+  2060 ;; This function is called by:
+  2061 ;;		_ISR
+  2062 ;; This function uses a non-reentrant model
+  2063 ;;
+  2064                           
+  2065                           	psect	text6
+  2066  000548                     __ptext6:
+  2067                           	opt stack 0
+  2068  000548                     _sys_interrupt:
+  2069                           	opt stack 27
+  2070                           
+  2071                           ;systick.c: 22: timer_count++;
+  2072                           
+  2073                           ;incstack = 0
+  2074  000548  2A30               	incf	_timer_count,f,c	;volatile
+  2075                           
+  2076                           ;systick.c: 23: if(timer_count == 76 )
+  2077  00054A  0E4C               	movlw	76
+  2078  00054C  1830               	xorwf	_timer_count,w,c	;volatile
+  2079  00054E  A4D8               	btfss	status,2,c
+  2080  000550  0012               	return	
+  2081                           
+  2082                           ;systick.c: 24: {
+  2083                           ;systick.c: 25: timer_count=0;
+  2084  000552  0E00               	movlw	0
+  2085  000554  6E30               	movwf	_timer_count,c	;volatile
+  2086                           
+  2087                           ;systick.c: 26: system_tick++;
+  2088  000556  4A2A               	infsnz	_system_tick,f,c	;volatile
+  2089  000558  2A2B               	incf	_system_tick+1,f,c	;volatile
+  2090  00055A  0012               	return	
+  2091  00055C                     __end_of_sys_interrupt:
+  2092                           	opt stack 0
+  2093                           pclatu	equ	0xFFB
+  2094                           pclath	equ	0xFFA
+  2095                           tblptru	equ	0xFF8
+  2096                           tblptrh	equ	0xFF7
+  2097                           tblptrl	equ	0xFF6
+  2098                           tablat	equ	0xFF5
+  2099                           prodh	equ	0xFF4
+  2100                           prodl	equ	0xFF3
+  2101                           intcon	equ	0xFF2
+  2102                           postinc0	equ	0xFEE
+  2103                           fsr0h	equ	0xFEA
+  2104                           fsr0l	equ	0xFE9
+  2105                           wreg	equ	0xFE8
+  2106                           postdec1	equ	0xFE5
+  2107                           fsr1h	equ	0xFE2
+  2108                           fsr1l	equ	0xFE1
+  2109                           fsr2h	equ	0xFDA
+  2110                           fsr2l	equ	0xFD9
+  2111                           status	equ	0xFD8
+  2112                           
+  2113 ;; *************** function _serial_interrupt *****************
+  2114 ;; Defined at:
+  2115 ;;		line 82 in file "../PIC18F4520_Master.X/serial.c"
+  2116 ;; Parameters:    Size  Location     Type
+  2117 ;;		None
+  2118 ;; Auto vars:     Size  Location     Type
+  2119 ;;  rxData          1    2[COMRAM] unsigned char 
+  2120 ;; Return value:  Size  Location     Type
+  2121 ;;                  1    wreg      void 
+  2122 ;; Registers used:
+  2123 ;;		wreg, fsr2l, fsr2h, status,2, status,0
+  2124 ;; Tracked objects:
+  2125 ;;		On entry : 0/0
+  2126 ;;		On exit  : 0/0
+  2127 ;;		Unchanged: 0/0
+  2128 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+  2129 ;;      Params:         0       0       0       0       0       0       0
+  2130 ;;      Locals:         1       0       0       0       0       0       0
+  2131 ;;      Temps:          2       0       0       0       0       0       0
+  2132 ;;      Totals:         3       0       0       0       0       0       0
+  2133 ;;Total ram usage:        3 bytes
+  2134 ;; Hardware stack levels used:    1
+  2135 ;; This function calls:
+  2136 ;;		Nothing
+  2137 ;; This function is called by:
+  2138 ;;		_ISR
+  2139 ;; This function uses a non-reentrant model
+  2140 ;;
+  2141                           
+  2142                           	psect	text7
+  2143  00044E                     __ptext7:
+  2144                           	opt stack 0
+  2145  00044E                     _serial_interrupt:
+  2146                           	opt stack 27
+  2147                           
+  2148                           ;serial.c: 84: char rxData=RCREG;
+  2149                           
+  2150                           ;incstack = 0
+  2151  00044E  CFAE F033          	movff	4014,serial_interrupt@rxData	;volatile
+  2152                           
+  2153                           ;serial.c: 85: if((rx_Buffer_Tail == 256-1 && (rx_Buffer_Head == 0)) || ((rx_Buffer_Tail
+      +                           + 1) == rx_Buffer_Head))
+  2154  000452  284C               	incf	_rx_Buffer_Tail,w,c	;volatile
+  2155  000454  104D               	iorwf	_rx_Buffer_Tail+1,w,c	;volatile
+  2156  000456  A4D8               	btfss	status,2,c
+  2157  000458  D004               	goto	i2l2235
+  2158  00045A  504A               	movf	_rx_Buffer_Head,w,c	;volatile
+  2159  00045C  104B               	iorwf	_rx_Buffer_Head+1,w,c	;volatile
+  2160  00045E  B4D8               	btfsc	status,2,c
+  2161  000460  D00D               	goto	i2l2237
+  2162  000462                     i2l2235:
+  2163  000462  0E01               	movlw	1
+  2164  000464  244C               	addwf	_rx_Buffer_Tail,w,c	;volatile
+  2165  000466  6E31               	movwf	??_serial_interrupt& (0+255),c
+  2166  000468  0E00               	movlw	0
+  2167  00046A  204D               	addwfc	_rx_Buffer_Tail+1,w,c	;volatile
+  2168  00046C  6E32               	movwf	(??_serial_interrupt+1)& (0+255),c
+  2169  00046E  504A               	movf	_rx_Buffer_Head,w,c	;volatile
+  2170  000470  1831               	xorwf	??_serial_interrupt,w,c
+  2171  000472  E106               	bnz	i2l2239
+  2172  000474  504B               	movf	_rx_Buffer_Head+1,w,c	;volatile
+  2173  000476  1832               	xorwf	??_serial_interrupt+1,w,c
+  2174  000478  A4D8               	btfss	status,2,c
+  2175  00047A  D002               	goto	i2l2239
+  2176  00047C                     i2l2237:
+  2177                           
+  2178                           ;serial.c: 86: {
+  2179                           ;serial.c: 87: rx_Buffer_Head++;
+  2180  00047C  4A4A               	infsnz	_rx_Buffer_Head,f,c	;volatile
+  2181  00047E  2A4B               	incf	_rx_Buffer_Head+1,f,c	;volatile
+  2182  000480                     i2l2239:
+  2183                           
+  2184                           ;serial.c: 88: }
+  2185                           ;serial.c: 90: if(rx_Buffer_Head == 256 || rx_Buffer_Head == -1)
+  2186  000480  044B               	decf	_rx_Buffer_Head+1,w,c	;volatile
+  2187  000482  104A               	iorwf	_rx_Buffer_Head,w,c	;volatile
+  2188  000484  B4D8               	btfsc	status,2,c
+  2189  000486  D005               	goto	i2l2243
+  2190  000488  284A               	incf	_rx_Buffer_Head,w,c	;volatile
+  2191  00048A  E107               	bnz	i2l2245
+  2192  00048C  284B               	incf	_rx_Buffer_Head+1,w,c	;volatile
+  2193  00048E  A4D8               	btfss	status,2,c
+  2194  000490  D004               	goto	i2l2245
+  2195  000492                     i2l2243:
+  2196                           
+  2197                           ;serial.c: 91: rx_Buffer_Head=0;
+  2198  000492  0E00               	movlw	0
+  2199  000494  6E4B               	movwf	_rx_Buffer_Head+1,c	;volatile
+  2200  000496  0E00               	movlw	0
+  2201  000498  6E4A               	movwf	_rx_Buffer_Head,c	;volatile
+  2202  00049A                     i2l2245:
+  2203                           
+  2204                           ;serial.c: 93: if(rx_Buffer_Tail == 256 - 1)
+  2205  00049A  284C               	incf	_rx_Buffer_Tail,w,c	;volatile
+  2206  00049C  104D               	iorwf	_rx_Buffer_Tail+1,w,c	;volatile
+  2207  00049E  A4D8               	btfss	status,2,c
+  2208  0004A0  D005               	goto	i2l2249
+  2209                           
+  2210                           ;serial.c: 94: rx_Buffer_Tail=0;
+  2211  0004A2  0E00               	movlw	0
+  2212  0004A4  6E4D               	movwf	_rx_Buffer_Tail+1,c	;volatile
+  2213  0004A6  0E00               	movlw	0
+  2214  0004A8  6E4C               	movwf	_rx_Buffer_Tail,c	;volatile
+  2215  0004AA  D002               	goto	i2l2251
+  2216  0004AC                     i2l2249:
+  2217                           
+  2218                           ;serial.c: 95: else
+  2219                           ;serial.c: 96: rx_Buffer_Tail++;
+  2220  0004AC  4A4C               	infsnz	_rx_Buffer_Tail,f,c	;volatile
+  2221  0004AE  2A4D               	incf	_rx_Buffer_Tail+1,f,c	;volatile
+  2222  0004B0                     i2l2251:
+  2223                           
+  2224                           ;serial.c: 97: rxBuffer[rx_Buffer_Tail]=rxData;
+  2225  0004B0  0E00               	movlw	low _rxBuffer
+  2226  0004B2  244C               	addwf	_rx_Buffer_Tail,w,c	;volatile
+  2227  0004B4  6ED9               	movwf	fsr2l,c
+  2228  0004B6  0E01               	movlw	high _rxBuffer
+  2229  0004B8  204D               	addwfc	_rx_Buffer_Tail+1,w,c	;volatile
+  2230  0004BA  6EDA               	movwf	fsr2h,c
+  2231  0004BC  C033  FFDF         	movff	serial_interrupt@rxData,indf2
+  2232  0004C0  0012               	return		;funcret
+  2233  0004C2                     __end_of_serial_interrupt:
+  2234                           	opt stack 0
+  2235                           pclatu	equ	0xFFB
+  2236                           pclath	equ	0xFFA
+  2237                           tblptru	equ	0xFF8
+  2238                           tblptrh	equ	0xFF7
+  2239                           tblptrl	equ	0xFF6
+  2240                           tablat	equ	0xFF5
+  2241                           prodh	equ	0xFF4
+  2242                           prodl	equ	0xFF3
+  2243                           intcon	equ	0xFF2
+  2244                           postinc0	equ	0xFEE
+  2245                           fsr0h	equ	0xFEA
+  2246                           fsr0l	equ	0xFE9
+  2247                           wreg	equ	0xFE8
+  2248                           postdec1	equ	0xFE5
+  2249                           fsr1h	equ	0xFE2
+  2250                           fsr1l	equ	0xFE1
+  2251                           indf2	equ	0xFDF
+  2252                           fsr2h	equ	0xFDA
+  2253                           fsr2l	equ	0xFD9
+  2254                           status	equ	0xFD8
+  2255                           pclatu	equ	0xFFB
+  2256                           pclath	equ	0xFFA
+  2257                           tblptru	equ	0xFF8
+  2258                           tblptrh	equ	0xFF7
+  2259                           tblptrl	equ	0xFF6
+  2260                           tablat	equ	0xFF5
+  2261                           prodh	equ	0xFF4
+  2262                           prodl	equ	0xFF3
+  2263                           intcon	equ	0xFF2
+  2264                           postinc0	equ	0xFEE
+  2265                           fsr0h	equ	0xFEA
+  2266                           fsr0l	equ	0xFE9
+  2267                           wreg	equ	0xFE8
+  2268                           postdec1	equ	0xFE5
+  2269                           fsr1h	equ	0xFE2
+  2270                           fsr1l	equ	0xFE1
+  2271                           indf2	equ	0xFDF
+  2272                           fsr2h	equ	0xFDA
+  2273                           fsr2l	equ	0xFD9
+  2274                           status	equ	0xFD8
+  2275                           
+  2276                           	psect	rparam
+  2277  0000                     pclatu	equ	0xFFB
+  2278                           pclath	equ	0xFFA
+  2279                           tblptru	equ	0xFF8
+  2280                           tblptrh	equ	0xFF7
+  2281                           tblptrl	equ	0xFF6
+  2282                           tablat	equ	0xFF5
+  2283                           prodh	equ	0xFF4
+  2284                           prodl	equ	0xFF3
+  2285                           intcon	equ	0xFF2
+  2286                           postinc0	equ	0xFEE
+  2287                           fsr0h	equ	0xFEA
+  2288                           fsr0l	equ	0xFE9
+  2289                           wreg	equ	0xFE8
+  2290                           postdec1	equ	0xFE5
+  2291                           fsr1h	equ	0xFE2
+  2292                           fsr1l	equ	0xFE1
+  2293                           indf2	equ	0xFDF
+  2294                           fsr2h	equ	0xFDA
+  2295                           fsr2l	equ	0xFD9
+  2296                           status	equ	0xFD8
+  2297                           
+  2298                           	psect	temp
+  2299  00004E                     btemp:
+  2300                           	opt stack 0
+  2301  00004E                     	ds	1
+  2302  0000                     int$flags	set	btemp
+  2303                           pclatu	equ	0xFFB
+  2304                           pclath	equ	0xFFA
+  2305                           tblptru	equ	0xFF8
+  2306                           tblptrh	equ	0xFF7
+  2307                           tblptrl	equ	0xFF6
+  2308                           tablat	equ	0xFF5
+  2309                           prodh	equ	0xFF4
+  2310                           prodl	equ	0xFF3
+  2311                           intcon	equ	0xFF2
+  2312                           postinc0	equ	0xFEE
+  2313                           fsr0h	equ	0xFEA
+  2314                           fsr0l	equ	0xFE9
+  2315                           wreg	equ	0xFE8
+  2316                           postdec1	equ	0xFE5
+  2317                           fsr1h	equ	0xFE2
+  2318                           fsr1l	equ	0xFE1
+  2319                           indf2	equ	0xFDF
+  2320                           fsr2h	equ	0xFDA
+  2321                           fsr2l	equ	0xFD9
+  2322                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     534
+    Constant    10
+    Data        8
+    BSS         304
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM          126     21      77
+    BANK0           128      0       0
+    BANK1           256      0     256
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+
+Pointer List with Targets:
+
+    sp__str_str	PTR unsigned char  size(2) Largest target is 128
+		 -> gsm_msg_read@gsm_resp(BANK0[128]), NULL(NULL[0]), 
+
+    sp__str_rchr	PTR unsigned char  size(2) Largest target is 128
+		 -> gsm_msg_read@gsm_resp(BANK0[128]), NULL(NULL[0]), 
+
+    sp__str_chr	PTR unsigned char  size(2) Largest target is 128
+		 -> gsm_msg_read@gsm_resp(BANK0[128]), gsm_wait@gsm_resp(COMRAM[32]), gsm_pname@gsm_resp(COMRAM[32]), NULL(NULL[0]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _io_test->_gpio_pin_mode
+    _io_test->_gpio_pin_write
+
+Critical Paths under _ISR in COMRAM
+
+    _ISR->_serial_interrupt
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _ISR in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _ISR in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _ISR in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _ISR in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _ISR in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _ISR in BANK5
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0    2858
+                            _io_test
+ ---------------------------------------------------------------------------------
+ (1) _io_test                                              0     0      0    2858
+                      _gpio_pin_mode
+                      _gpio_pin_read
+                     _gpio_pin_write
+ ---------------------------------------------------------------------------------
+ (2) _gpio_pin_write                                       4     3      1    1514
+                                             17 COMRAM     4     3      1
+ ---------------------------------------------------------------------------------
+ (2) _gpio_pin_read                                        3     3      0     150
+                                             17 COMRAM     3     3      0
+ ---------------------------------------------------------------------------------
+ (2) _gpio_pin_mode                                        4     3      1    1194
+                                             17 COMRAM     4     3      1
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (3) _ISR                                                 14    14      0      15
+                                              3 COMRAM    14    14      0
+                   _serial_interrupt
+                      _sys_interrupt
+ ---------------------------------------------------------------------------------
+ (4) _sys_interrupt                                        0     0      0       0
+ ---------------------------------------------------------------------------------
+ (4) _serial_interrupt                                     3     3      0      15
+                                              0 COMRAM     3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _io_test
+     _gpio_pin_mode
+     _gpio_pin_read
+     _gpio_pin_write
+
+ _ISR (ROOT)
+   _serial_interrupt
+   _sys_interrupt
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             5FF      0       0      17        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK5           100      0       0      16        0.0%
+BANK5              100      0       0      14        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0     100       7      100.0%
+BITBANK0            80      0       0       4        0.0%
+BANK0               80      0       0       5        0.0%
+BITCOMRAM           7E      0       0       0        0.0%
+COMRAM              7E     15      4D       1       61.1%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0     14D      15        0.0%
+DATA                 0      0     14D       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.37 build -260352376 
+Symbol Table                                                                                   Sat Aug 20 00:41:14 2016
+
+              _SSPSTATbits 000FC7                         _EN 002C                         _RS 002D  
+              __CFG_OSC$HS 000000          gpio_pin_mode@mode 0042                        l851 0524  
+                      l934 0568                        _GIE 007F97                        _ISR 0008  
+                      u804 03BE                        u724 033A                        u805 03BA  
+                      u725 0336                        _PSA 007EAB                        u744 035E  
+                      u745 035A                        u764 037E                        u765 037A  
+                      u784 039E                        u785 039A                        wreg 000FE8  
+             __CFG_LVP$OFF 000000                       ?_ISR 0031               __CFG_WDT$OFF 000000  
+                     l3111 0068                       l3131 00E6                       l3123 00B8  
+                     l3107 0046                       l3061 021E                       l3053 01F2  
+                     l3143 0136                       l3135 0108                       l3119 0096  
+                     l3073 026A                       l3065 023E                       l3049 01D2  
+                     l3155 0186                       l3147 0158                       l3085 02B6  
+                     l3077 028A                       l3097 0302                       l3089 02D6  
+                     l1905 03C4                       l3385 053C                       l1891 0384  
+                     l1883 0364                       l1875 0344                       l1899 03A4  
+                     _ADON 007E10                       _EEIF 007D0C                       STR_1 7FEF  
+                     STR_2 7FFA                       STR_3 7F7C                       STR_4 7FAA  
+                     STR_5 7FFD                       STR_6 7FA1                       STR_7 7F67  
+                     STR_8 7F98                       STR_9 7FF7                       _T0CS 007EAD  
+                     u2014 0212                       u2015 020E                       u2114 02AA  
+                     u2034 0234                       u2115 02A6                       u2035 0230  
+                     _LATA 000F89                       u2134 02CC                       u2214 0038  
+                     _LATB 000F8A                       u2135 02C8                       u2215 0034  
+                     _LATC 000F8B                       u2064 025E                       _LATD 000F8C  
+                     u2065 025A                       _LATE 000F8D                       u2314 00D8  
+                     u2234 005C                       u2315 00D4                       u2235 0058  
+                     u2164 02F6                       u2084 0280                       u2165 02F2  
+                     u2085 027C                       u2414 0178                       u2334 00FC  
+                     u2415 0174                       u2335 00F8                       u2184 0318  
+                     u2264 0088                       u2185 0314                       u2265 0084  
+                     u2434 019C                       u2435 0198                       u2364 0128  
+                     u2284 00AC                       u2365 0124                       u2285 00A8  
+                     u2384 014C                       u2385 0148                       _PEIE 007F96  
+                     u1964 01C6                       u1965 01C2                       u1984 01E8  
+                     u1985 01E4                       _RCIE 007CED                       _RCIF 007CF5  
+                     _TMR1 000FCE                       _bits 0021                       _main 0564  
+                     fsr0h 000FEA                       fsr1h 000FE2                       fsr0l 000FE9  
+                     fsr2h 000FDA                       fsr1l 000FE1                       indf2 000FDF  
+                     fsr2l 000FD9                       btemp 004E                       pclat 000FFA  
+            __CFG_BOREN$ON 000000                       prodh 000FF4                       prodl 000FF3  
+                     start 0016               ___param_bank 000010                      ??_ISR 0034  
+                    ?_main 0031          gpio_pin_write@pin 0045                      _ADRES 000FC3  
+                    _EEADR 000FA9                      STR_10 7F8F                      STR_11 7FE8  
+                    STR_20 7F28                      STR_12 7ED1                      STR_21 7F0C  
+                    STR_13 7EE1                      STR_22 7F72                      STR_30 7E54  
+                    STR_14 7DE9                      STR_31 7E9F                      STR_23 7E8E  
+                    STR_40 7FC3                      STR_16 7FBB                      STR_24 7E7B  
+                    STR_32 7E28                      STR_41 7F5C                      STR_17 7F36  
+                    STR_25 7F1A                      STR_42 7FDA                      STR_50 7EC1  
+                    STR_34 7EB0                      STR_26 7E68                      STR_43 7FF4  
+                    STR_27 7FD3                      STR_19 7FCB                      STR_52 7F43  
+                    STR_36 7E3F                      STR_45 7FE1                      STR_29 7F86  
+                    STR_37 7EF0                      STR_38 7EFE                      STR_39 7FB3  
+                    STR_48 7F50                      STR_49 7E11                      _T0PS0 007EA8  
+                    _T0PS1 007EA9                      _T0PS2 007EAA                      i2l395 0406  
+                    i2l396 0412                      _RCREG 000FAE                      _SPBRG 000FAF  
+                    _PORTA 000F80                      _PORTB 000F81                      _PORTC 000F82  
+                    _PORTD 000F83                      _PORTE 000F84                      _TRISA 000F92  
+                    _TRISB 000F93                      _TRISC 000F94                      _TRISD 000F95  
+                    _TRISE 000F96              rtc_test@F3465 0046                      _TXREG 000FAD  
+          __end_of_dpowers 7DE9            __end_of_io_test 0548     __size_of_gpio_pin_read 00A6  
+   __size_of_gpio_pin_mode 017A                      tablat 000FF5                      status 000FD8  
+          __initialization 04C2                _system_tick 002A               __end_of_main 056A  
+                   ??_main 0046              __activetblptr 000002                     _ADCON0 000FC2  
+                   _ADCON1 000FC1                     _ADCON2 000FC0                     _EEDATA 000FA8  
+                   _EECON2 000FA7                     _T08BIT 007EAE                     _GODONE 007E11  
+ __end_of_serial_interrupt 04C2                     i2l2251 04B0                     i2l2243 0492  
+                   i2l2235 0462                     i2l2245 049A                     i2l2237 047C  
+                   i2l2239 0480                     i2l2249 04AC                     _TMR0IE 007F95  
+                   _TMR0IF 007F92                     _TMR0ON 007EAF                     _TMR1ON 007E68  
+                   _SSPADD 000FC8                     _SSPBUF 000FC9              _gpio_pin_read 0322  
+            _gpio_pin_mode 01A8                     clear_0 04CA                     clear_1 04DC  
+                ??_io_test 0046    __size_of_gpio_pin_write 018E               __pdataCOMRAM 0046  
+             __mediumconst 7DDE                     tblptrh 000FF7                     tblptrl 000FF6  
+                   tblptru 000FF8                 __accesstop 0080    __end_of__initialization 0502  
+          __CFG_PBADEN$OFF 000000     serial_interrupt@rxData 0033              ___rparam_used 000001  
+           __pcstackCOMRAM 0031             ?_gpio_pin_read 0031             ?_gpio_pin_mode 0042  
+               __pbssBANK1 0100     __size_of_sys_interrupt 0014                    _T1CKPS0 007E6C  
+    system_tick_test@F3454 0011      gpio_pin_write@bit_val 0042                    _SSPCON1 000FC6  
+                  _SSPSTAT 000FC7                    __Hparam 0000                    __Lparam 0000  
+          ??_gpio_pin_read 0042            ??_gpio_pin_mode 0043              _sys_interrupt 0548  
+                  __pcinit 04C2                    __ramtop 0600                    __ptext0 0564  
+                  __ptext1 0510                    __ptext2 001A                    __ptext3 0322  
+                  __ptext4 01A8                    __ptext6 0548                    __ptext7 044E  
+           _gpio_pin_write 001A               __size_of_ISR 0446                    _dpowers 7DDF  
+                  _io_test 0510             __pintcode_body 03C8       end_of_initialization 0502  
+        ?_serial_interrupt 0031              __Lmediumconst 7DDE                    int_func 03C8  
+       ??_serial_interrupt 0031                  _RCSTAbits 000FAB                    postdec1 000FE5  
+                  postinc0 000FEE             ?_sys_interrupt 0031             _rx_Buffer_Head 004A  
+           _rx_Buffer_Tail 004C     __end_of_gpio_pin_write 01A8                  _TRISCbits 000F94  
+         gpio_pin_read@pin 0044           gpio_pin_mode@pin 0045                  _TXSTAbits 000FAC  
+            __pidataCOMRAM 055C            ?_gpio_pin_write 0042        start_initialization 04C2  
+              __end_of_ISR 044E            ??_sys_interrupt 0031                __pbssCOMRAM 0001  
+                __pintcode 0008              __pmediumconst 7DDE                   ?_io_test 0031  
+            adc_test@F3448 0001                   _PIR1bits 000F9E      __end_of_gpio_pin_read 03C8  
+    __end_of_gpio_pin_mode 0322  __size_of_serial_interrupt 0074                  copy_data0 04F6  
+               _EECON1bits 000FA6                   __Hrparam 0000                   __Lrparam 0000  
+         ??_gpio_pin_write 0043           __size_of_io_test 0038              __size_of_main 0006  
+                 _humidity 002E                   _rxBuffer 0100                   int$flags 004E  
+            _lcd_data_pins 0026                 _INTCONbits 000FF2                   intlevel2 0000  
+    __end_of_sys_interrupt 055C           _serial_interrupt 044E                _temperature 002F  
+              _SSPCON2bits 000FC5                _timer_count 0030  

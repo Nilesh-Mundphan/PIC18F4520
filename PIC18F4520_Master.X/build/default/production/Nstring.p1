@@ -1,0 +1,870 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;Nstring.h: 15: int str_len(const char *);
+[; ;Nstring.h: 16: void str_cpy(char *,const char *);
+[; ;Nstring.h: 17: void str_ncpy(char *,const char *,int);
+[; ;Nstring.h: 18: int str_cmp(const char *,const char *);
+[; ;Nstring.h: 19: int str_ncmp(const char *,const char *,int);
+[; ;Nstring.h: 20: char * str_chr(const char *,const char);
+[; ;Nstring.h: 21: char * str_rchr(const char *,const char);
+[; ;Nstring.h: 22: char * str_str(const char *,const char *);
+[; ;Nstring.h: 23: void str_rev(char *);
+[; ;Nstring.h: 24: void str_upr(char *);
+[; ;Nstring.h: 25: void str_lwr(char *);
+[; ;Nstring.h: 26: void str_cat(char *,char*);
+[; ;Nstring.h: 28: void int_to_asci(char *,long int);
+[; ;Nstring.h: 29: void float_to_asci(char *,float);
+"3 Nstring.c
+[v _str_len `(i ~T0 @X0 1 ef1`*Cuc ]
+"4
+{
+[; ;Nstring.c: 3: int str_len(const char *s)
+[; ;Nstring.c: 4: {
+[e :U _str_len ]
+"3
+[v _s `*Cuc ~T0 @X0 1 r1 ]
+"4
+[f ]
+"5
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 5: int i;
+[; ;Nstring.c: 6: for(i=0;s[i];i++);
+"6
+{
+[e = _i -> 0 `i ]
+[e $U 5  ]
+[e :U 2 ]
+[e ++ _i -> 1 `i ]
+[e :U 5 ]
+[e $ != -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> -> -> 0 `i `Cuc `i 2  ]
+[e :U 3 ]
+}
+[; ;Nstring.c: 8: return i;
+"8
+[e ) _i ]
+[e $UE 1  ]
+[; ;Nstring.c: 9: }
+"9
+[e :UE 1 ]
+}
+"11
+[v _str_cpy `(v ~T0 @X0 1 ef2`*uc`*Cuc ]
+"12
+{
+[; ;Nstring.c: 11: void str_cpy(char *d,const char *s)
+[; ;Nstring.c: 12: {
+[e :U _str_cpy ]
+"11
+[v _d `*uc ~T0 @X0 1 r1 ]
+[v _s `*Cuc ~T0 @X0 1 r2 ]
+"12
+[f ]
+"13
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 13: int i;
+[; ;Nstring.c: 14: for(i=0;s[i];i++)
+"14
+{
+[e = _i -> 0 `i ]
+[e $U 10  ]
+"15
+[e :U 7 ]
+[; ;Nstring.c: 15: d[i]=s[i];
+[e = *U + _d * -> _i `x -> -> # *U _d `i `x *U + _s * -> _i `x -> -> # *U _s `i `x ]
+"14
+[e ++ _i -> 1 `i ]
+[e :U 10 ]
+[e $ != -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> -> -> 0 `i `Cuc `i 7  ]
+[e :U 8 ]
+"15
+}
+[; ;Nstring.c: 17: d[i]='\0';
+"17
+[e = *U + _d * -> _i `x -> -> # *U _d `i `x -> -> 0 `ui `uc ]
+[; ;Nstring.c: 19: }
+"19
+[e :UE 6 ]
+}
+"21
+[v _str_ncpy `(v ~T0 @X0 1 ef3`*uc`*Cuc`i ]
+"22
+{
+[; ;Nstring.c: 21: void str_ncpy(char *d,const char *s,int clen)
+[; ;Nstring.c: 22: {
+[e :U _str_ncpy ]
+"21
+[v _d `*uc ~T0 @X0 1 r1 ]
+[v _s `*Cuc ~T0 @X0 1 r2 ]
+[v _clen `i ~T0 @X0 1 r3 ]
+"22
+[f ]
+"23
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 23: int i;
+[; ;Nstring.c: 24: for(i=0;i<clen;i++)
+"24
+{
+[e = _i -> 0 `i ]
+[e $U 15  ]
+"25
+[e :U 12 ]
+[; ;Nstring.c: 25: d[i]=s[i];
+[e = *U + _d * -> _i `x -> -> # *U _d `i `x *U + _s * -> _i `x -> -> # *U _s `i `x ]
+"24
+[e ++ _i -> 1 `i ]
+[e :U 15 ]
+[e $ < _i _clen 12  ]
+[e :U 13 ]
+"25
+}
+[; ;Nstring.c: 27: d[i]='\0';
+"27
+[e = *U + _d * -> _i `x -> -> # *U _d `i `x -> -> 0 `ui `uc ]
+[; ;Nstring.c: 29: }
+"29
+[e :UE 11 ]
+}
+"30
+[v _str_cmp `(i ~T0 @X0 1 ef2`*Cuc`*Cuc ]
+"31
+{
+[; ;Nstring.c: 30: int str_cmp(const char *s1,const char *s2)
+[; ;Nstring.c: 31: {
+[e :U _str_cmp ]
+"30
+[v _s1 `*Cuc ~T0 @X0 1 r1 ]
+[v _s2 `*Cuc ~T0 @X0 1 r2 ]
+"31
+[f ]
+"32
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 32: int i;
+[; ;Nstring.c: 33: for(i=0;s1[i];i++)
+"33
+{
+[e = _i -> 0 `i ]
+[e $U 20  ]
+"34
+[e :U 17 ]
+[; ;Nstring.c: 34: if(s1[i]!=s2[i])
+[e $ ! != -> *U + _s1 * -> _i `x -> -> # *U _s1 `i `x `i -> *U + _s2 * -> _i `x -> -> # *U _s2 `i `x `i 21  ]
+[; ;Nstring.c: 35: break;
+"35
+[e $U 18  ]
+[e :U 21 ]
+"33
+[e ++ _i -> 1 `i ]
+[e :U 20 ]
+[e $ != -> *U + _s1 * -> _i `x -> -> # *U _s1 `i `x `i -> -> -> 0 `i `Cuc `i 17  ]
+[e :U 18 ]
+"37
+}
+[; ;Nstring.c: 37: if(s1[i]=='\0')
+[e $ ! == -> *U + _s1 * -> _i `x -> -> # *U _s1 `i `x `ui -> 0 `ui 22  ]
+[; ;Nstring.c: 38: return 0;
+"38
+[e ) -> 0 `i ]
+[e $UE 16  ]
+[e $U 23  ]
+"39
+[e :U 22 ]
+[; ;Nstring.c: 39: else
+[; ;Nstring.c: 40: if(s1[i]>s2[i])
+"40
+[e $ ! > -> *U + _s1 * -> _i `x -> -> # *U _s1 `i `x `i -> *U + _s2 * -> _i `x -> -> # *U _s2 `i `x `i 24  ]
+[; ;Nstring.c: 41: return 1;
+"41
+[e ) -> 1 `i ]
+[e $UE 16  ]
+[e $U 25  ]
+"42
+[e :U 24 ]
+[; ;Nstring.c: 42: else
+[; ;Nstring.c: 43: return -1;
+"43
+[e ) -U -> 1 `i ]
+[e $UE 16  ]
+[e :U 25 ]
+[e :U 23 ]
+[; ;Nstring.c: 44: }
+"44
+[e :UE 16 ]
+}
+"46
+[v _str_ncmp `(i ~T0 @X0 1 ef3`*Cuc`*Cuc`i ]
+"47
+{
+[; ;Nstring.c: 46: int str_ncmp(const char *s1,const char *s2,int clen)
+[; ;Nstring.c: 47: {
+[e :U _str_ncmp ]
+"46
+[v _s1 `*Cuc ~T0 @X0 1 r1 ]
+[v _s2 `*Cuc ~T0 @X0 1 r2 ]
+[v _clen `i ~T0 @X0 1 r3 ]
+"47
+[f ]
+"48
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 48: int i;
+[; ;Nstring.c: 49: for(i=0;i<clen;i++)
+"49
+{
+[e = _i -> 0 `i ]
+[e $U 30  ]
+"50
+[e :U 27 ]
+[; ;Nstring.c: 50: if(s1[i]!=s2[i])
+[e $ ! != -> *U + _s1 * -> _i `x -> -> # *U _s1 `i `x `i -> *U + _s2 * -> _i `x -> -> # *U _s2 `i `x `i 31  ]
+[; ;Nstring.c: 51: break;
+"51
+[e $U 28  ]
+[e :U 31 ]
+"49
+[e ++ _i -> 1 `i ]
+[e :U 30 ]
+[e $ < _i _clen 27  ]
+[e :U 28 ]
+"53
+}
+[; ;Nstring.c: 53: if(i==clen)
+[e $ ! == _i _clen 32  ]
+[; ;Nstring.c: 54: return 0;
+"54
+[e ) -> 0 `i ]
+[e $UE 26  ]
+[e $U 33  ]
+"55
+[e :U 32 ]
+[; ;Nstring.c: 55: else
+[; ;Nstring.c: 56: if(s1[i]>s2[i])
+"56
+[e $ ! > -> *U + _s1 * -> _i `x -> -> # *U _s1 `i `x `i -> *U + _s2 * -> _i `x -> -> # *U _s2 `i `x `i 34  ]
+[; ;Nstring.c: 57: return 1;
+"57
+[e ) -> 1 `i ]
+[e $UE 26  ]
+[e $U 35  ]
+"58
+[e :U 34 ]
+[; ;Nstring.c: 58: else
+[; ;Nstring.c: 59: return -1;
+"59
+[e ) -U -> 1 `i ]
+[e $UE 26  ]
+[e :U 35 ]
+[e :U 33 ]
+[; ;Nstring.c: 60: }
+"60
+[e :UE 26 ]
+}
+"61
+[v _str_chr `(*uc ~T0 @X0 1 ef2`*Cuc`Cuc ]
+"62
+{
+[; ;Nstring.c: 61: char * str_chr(const char *s,const char ch)
+[; ;Nstring.c: 62: {
+[e :U _str_chr ]
+"61
+[v _s `*Cuc ~T0 @X0 1 r1 ]
+[v _ch `Cuc ~T0 @X0 1 r2 ]
+"62
+[f ]
+"63
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 63: int i;
+[; ;Nstring.c: 64: for(i=0;s[i];i++)
+"64
+{
+[e = _i -> 0 `i ]
+[e $U 40  ]
+"65
+[e :U 37 ]
+[; ;Nstring.c: 65: if(s[i]==ch)
+[e $ ! == -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> _ch `i 41  ]
+[; ;Nstring.c: 66: return (char *)s+i;
+"66
+[e ) + -> _s `*uc * -> _i `x -> -> # *U -> _s `*uc `i `x ]
+[e $UE 36  ]
+[e :U 41 ]
+"64
+[e ++ _i -> 1 `i ]
+[e :U 40 ]
+[e $ != -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> -> -> 0 `i `Cuc `i 37  ]
+[e :U 38 ]
+"68
+}
+[; ;Nstring.c: 68: return 0;
+[e ) -> -> 0 `i `*uc ]
+[e $UE 36  ]
+[; ;Nstring.c: 69: }
+"69
+[e :UE 36 ]
+}
+"70
+[v _str_rchr `(*uc ~T0 @X0 1 ef2`*Cuc`Cuc ]
+"71
+{
+[; ;Nstring.c: 70: char * str_rchr(const char *s,const char ch)
+[; ;Nstring.c: 71: {
+[e :U _str_rchr ]
+"70
+[v _s `*Cuc ~T0 @X0 1 r1 ]
+[v _ch `Cuc ~T0 @X0 1 r2 ]
+"71
+[f ]
+"72
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 72: int i;
+[; ;Nstring.c: 73: for(i=0;s[i];i++);
+"73
+{
+[e = _i -> 0 `i ]
+[e $U 46  ]
+[e :U 43 ]
+[e ++ _i -> 1 `i ]
+[e :U 46 ]
+[e $ != -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> -> -> 0 `i `Cuc `i 43  ]
+[e :U 44 ]
+}
+[; ;Nstring.c: 74: for(i=i-1;i>=0;i--)
+"74
+{
+[e = _i - _i -> 1 `i ]
+[e $ >= _i -> 0 `i 47  ]
+[e $U 48  ]
+"75
+[e :U 47 ]
+[; ;Nstring.c: 75: if(s[i]==ch)
+[e $ ! == -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> _ch `i 50  ]
+[; ;Nstring.c: 76: return (char *)s+i;
+"76
+[e ) + -> _s `*uc * -> _i `x -> -> # *U -> _s `*uc `i `x ]
+[e $UE 42  ]
+[e :U 50 ]
+"74
+[e -- _i -> 1 `i ]
+[e $ >= _i -> 0 `i 47  ]
+[e :U 48 ]
+"78
+}
+[; ;Nstring.c: 78: return 0;
+[e ) -> -> 0 `i `*uc ]
+[e $UE 42  ]
+[; ;Nstring.c: 79: }
+"79
+[e :UE 42 ]
+}
+"80
+[v _str_str `(*uc ~T0 @X0 1 ef2`*Cuc`*Cuc ]
+"81
+{
+[; ;Nstring.c: 80: char * str_str(const char *m,const char *s)
+[; ;Nstring.c: 81: {
+[e :U _str_str ]
+"80
+[v _m `*Cuc ~T0 @X0 1 r1 ]
+[v _s `*Cuc ~T0 @X0 1 r2 ]
+"81
+[f ]
+"82
+[v _i `i ~T0 @X0 1 a ]
+[v _j `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 82: int i,j;
+[; ;Nstring.c: 83: for(i=0;m[i];i++)
+"83
+{
+[e = _i -> 0 `i ]
+[e $U 55  ]
+"84
+[e :U 52 ]
+[; ;Nstring.c: 84: {
+{
+[; ;Nstring.c: 85: if(s[0]==m[i])
+"85
+[e $ ! == -> *U + _s * -> -> 0 `i `x -> -> # *U _s `i `x `i -> *U + _m * -> _i `x -> -> # *U _m `i `x `i 56  ]
+[; ;Nstring.c: 86: {
+"86
+{
+[; ;Nstring.c: 87: for(j=1;s[j];j++)
+"87
+{
+[e = _j -> 1 `i ]
+[e $U 60  ]
+"88
+[e :U 57 ]
+[; ;Nstring.c: 88: if(s[j]!=m[i+j])
+[e $ ! != -> *U + _s * -> _j `x -> -> # *U _s `i `x `i -> *U + _m * -> + _i _j `x -> -> # *U _m `i `x `i 61  ]
+[; ;Nstring.c: 89: break;
+"89
+[e $U 58  ]
+[e :U 61 ]
+"87
+[e ++ _j -> 1 `i ]
+[e :U 60 ]
+[e $ != -> *U + _s * -> _j `x -> -> # *U _s `i `x `i -> -> -> 0 `i `Cuc `i 57  ]
+[e :U 58 ]
+"91
+}
+[; ;Nstring.c: 91: if(s[j]=='\0')
+[e $ ! == -> *U + _s * -> _j `x -> -> # *U _s `i `x `ui -> 0 `ui 62  ]
+[; ;Nstring.c: 92: return (char *)m+i;
+"92
+[e ) + -> _m `*uc * -> _i `x -> -> # *U -> _m `*uc `i `x ]
+[e $UE 51  ]
+[e :U 62 ]
+"93
+}
+[e :U 56 ]
+"94
+}
+"83
+[e ++ _i -> 1 `i ]
+[e :U 55 ]
+[e $ != -> *U + _m * -> _i `x -> -> # *U _m `i `x `i -> -> -> 0 `i `Cuc `i 52  ]
+[e :U 53 ]
+"94
+}
+[; ;Nstring.c: 93: }
+[; ;Nstring.c: 94: }
+[; ;Nstring.c: 95: return 0;
+"95
+[e ) -> -> 0 `i `*uc ]
+[e $UE 51  ]
+[; ;Nstring.c: 96: }
+"96
+[e :UE 51 ]
+}
+"98
+[v _str_rev `(v ~T0 @X0 1 ef1`*uc ]
+"99
+{
+[; ;Nstring.c: 98: void str_rev(char *s)
+[; ;Nstring.c: 99: {
+[e :U _str_rev ]
+"98
+[v _s `*uc ~T0 @X0 1 r1 ]
+"99
+[f ]
+"100
+[v _i `i ~T0 @X0 1 a ]
+[v _j `i ~T0 @X0 1 a ]
+"101
+[v _temp `uc ~T0 @X0 1 a ]
+[; ;Nstring.c: 100: int i,j;
+[; ;Nstring.c: 101: char temp;
+[; ;Nstring.c: 102: for(i=0;s[i];i++);
+"102
+{
+[e = _i -> 0 `i ]
+[e $U 67  ]
+[e :U 64 ]
+[e ++ _i -> 1 `i ]
+[e :U 67 ]
+[e $ != -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> -> -> 0 `i `uc `i 64  ]
+[e :U 65 ]
+}
+[; ;Nstring.c: 104: for(i=i-1,j=0;i>j;i--,j++)
+"104
+{
+[e ; = _i - _i -> 1 `i = _j -> 0 `i ]
+[e $U 71  ]
+"105
+[e :U 68 ]
+[; ;Nstring.c: 105: {
+{
+[; ;Nstring.c: 106: temp=s[j];
+"106
+[e = _temp *U + _s * -> _j `x -> -> # *U _s `i `x ]
+[; ;Nstring.c: 107: s[j]=s[i];
+"107
+[e = *U + _s * -> _j `x -> -> # *U _s `i `x *U + _s * -> _i `x -> -> # *U _s `i `x ]
+[; ;Nstring.c: 108: s[i]=temp;
+"108
+[e = *U + _s * -> _i `x -> -> # *U _s `i `x _temp ]
+"109
+}
+"104
+[e ; -- _i -> 1 `i ++ _j -> 1 `i ]
+[e :U 71 ]
+[e $ > _i _j 68  ]
+[e :U 69 ]
+"109
+}
+[; ;Nstring.c: 109: }
+[; ;Nstring.c: 110: }
+"110
+[e :UE 63 ]
+}
+"112
+[v _str_upr `(v ~T0 @X0 1 ef1`*uc ]
+"113
+{
+[; ;Nstring.c: 112: void str_upr(char *s)
+[; ;Nstring.c: 113: {
+[e :U _str_upr ]
+"112
+[v _s `*uc ~T0 @X0 1 r1 ]
+"113
+[f ]
+"114
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 114: int i;
+[; ;Nstring.c: 115: for(i=0;s[i];i++)
+"115
+{
+[e = _i -> 0 `i ]
+[e $U 76  ]
+"116
+[e :U 73 ]
+[; ;Nstring.c: 116: if(s[i]>='a'&&s[i]<='z')
+[e $ ! && >= -> *U + _s * -> _i `x -> -> # *U _s `i `x `ui -> 97 `ui <= -> *U + _s * -> _i `x -> -> # *U _s `i `x `ui -> 122 `ui 77  ]
+[; ;Nstring.c: 117: s[i]=s[i]-32;
+"117
+[e = *U + _s * -> _i `x -> -> # *U _s `i `x -> - -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> 32 `i `uc ]
+[e :U 77 ]
+"115
+[e ++ _i -> 1 `i ]
+[e :U 76 ]
+[e $ != -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> -> -> 0 `i `uc `i 73  ]
+[e :U 74 ]
+"118
+}
+[; ;Nstring.c: 118: }
+[e :UE 72 ]
+}
+"120
+[v _str_lwr `(v ~T0 @X0 1 ef1`*uc ]
+"121
+{
+[; ;Nstring.c: 120: void str_lwr(char *s)
+[; ;Nstring.c: 121: {
+[e :U _str_lwr ]
+"120
+[v _s `*uc ~T0 @X0 1 r1 ]
+"121
+[f ]
+"122
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 122: int i;
+[; ;Nstring.c: 123: for(i=0;s[i];i++)
+"123
+{
+[e = _i -> 0 `i ]
+[e $U 82  ]
+"124
+[e :U 79 ]
+[; ;Nstring.c: 124: if(s[i]>='A'&&s[i]<='Z')
+[e $ ! && >= -> *U + _s * -> _i `x -> -> # *U _s `i `x `ui -> 65 `ui <= -> *U + _s * -> _i `x -> -> # *U _s `i `x `ui -> 90 `ui 83  ]
+[; ;Nstring.c: 125: s[i]=s[i]+32;
+"125
+[e = *U + _s * -> _i `x -> -> # *U _s `i `x -> + -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> 32 `i `uc ]
+[e :U 83 ]
+"123
+[e ++ _i -> 1 `i ]
+[e :U 82 ]
+[e $ != -> *U + _s * -> _i `x -> -> # *U _s `i `x `i -> -> -> 0 `i `uc `i 79  ]
+[e :U 80 ]
+"126
+}
+[; ;Nstring.c: 126: }
+[e :UE 78 ]
+}
+"128
+[v _str_cat `(v ~T0 @X0 1 ef2`*uc`*uc ]
+"129
+{
+[; ;Nstring.c: 128: void str_cat(char * m,char * s)
+[; ;Nstring.c: 129: {
+[e :U _str_cat ]
+"128
+[v _m `*uc ~T0 @X0 1 r1 ]
+[v _s `*uc ~T0 @X0 1 r2 ]
+"129
+[f ]
+"130
+[v _i `i ~T0 @X0 1 a ]
+[v _j `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 130: int i,j;
+[; ;Nstring.c: 131: for(i=0;m[i];i++);
+"131
+{
+[e = _i -> 0 `i ]
+[e $U 88  ]
+[e :U 85 ]
+[e ++ _i -> 1 `i ]
+[e :U 88 ]
+[e $ != -> *U + _m * -> _i `x -> -> # *U _m `i `x `i -> -> -> 0 `i `uc `i 85  ]
+[e :U 86 ]
+}
+[; ;Nstring.c: 132: for(i=i,j=0;s[j];i++,j++)
+"132
+{
+[e ; = _i _i = _j -> 0 `i ]
+[e $U 92  ]
+"133
+[e :U 89 ]
+[; ;Nstring.c: 133: m[i]=s[j];
+[e = *U + _m * -> _i `x -> -> # *U _m `i `x *U + _s * -> _j `x -> -> # *U _s `i `x ]
+"132
+[e ; ++ _i -> 1 `i ++ _j -> 1 `i ]
+[e :U 92 ]
+[e $ != -> *U + _s * -> _j `x -> -> # *U _s `i `x `i -> -> -> 0 `i `uc `i 89  ]
+[e :U 90 ]
+"133
+}
+[; ;Nstring.c: 134: m[i]='\0';
+"134
+[e = *U + _m * -> _i `x -> -> # *U _m `i `x -> -> 0 `ui `uc ]
+[; ;Nstring.c: 135: }
+"135
+[e :UE 84 ]
+}
+"137
+[v _int_to_asci `(v ~T0 @X0 1 ef2`*uc`l ]
+"138
+{
+[; ;Nstring.c: 137: void int_to_asci(char *str,long int inte)
+[; ;Nstring.c: 138: {
+[e :U _int_to_asci ]
+"137
+[v _str `*uc ~T0 @X0 1 r1 ]
+[v _inte `l ~T0 @X0 1 r2 ]
+"138
+[f ]
+"140
+[v _i `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 140: int i=10,j=0,k=0,isneg=0;
+[e = _i -> 10 `i ]
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[v _k `i ~T0 @X0 1 a ]
+[e = _k -> 0 `i ]
+[v _isneg `i ~T0 @X0 1 a ]
+[e = _isneg -> 0 `i ]
+"141
+[v _temp `uc ~T0 @X0 -> 10 `i a ]
+[; ;Nstring.c: 141: char temp[10];
+[; ;Nstring.c: 142: if(inte<0)
+"142
+[e $ ! < _inte -> -> 0 `i `l 94  ]
+[; ;Nstring.c: 143: {
+"143
+{
+[; ;Nstring.c: 144: inte*=-1;
+"144
+[e =* _inte -> -U -> 1 `i `l ]
+[; ;Nstring.c: 145: isneg=1;
+"145
+[e = _isneg -> 1 `i ]
+"146
+}
+[e :U 94 ]
+[; ;Nstring.c: 146: }
+[; ;Nstring.c: 147: while(inte)
+"147
+[e $U 95  ]
+[e :U 96 ]
+[; ;Nstring.c: 148: {
+"148
+{
+[; ;Nstring.c: 149: temp[i]=inte%10+0x30;
+"149
+[e = *U + &U _temp * -> -> _i `ui `ux -> -> # *U &U _temp `ui `ux -> + % _inte -> -> 10 `i `l -> -> 48 `i `l `uc ]
+[; ;Nstring.c: 150: inte=inte/10;
+"150
+[e = _inte / _inte -> -> 10 `i `l ]
+[; ;Nstring.c: 151: i--;
+"151
+[e -- _i -> 1 `i ]
+"152
+}
+[e :U 95 ]
+"147
+[e $ != _inte -> -> 0 `i `l 96  ]
+[e :U 97 ]
+[; ;Nstring.c: 152: }
+[; ;Nstring.c: 153: if(isneg)
+"153
+[e $ ! != _isneg -> 0 `i 98  ]
+[; ;Nstring.c: 154: str[k++]='-';
+"154
+[e = *U + _str * -> ++ _k -> 1 `i `x -> -> # *U _str `i `x -> -> 45 `ui `uc ]
+[e :U 98 ]
+[; ;Nstring.c: 156: for(j=i+1;j<=10;j++){
+"156
+{
+[e = _j + _i -> 1 `i ]
+[e $ <= _j -> 10 `i 99  ]
+[e $U 100  ]
+[e :U 99 ]
+{
+[; ;Nstring.c: 157: str[k++]=temp[j];
+"157
+[e = *U + _str * -> ++ _k -> 1 `i `x -> -> # *U _str `i `x *U + &U _temp * -> -> _j `ui `ux -> -> # *U &U _temp `ui `ux ]
+"158
+}
+"156
+[e ++ _j -> 1 `i ]
+[e $ <= _j -> 10 `i 99  ]
+[e :U 100 ]
+"158
+}
+[; ;Nstring.c: 158: }
+[; ;Nstring.c: 159: str[k]='\0';
+"159
+[e = *U + _str * -> _k `x -> -> # *U _str `i `x -> -> 0 `ui `uc ]
+[; ;Nstring.c: 161: }
+"161
+[e :UE 93 ]
+}
+"163
+[v _float_to_asci `(v ~T0 @X0 1 ef2`*uc`f ]
+"164
+{
+[; ;Nstring.c: 163: void float_to_asci(char *str,float flot)
+[; ;Nstring.c: 164: {
+[e :U _float_to_asci ]
+"163
+[v _str `*uc ~T0 @X0 1 r1 ]
+[v _flot `f ~T0 @X0 1 r2 ]
+"164
+[f ]
+"165
+[v _ipart `i ~T0 @X0 1 a ]
+[v _fpart1 `i ~T0 @X0 1 a ]
+[v _point `i ~T0 @X0 1 a ]
+[; ;Nstring.c: 165: int ipart,fpart1,point=0,i=0,k=0,isneg=0;
+[e = _point -> 0 `i ]
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[v _k `i ~T0 @X0 1 a ]
+[e = _k -> 0 `i ]
+[v _isneg `i ~T0 @X0 1 a ]
+[e = _isneg -> 0 `i ]
+"166
+[v _res `uc ~T0 @X0 -> 10 `i a ]
+[; ;Nstring.c: 166: char res[10];
+[; ;Nstring.c: 168: if(flot<0)
+"168
+[e $ ! < _flot -> -> 0 `i `f 103  ]
+[; ;Nstring.c: 169: {
+"169
+{
+[; ;Nstring.c: 170: flot*=-1;
+"170
+[e =* _flot -> -U -> 1 `i `f ]
+[; ;Nstring.c: 171: isneg=1;
+"171
+[e = _isneg -> 1 `i ]
+"172
+}
+[e :U 103 ]
+[; ;Nstring.c: 172: }
+[; ;Nstring.c: 173: ipart = (int)flot;
+"173
+[e = _ipart -> _flot `i ]
+[; ;Nstring.c: 175: fpart1=flot * (float)100;
+"175
+[e = _fpart1 -> * _flot -> -> 100 `i `f `i ]
+[; ;Nstring.c: 177: int_to_asci(res,(int)fpart1);
+"177
+[e ( _int_to_asci (2 , &U _res -> _fpart1 `l ]
+[; ;Nstring.c: 179: if(ipart==0)
+"179
+[e $ ! == _ipart -> 0 `i 104  ]
+[; ;Nstring.c: 180: point=0;
+"180
+[e = _point -> 0 `i ]
+[e $U 105  ]
+"181
+[e :U 104 ]
+[; ;Nstring.c: 181: else if(ipart<10)
+[e $ ! < _ipart -> 10 `i 106  ]
+[; ;Nstring.c: 182: point=1;
+"182
+[e = _point -> 1 `i ]
+[e $U 107  ]
+"183
+[e :U 106 ]
+[; ;Nstring.c: 183: else if(ipart<100)
+[e $ ! < _ipart -> 100 `i 108  ]
+[; ;Nstring.c: 184: point=2;
+"184
+[e = _point -> 2 `i ]
+[e $U 109  ]
+"185
+[e :U 108 ]
+[; ;Nstring.c: 185: else if(ipart<1000)
+[e $ ! < _ipart -> 1000 `i 110  ]
+[; ;Nstring.c: 186: point=3;
+"186
+[e = _point -> 3 `i ]
+[e $U 111  ]
+"187
+[e :U 110 ]
+[; ;Nstring.c: 187: else if(ipart<10000)
+[e $ ! < _ipart -> 10000 `i 112  ]
+[; ;Nstring.c: 188: point=4;
+"188
+[e = _point -> 4 `i ]
+[e :U 112 ]
+"190
+[e :U 111 ]
+[e :U 109 ]
+[e :U 107 ]
+[e :U 105 ]
+[; ;Nstring.c: 190: for(i=str_len(res)+1;i>=point;i--)
+{
+[e = _i + ( _str_len (1 -> &U _res `*Cuc -> 1 `i ]
+[e $U 116  ]
+"191
+[e :U 113 ]
+[; ;Nstring.c: 191: res[i+1]=res[i];
+[e = *U + &U _res * -> -> + _i -> 1 `i `ui `ux -> -> # *U &U _res `ui `ux *U + &U _res * -> -> _i `ui `ux -> -> # *U &U _res `ui `ux ]
+"190
+[e -- _i -> 1 `i ]
+[e :U 116 ]
+[e $ >= _i _point 113  ]
+[e :U 114 ]
+"191
+}
+[; ;Nstring.c: 192: res[point]='.';
+"192
+[e = *U + &U _res * -> -> _point `ui `ux -> -> # *U &U _res `ui `ux -> -> 46 `ui `uc ]
+[; ;Nstring.c: 194: if(isneg)
+"194
+[e $ ! != _isneg -> 0 `i 117  ]
+[; ;Nstring.c: 195: str[k++]='-';
+"195
+[e = *U + _str * -> ++ _k -> 1 `i `x -> -> # *U _str `i `x -> -> 45 `ui `uc ]
+[e :U 117 ]
+[; ;Nstring.c: 197: if(!point){
+"197
+[e $ ! ! != _point -> 0 `i 118  ]
+{
+[; ;Nstring.c: 198: str[k++]='0';
+"198
+[e = *U + _str * -> ++ _k -> 1 `i `x -> -> # *U _str `i `x -> -> 48 `ui `uc ]
+"199
+}
+[e :U 118 ]
+[; ;Nstring.c: 199: }
+[; ;Nstring.c: 200: for(i=0;i<str_len(res)+1;i++)
+"200
+{
+[e = _i -> 0 `i ]
+[e $U 122  ]
+"201
+[e :U 119 ]
+[; ;Nstring.c: 201: str[k++]=res[i];
+[e = *U + _str * -> ++ _k -> 1 `i `x -> -> # *U _str `i `x *U + &U _res * -> -> _i `ui `ux -> -> # *U &U _res `ui `ux ]
+"200
+[e ++ _i -> 1 `i ]
+[e :U 122 ]
+[e $ < _i + ( _str_len (1 -> &U _res `*Cuc -> 1 `i 119  ]
+[e :U 120 ]
+"201
+}
+[; ;Nstring.c: 202: }
+"202
+[e :UE 102 ]
+}
