@@ -14,7 +14,7 @@ extern "C" {
 
 #define MUP_ADDR 0xD0   
     
-void mpu6050_init();
+void mpu6050_init(void);
 void mpu6050_read(int16_t *);
 
 

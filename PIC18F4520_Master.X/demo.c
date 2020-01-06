@@ -20,7 +20,7 @@ void io_test()
     gpio_pin_mode(PB0,OUTPUT);
     gpio_pin_mode(PB1,INPUT);
 
-while(1){
+    while(1){
     if((gpio_pin_read(PB1)))
     {
         gpio_pin_write(PB0,LOW);
@@ -108,7 +108,7 @@ void hcsr04_test()
 
 void lcd_test()
 {
-    lcd_init(PC1,PC0,PE1,PE0,PC3,PC2);
+    lcd_init(PC1,PC0,PE1,PE0,PC3,PC2);//D4,D5,D4,D5,RS,EN
     lcd_clear();
     lcd_print_xy(0,0," Master");
     lcd_print_xy(0,1,"PIC Libraries");
@@ -137,7 +137,7 @@ void eeprom_test()
     serial_print("Writing the data\r\n");
     eeprom_print(0x00,(uint8_t*)"PIC18F EEPROM");
     serial_print("Reading the data\r\n");
-    eeprom_scan(0x00,d);
+    eeprom_scan(0x00,(uint8_t*)d);
     serial_print("Data :");
     serial_print(d);
 }

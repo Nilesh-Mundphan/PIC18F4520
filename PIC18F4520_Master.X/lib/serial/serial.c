@@ -32,7 +32,7 @@ void serial_init(unsigned int baud_rate)
 
 void serial_write(char ch)
 {
-    while(!PIR1bits.TXIF);
+    while(!PIR1bits.TXIF){}
           TXREG=ch;
 }
 

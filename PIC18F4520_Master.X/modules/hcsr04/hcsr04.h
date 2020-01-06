@@ -18,9 +18,9 @@ extern "C" {
 #define US_ERROR     				-1
 #define US_NO_OBSTACLE          	-2
     
-void HCSR04_init();
-void HCSR04_tsrigger();
-int16_t get_pulse_width();
+void HCSR04_init(void);
+void HCSR04_tsrigger(void);
+int16_t get_pulse_width(void);
 
     
     

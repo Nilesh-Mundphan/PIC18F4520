@@ -3,7 +3,7 @@
 int str_len(const char *s)
 {
     int i;
-	for(i=0;s[i];i++);	
+	for(i=0;s[i];i++){}	
     
     return i;	
 }
@@ -128,7 +128,7 @@ int i;
 void str_cat(char * m,char * s)
 {
 int i,j;
-	for(i=0;m[i];i++);
+	for(i=0;m[i];i++){}
         for(i=i,j=0;s[j];i++,j++)
 	    m[i]=s[j];
             m[i]='\0';

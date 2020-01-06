@@ -3,20 +3,20 @@
 #include "gpio.h"
 #include "delay.h"
 
-void HCSR04_init()
+void HCSR04_init(void)
 {
     gpio_pin_mode(US_TRIG_POS,OUTPUT);
     gpio_pin_mode(US_ECHO_POS,INPUT);
 }
 
-void HCSR04_trigger()
+void HCSR04_trigger(void)
 {
     gpio_pin_write(US_TRIG_POS,HIGH);
     delay_us(15);
     gpio_pin_write(US_TRIG_POS,LOW);
 }
 
-int16_t get_pulse_width()
+int16_t get_pulse_width(void)
 {
    uint32_t i,result;
     //Wait for the rising edge

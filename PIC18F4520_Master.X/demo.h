@@ -12,19 +12,19 @@
 extern "C" {
 #endif
 
-void io_test();    
-void gsm_test();
-void mpu6050_test();
-void lcd_test();
-void adc_test(); 
-void eeprom_test();
-void system_tick_test();
-void mcp32_test();
-void serial_test();
-void i2c_eeprom_test();
-void rtc_test();
-void dht11_test();
-void hcsr04_test();
+void io_test(void);    
+void gsm_test(void);
+void mpu6050_test(void);
+void lcd_test(void);
+void adc_test(void); 
+void eeprom_test(void);
+void system_tick_test(void);
+void mcp32_test(void);
+void serial_test(void);
+void i2c_eeprom_test(void);
+void rtc_test(void);
+void dht11_test(void);
+void hcsr04_test(void);
 
 #ifdef	__cplusplus
 }

@@ -13,7 +13,7 @@ void eeprom_write_byte(uint8_t addr,uint8_t data)
     EECON2=0xAA;
     EECON1bits.WR=1;
     GIE=1;
-    while(!EEIF);
+    while(!EEIF){}
       EEIF=0;
 }
 
@@ -26,8 +26,9 @@ unsigned char eeprom_read_byte(uint8_t addr)
 
 void eeprom_print(uint8_t addr,uint8_t *str)
 {
-    while(*str)
+    while(*str){
         eeprom_write_byte(addr++,*str++);
+    }
     
     eeprom_write_byte(addr,'\0');
 }

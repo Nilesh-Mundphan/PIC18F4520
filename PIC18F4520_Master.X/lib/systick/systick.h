@@ -15,7 +15,7 @@ extern "C" {
 void systick_init(void);
 volatile unsigned char timer_count=0;
 volatile unsigned int system_tick=0;  
-void sys_interrupt();
+void sys_interrupt(void);
 #ifdef	__cplusplus
 }
 #endif

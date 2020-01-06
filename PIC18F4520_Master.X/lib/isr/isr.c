@@ -2,7 +2,7 @@
 #include "serial.h"
 #include "systick.h"
 
-void interrupt ISR(void)
+void __interrupt() ISR(void)
 {
     if (RCIE && RCIF) {
         serial_interrupt();

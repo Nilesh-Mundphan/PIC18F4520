@@ -1,7 +1,7 @@
- build/default/production/main.d  \
- build/default/production/main.p1:  \
- main.c  \
+build/default/production/main.p1:  \
+main.c  \
+lib/system/system.h  \
+lib/delay/delay.h  \
 lib/gpio/gpio.h  \
 demo.h  \
-lib/delay/delay.h  \
-lib/system/system.h 
+modules/lcd/lcd.h 

@@ -22,8 +22,10 @@ extern "C" {
 #pragma config BOREN = ON        // Brown-out Reset Enable bit (BOR enabled)
 #pragma config LVP = OFF         // Low-Voltage (Single-Supply)
 #pragma config PBADEN = OFF
+
 #pragma warning disable 520
-#pragma warning disable 752
+//#pragma warning disable 752
+#pragma warning disable 1498
 
 /*Micros*/
 #define INPUT 1
