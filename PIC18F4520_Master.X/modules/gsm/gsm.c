@@ -30,6 +30,20 @@ void gsm_pname(char *pname)
 		str_cpy(pname,start);
 }
 
+void gsm_signal(char *sname)
+{ 
+		char *start,*end,gsm_resp[32];;
+		gsm_cmd("AT+CSQ",gsm_resp,2000);
+		
+		start=str_chr(gsm_resp,':');
+		start++;
+        start++;
+		end=str_chr(start,',');
+		*end='\0';
+	
+		str_cpy(sname,start);
+}
+
 void gsm_cmd(const char *cmd,char *Response,unsigned int timeout)
 {
 		serial_flush();
