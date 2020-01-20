@@ -19,7 +19,7 @@ unsigned int serial_available(void);
 char serial_read(void);
 void serial_flush(void);
 void serial_interrupt(void);
-void serial_responce(char *str,int timeout);
+int serial_responce(unsigned char *str,int timeout);
 
 #ifdef	__cplusplus
 }
