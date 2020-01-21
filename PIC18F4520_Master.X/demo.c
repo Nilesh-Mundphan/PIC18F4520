@@ -13,6 +13,7 @@
 #include "hcsr04.h"
 #include "mpu6050.h"
 #include "gsm.h"
+#include "softwareserial.h"
 #include <stdio.h>
 
 void io_test()
@@ -110,8 +111,8 @@ void lcd_test()
 {
     lcd_init(PC1,PC0,PE1,PE0,PC3,PC2);//D4,D5,D4,D5,RS,EN
     lcd_clear();
-    lcd_print_xy(0,0," Master");
-    lcd_print_xy(0,1,"PIC Libraries");
+    lcd_print_xy(0,0,"PIC18F4520 Libs");
+    lcd_print_xy(0,1,"By N!lesh ");
 }
 
 void adc_test()
@@ -262,3 +263,9 @@ void dht11_test()
     }
 }
 
+void soft_serial(void){
+    softserial_init();
+    while(1){
+        softserial_print("Hello N!lesh !!!\n");
+    }
+}

@@ -25,7 +25,7 @@ void i2c_eeprom_test(void);
 void rtc_test(void);
 void dht11_test(void);
 void hcsr04_test(void);
-
+void soft_serial(void);
 #ifdef	__cplusplus
 }
 #endif
