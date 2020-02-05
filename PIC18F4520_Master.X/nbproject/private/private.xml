@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/media/nilesh_m/New%20Volume/Tasks/MiProjects/PIC18F4520/PIC18F4520_Master.X/modules/keypad/keypad.h</file>
             <file>file:/media/nilesh_m/New%20Volume/Tasks/MiProjects/PIC18F4520/PIC18F4520_Master.X/demo.c</file>
-            <file>file:/media/nilesh_m/New%20Volume/Tasks/MiProjects/PIC18F4520/PIC18F4520_Master.X/lib/serial/serial.h</file>
-            <file>file:/media/nilesh_m/New%20Volume/Tasks/MiProjects/PIC18F4520/PIC18F4520_Master.X/lib/serial/serial.c</file>
-            <file>file:/media/nilesh_m/New%20Volume/Tasks/MiProjects/PIC18F4520/PIC18F4520_Master.X/modules/gsm/gsm.c</file>
+            <file>file:/media/nilesh_m/New%20Volume/Tasks/MiProjects/PIC18F4520/PIC18F4520_Master.X/modules/keypad/keypad.c</file>
         </group>
     </open-files>
 </project-private>

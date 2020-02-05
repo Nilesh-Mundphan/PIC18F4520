@@ -14,6 +14,7 @@
 #include "mpu6050.h"
 #include "gsm.h"
 #include "softwareserial.h"
+#include "keypad.h"
 #include <stdio.h>
 
 void io_test()
@@ -22,14 +23,14 @@ void io_test()
     gpio_pin_mode(PB1,INPUT);
 
     while(1){
-    if((gpio_pin_read(PB1)))
-    {
-        gpio_pin_write(PB0,LOW);
+        if((gpio_pin_read(PB1)))
+        {
+            gpio_pin_write(PB0,LOW);
+        }
+        else{
+            gpio_pin_write(PB0,HIGH);
+        }
     }
-    else{
-        gpio_pin_write(PB0,HIGH);
-    }
-}
 }
 
 
@@ -92,13 +93,13 @@ void hcsr04_test()
     lcd_init(PC1,PC0,PE1,PE0,PC3,PC2);
     lcd_clear();
     lcd_print_xy(0,0,"HC-SR04");
-    
-   HCSR04_init();
-   while(1)
+
+    HCSR04_init();
+    while(1)
     {
         HCSR04_tsrigger();
         d=(get_pulse_width()/58);
-        
+
         sprintf(line1,"Distance :%d",d);
         lcd_print_xy(0,0,"HC-SR04");
         lcd_print_xy(0,1,line1);
@@ -268,4 +269,26 @@ void soft_serial(void){
     while(1){
         softserial_print("Hello N!lesh !!!\n");
     }
+}
+
+void keypad_test(){
+    char line1[16];
+    lcd_init(PC1,PC0,PE1,PE0,PC3,PC2);
+    lcd_clear();
+    lcd_print_xy(0,0,"Matrix 4x4 ");                            
+    lcd_print_xy(0,1,"Keypad");            
+    
+    delay_ms(1000);
+    INTCON2bits.RBPU=0; //Enable PORTB Pull-ups
+    
+    while(1){
+        uint8_t key = get_keypad_key();        
+        if(key!=255){
+            lcd_clear();
+            lcd_print_xy(0,0,"4x4 Keypad");         
+            sprintf(line1,"Key: %d",key);
+            lcd_print_xy(0,1,line1);                            
+            delay_ms(500);
+        }
+    }    
 }

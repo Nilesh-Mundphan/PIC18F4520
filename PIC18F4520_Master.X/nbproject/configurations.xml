@@ -25,6 +25,7 @@
         <itemPath>modules/mcp320x/mcp320x.h</itemPath>
         <itemPath>modules/mpu6050/mpu6050.h</itemPath>
         <itemPath>modules/softwareserial/softwareserial.h</itemPath>
+        <itemPath>modules/keypad/keypad.h</itemPath>
       </logicalFolder>
       <itemPath>demo.h</itemPath>
     </logicalFolder>
@@ -56,6 +57,7 @@
         <itemPath>modules/mpu6050/mpu6050.c</itemPath>
         <itemPath>modules/rtc/time.c</itemPath>
         <itemPath>modules/softwareserial/softwareserial.c</itemPath>
+        <itemPath>modules/keypad/keypad.c</itemPath>
       </logicalFolder>
       <itemPath>demo.c</itemPath>
       <itemPath>main.c</itemPath>
@@ -117,7 +119,7 @@
         <property key="define-macros" value="_XTAL_FREQ=20000000"/>
         <property key="disable-optimizations" value="false"/>
         <property key="extra-include-directories"
-                  value="lib\delay;lib\system;lib\adc;lib\eeprom;lib\gpio;lib\i2c;lib\serial;lib\spi;lib\nstring;lib\isr;lib\systick;modules\dht11;modules\gsm;modules\hcsr04;modules\lcd;modules\mcp320x;modules\mpu6050;modules\rtc;modules\softwareserial"/>
+                  value="lib\delay;lib\system;lib\adc;lib\eeprom;lib\gpio;lib\i2c;lib\serial;lib\spi;lib\nstring;lib\isr;lib\systick;modules\dht11;modules\gsm;modules\hcsr04;modules\lcd;modules\mcp320x;modules\mpu6050;modules\rtc;modules\softwareserial;modules\keypad"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>
